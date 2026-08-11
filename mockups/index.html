@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Web CV of Nazmus Sakib Abir, an AI/ML engineer and technical lead specializing in computer vision, generative AI, multimodal RAG, and production AI systems.">
+  <title>Nazmus Sakib Abir — Web CV</title>
+  <style>
+    :root {
+      --ink: #18212f;
+      --muted: #5e6878;
+      --soft: #eef2f6;
+      --line: #d9e0e8;
+      --paper: #ffffff;
+      --page: #f4f6f8;
+      --accent: #2059a8;
+      --accent-soft: #eaf1fb;
+      --success: #176b55;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--page);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+
+    .topbar-inner {
+      width: min(calc(100% - 40px), var(--max));
+      min-height: 58px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .wordmark {
+      color: var(--ink);
+      font-weight: 750;
+      text-decoration: none;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.84rem;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav a:hover { color: var(--ink); }
+
+    .print-button {
+      padding: 7px 11px;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font: inherit;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .page {
+      width: min(calc(100% - 40px), var(--max));
+      margin: 28px auto 64px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(24, 33, 47, 0.08);
+    }
+
+    .identity {
+      padding: 52px 56px 36px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .identity-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.7fr);
+      gap: 56px;
+      align-items: end;
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 0.76rem;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 4.7rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .role {
+      margin: 17px 0 0;
+      color: #334256;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      font-weight: 600;
+    }
+
+    .identity-summary {
+      max-width: 750px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .contact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 0.88rem;
+    }
+
+    .contact-list li {
+      display: grid;
+      grid-template-columns: 76px 1fr;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--soft);
+    }
+
+    .contact-list li:last-child { border-bottom: 0; }
+    .contact-label { color: var(--muted); }
+    .contact-value { color: var(--ink); font-weight: 600; }
+
+    .evidence-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+
+    .evidence {
+      min-height: 104px;
+      padding: 22px 26px;
+      border-right: 1px solid var(--line);
+    }
+
+    .evidence:last-child { border-right: 0; }
+
+    .evidence strong {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 1.22rem;
+      line-height: 1.25;
+    }
+
+    .evidence span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      line-height: 1.4;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.1fr) minmax(250px, 0.8fr);
+      gap: 0;
+    }
+
+    main { padding: 50px 56px 60px; }
+
+    aside {
+      padding: 50px 34px 60px;
+      background: #fbfcfd;
+      border-left: 1px solid var(--line);
+    }
+
+    section + section { margin-top: 58px; }
+
+    .section-heading {
+      margin: 0 0 24px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--ink);
+      font-size: 0.78rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+
+    .section-intro {
+      max-width: 720px;
+      margin: -9px 0 27px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .job + .job {
+      margin-top: 40px;
+      padding-top: 38px;
+      border-top: 1px solid var(--line);
+    }
+
+    .job-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      margin-bottom: 20px;
+    }
+
+    .job h3 {
+      margin: 0;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      letter-spacing: -0.02em;
+    }
+
+    .job-function {
+      margin: 4px 0 0;
+      color: var(--accent);
+      font-size: 0.91rem;
+      font-weight: 650;
+    }
+
+    .job-meta {
+      margin: 1px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .job-summary {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .year-block {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 18px;
+      padding: 18px 0;
+      border-top: 1px solid var(--soft);
+    }
+
+    .year-block:first-of-type { border-top: 0; }
+
+    .year {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+    }
+
+    .year-block ul,
+    .compact-list {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .year-block li,
+    .compact-list li {
+      margin-bottom: 9px;
+      color: #344052;
+      font-size: 0.89rem;
+    }
+
+    .year-block li:last-child,
+    .compact-list li:last-child { margin-bottom: 0; }
+
+    .project-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .project {
+      padding: 20px 21px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+    }
+
+    .project-topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 11px;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.35;
+    }
+
+    .project time {
+      color: var(--muted);
+      font-size: 0.76rem;
+      white-space: nowrap;
+    }
+
+    .project dl {
+      display: grid;
+      grid-template-columns: 58px 1fr;
+      gap: 5px 11px;
+      margin: 0;
+      font-size: 0.83rem;
+    }
+
+    .project dt {
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .project dd {
+      margin: 0;
+      color: #344052;
+    }
+
+    .project-result {
+      color: var(--success);
+      font-weight: 680;
+    }
+
+    .aside-section + .aside-section {
+      margin-top: 36px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .aside-heading {
+      margin: 0 0 15px;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .skill-group + .skill-group { margin-top: 19px; }
+
+    .skill-group h3 {
+      margin: 0 0 6px;
+      color: var(--accent);
+      font-size: 0.8rem;
+    }
+
+    .skill-group p,
+    .aside-copy {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.65;
+    }
+
+    .credential + .credential { margin-top: 17px; }
+
+    .credential strong {
+      display: block;
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .credential span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .link-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .link-list li + li { margin-top: 11px; }
+
+    .link-list a {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .link-list span {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 0.74rem;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 21px 56px;
+      color: var(--muted);
+      background: #fbfcfd;
+      border-top: 1px solid var(--line);
+      font-size: 0.74rem;
+    }
+
+    @media (max-width: 900px) {
+      .nav a { display: none; }
+      .identity { padding: 42px 34px 30px; }
+      .identity-grid { grid-template-columns: 1fr; gap: 28px; }
+      .contact-list { max-width: 460px; }
+      .evidence-strip { grid-template-columns: repeat(2, 1fr); }
+      .evidence:nth-child(2) { border-right: 0; }
+      .evidence:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .content-grid { grid-template-columns: 1fr; }
+      main { padding: 42px 34px 50px; }
+      aside { padding: 40px 34px 46px; border-left: 0; border-top: 1px solid var(--line); }
+      .footer { padding-inline: 34px; }
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner, .page { width: min(calc(100% - 22px), var(--max)); }
+      .page { margin-top: 12px; }
+      .topbar-inner { min-height: 52px; }
+      .identity { padding: 32px 22px 26px; }
+      h1 { font-size: 2.65rem; }
+      .role { font-size: 1.02rem; }
+      .identity-summary { font-size: 0.92rem; }
+      .contact-list li { grid-template-columns: 65px 1fr; }
+      .evidence { padding: 18px; }
+      .evidence strong { font-size: 1.02rem; }
+      main, aside { padding: 36px 22px 42px; }
+      section + section { margin-top: 46px; }
+      .job-header { grid-template-columns: 1fr; gap: 7px; }
+      .job-meta { text-align: left; }
+      .year-block { grid-template-columns: 1fr; gap: 8px; }
+      .project-topline { display: block; }
+      .project time { display: block; margin-top: 3px; }
+      .project dl { grid-template-columns: 1fr; gap: 1px; }
+      .project dd + dt { margin-top: 7px; }
+      .footer { display: block; padding: 18px 22px; }
+      .footer span { display: block; margin-top: 4px; }
+    }
+
+    @media print {
+      @page { margin: 12mm; }
+      body { background: #fff; font-size: 9.5pt; }
+      .topbar { display: none; }
+      .page { width: 100%; margin: 0; border: 0; box-shadow: none; }
+      .identity { padding: 0 0 22px; }
+      .identity-grid { grid-template-columns: 1.5fr 0.7fr; }
+      .content-grid { grid-template-columns: 2fr 0.78fr; }
+      main { padding: 30px 28px 0 0; }
+      aside { padding: 30px 0 0 24px; }
+      .evidence { min-height: 0; padding: 14px; }
+      section + section { margin-top: 30px; }
+      .project, .job, .aside-section { break-inside: avoid; }
+      .footer { padding: 18px 0 0; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="wordmark" href="#top">Nazmus Sakib Abir</a>
+      <nav class="nav" aria-label="CV sections">
+        <a href="#experience">Experience</a>
+        <a href="#selected-work">Selected work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#publications">Publications</a>
+        <button class="print-button" type="button" onclick="window.print()">Print / save PDF</button>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page" id="top">
+    <header class="identity">
+      <div class="identity-grid">
+        <div>
+          <p class="kicker">Web CV · Updated August 2026</p>
+          <h1>Nazmus<br>Sakib Abir</h1>
+          <p class="role">AI/ML Engineer · Technical Lead</p>
+          <p class="identity-summary">
+            I build applied AI systems from research and technical evaluation through backend, frontend, deployment, and operations. My recent work focuses on computer vision, generative AI, multimodal RAG, document understanding, and production systems constrained by latency, GPU memory, data, and licensing requirements.
+          </p>
+        </div>
+
+        <ul class="contact-list" aria-label="Contact details">
+          <li><span class="contact-label">Based in</span><span class="contact-value">Dhaka, Bangladesh</span></li>
+          <li><span class="contact-label">Employer</span><span class="contact-value">Chowa Giken Corporation</span></li>
+          <li><span class="contact-label">Email</span><a class="contact-value" href="mailto:nsabir2011@gmail.com">nsabir2011@gmail.com</a></li>
+          <li><span class="contact-label">LinkedIn</span><a class="contact-value" href="https://www.linkedin.com/in/nsabir2011/">linkedin.com/in/nsabir2011</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section class="evidence-strip" aria-label="Career evidence at a glance">
+      <div class="evidence"><strong>Since 2018</strong><span>Professional software and AI engineering experience</span></div>
+      <div class="evidence"><strong>3.2× faster</strong><span>Vision inference optimization without retraining</span></div>
+      <div class="evidence"><strong>16 GB GPU</strong><span>Integrated GDINO, SAM, and SDXL in one constrained pipeline</span></div>
+      <div class="evidence"><strong>Research → delivery</strong><span>Proposals, engineering, APIs, UI, cloud, and mentoring</span></div>
+    </section>
+
+    <div class="content-grid">
+      <main>
+        <section id="experience">
+          <h2 class="section-heading">Professional experience</h2>
+
+          <article class="job">
+            <div class="job-header">
+              <div>
+                <h3>Chowa Giken Corporation</h3>
+                <p class="job-function">AI/ML engineering, development leadership, and applied research</p>
+              </div>
+              <p class="job-meta">October 2022 – Present<br>R&amp;D Offshore AI Development Team</p>
+            </div>
+            <p class="job-summary">
+              Progressed from hands-on computer-vision and product engineering into technical-development leadership while continuing to code. Responsibilities span project proposals, model research, AI pipelines, backend and frontend delivery, cloud infrastructure, technical mentoring, and external presentations.
+            </p>
+
+            <div class="year-block">
+              <div class="year">2026</div>
+              <ul>
+                <li>Proposed and led an OCR-based, multi-document RAG system that organizes evidence by topic and subtopic, retrieves it through a multi-step pipeline, and improves capability and response speed over the first version.</li>
+                <li>Led a successful evaluation of FLUX.2 Klein 4B for floorplan generation, showing that a direct single-stage workflow could replace an older two-stage Stable Diffusion 1.5 process.</li>
+                <li>Continued design-rule-aware house-exterior generation through May and began a second university AI mentoring cohort.</li>
+              </ul>
+            </div>
+
+            <div class="year-block">
+              <div class="year">2025</div>
+              <ul>
+                <li>Completed the first image-aware RAG system: extracted images from PDFs, placed relevant visuals at the correct semantic positions, and streamed text and images without exposing rendering artifacts.</li>
+                <li>Worked on generative floorplans under strict model-origin, licensing, and limited-data constraints; owned color-segment generation, contributed annotation work, and delivered the REST API and deployment.</li>
+                <li>Developed SDXL-based house-side generation that followed elevation plans, client design rules, selected textures, and four-view consistency requirements.</li>
+                <li>Prepared lecture material, taught, and mentored university students; one mentored group won the final program prize.</li>
+              </ul>
+            </div>
+
+            <div class="year-block">
+              <div class="year">2024</div>
+              <ul>
+                <li>Led a forecast-explainability project designed to improve trust by presenting plausible context behind model predictions; delivered the system early and contributed to the related patent application.</li>
+                <li>Built a multi-model image-generation pipeline using GDINO, SAM, and SDXL while fitting the full workload on one 16 GB GPU.</li>
+                <li>Added Apple Silicon support to an anomaly-detection product without access to Mac hardware, working iteratively from a colleague's test feedback.</li>
+                <li>Delivered sales and executive demos, managed portions of GCP and Azure, maintained internal servers, and presented company capabilities to public-sector stakeholders.</li>
+              </ul>
+            </div>
+
+            <div class="year-block">
+              <div class="year">2023</div>
+              <ul>
+                <li>Led ASJ-side development of a self-service product-anomaly-detection workflow, contributing to its backend and React frontend and improving the UI's speed and usability.</li>
+                <li>Reduced high-resolution 360° image inference from about 42 seconds to 12–13 seconds per sample without retraining or changing model outputs.</li>
+                <li>Built a portal and Azure infrastructure for several AI demos, including deployment, Nginx proxying, SSL, and ongoing maintenance.</li>
+                <li>Researched object segmentation and privacy risks in generative image editing, documented model comparisons, and presented findings internally.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <div>
+                <h3>MononAI Limited</h3>
+                <p class="job-function">Full Stack Developer · Deep Learning Engineer</p>
+              </div>
+              <p class="job-meta">June 2018 – 2022<br>Dhaka, Bangladesh</p>
+            </div>
+            <p class="job-summary">
+              Developed AI-powered video-surveillance systems and the software needed to deploy, operate, and expose them as usable products.
+            </p>
+            <ul class="compact-list">
+              <li>Built object detection, tracking, face-recognition, vehicle-ANPR, and analytics workflows for real-world surveillance data.</li>
+              <li>Developed and deployed deep-learning services and REST APIs; optimized production inference pipelines and implemented models from research papers.</li>
+              <li>Built application interfaces and UI components, improved frontend performance, and worked with complex SQL and NoSQL aggregations.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="selected-work">
+          <h2 class="section-heading">Selected engineering work</h2>
+          <p class="section-intro">A compact view of representative problems, personal responsibilities, and outcomes. Public descriptions use generalized project labels.</p>
+
+          <div class="project-list">
+            <article class="project">
+              <div class="project-topline">
+                <h3>OCR-driven multi-document RAG</h3>
+                <time>2026</time>
+              </div>
+              <dl>
+                <dt>Problem</dt><dd>Support scanned and digital PDFs, complex visual content, and questions spanning multiple documents.</dd>
+                <dt>Role</dt><dd>Idea originator, development lead, project lead, and hands-on engineer.</dd>
+                <dt>Result</dt><dd class="project-result">Delivered a more capable and faster second-generation system with evidence-oriented multi-step retrieval.</dd>
+              </dl>
+            </article>
+
+            <article class="project">
+              <div class="project-topline">
+                <h3>Image-aware RAG for technical documents</h3>
+                <time>2024–2025</time>
+              </div>
+              <dl>
+                <dt>Problem</dt><dd>Make document answers easier to follow by inserting relevant source images in the correct places.</dd>
+                <dt>Role</dt><dd>Proposed the idea, led delivery, contributed directly, prepared a demo, and mentored another engineer.</dd>
+                <dt>Result</dt><dd class="project-result">Completed the system and supported a related patent application and public demonstration.</dd>
+              </dl>
+            </article>
+
+            <article class="project">
+              <div class="project-topline">
+                <h3>High-resolution vision inference optimization</h3>
+                <time>2023</time>
+              </div>
+              <dl>
+                <dt>Problem</dt><dd>Process very large 360° images on a 16 GB GPU without retraining or changing outputs.</dd>
+                <dt>Role</dt><dd>Optimized inference execution and data movement between processing stages.</dd>
+                <dt>Result</dt><dd class="project-result">Reduced runtime from approximately 42 seconds to 12–13 seconds per sample.</dd>
+              </dl>
+            </article>
+
+            <article class="project">
+              <div class="project-topline">
+                <h3>Generative floorplans under model constraints</h3>
+                <time>2025–2026</time>
+              </div>
+              <dl>
+                <dt>Problem</dt><dd>Generate usable floorplans with limited client data and strict commercial-use and model-origin requirements.</dd>
+                <dt>Role</dt><dd>Owned SD 1.5 color segmentation; contributed annotation, REST API, deployment, and later model evaluation leadership.</dd>
+                <dt>Result</dt><dd class="project-result">Delivered the original pipeline and validated a newer model that could simplify it to single-stage generation.</dd>
+              </dl>
+            </article>
+
+            <article class="project">
+              <div class="project-topline">
+                <h3>Self-service anomaly detection platform</h3>
+                <time>2023–2024</time>
+              </div>
+              <dl>
+                <dt>Problem</dt><dd>Provide a fast workflow for uploading product data, training models, and running inference.</dd>
+                <dt>Role</dt><dd>ASJ-side lead with backend and React frontend contributions; proposed and implemented usability improvements.</dd>
+                <dt>Result</dt><dd class="project-result">Delivered the full workflow and later extended it to Apple Silicon using remote test feedback.</dd>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <section id="leadership">
+          <h2 class="section-heading">Leadership, teaching, and communication</h2>
+          <ul class="compact-list">
+            <li>Proposed and led technical-development projects while remaining a hands-on engineer and researcher.</li>
+            <li>Contributed to patent applications connected to multimodal RAG, forecast explainability, and generative floorplans.</li>
+            <li>Performed lecturer-equivalent work for university AI programs: prepared course material, delivered lectures, and mentored project groups.</li>
+            <li>Presented company projects and technical capabilities to organizations including a2i and BCC and represented the company at Code Samurai events.</li>
+            <li>Created reusable model-comparison and research documentation and supported the growth of junior engineers.</li>
+          </ul>
+        </section>
+      </main>
+
+      <aside>
+        <section class="aside-section" id="capabilities">
+          <h2 class="aside-heading">Core capabilities</h2>
+          <div class="skill-group">
+            <h3>Applied AI</h3>
+            <p>Computer vision, anomaly detection, object detection, segmentation, image enhancement, generative AI, inpainting, multimodal RAG, OCR, and forecast explainability.</p>
+          </div>
+          <div class="skill-group">
+            <h3>Models &amp; frameworks</h3>
+            <p>PyTorch, OpenCV, Stable Diffusion 1.5, SDXL, LoRA, GDINO, SAM, FLUX.2 Klein 4B, language models, and TensorRT.</p>
+          </div>
+          <div class="skill-group">
+            <h3>Software engineering</h3>
+            <p>Python, FastAPI, Flask, REST APIs, React, JavaScript, Kivy, Gradio, PostgreSQL, MongoDB, testing, Git, and shell scripting.</p>
+          </div>
+          <div class="skill-group">
+            <h3>Infrastructure</h3>
+            <p>Docker, Linux, GCP, Azure, Nginx, SSL, private VM architectures, deployment, service maintenance, and inference optimization.</p>
+          </div>
+        </section>
+
+        <section class="aside-section">
+          <h2 class="aside-heading">Education</h2>
+          <div class="credential">
+            <strong>BSc in Electrical &amp; Electronic Engineering</strong>
+            <span>BRAC University · 2014–2018<br>CGPA 3.67 · 149.5 credits</span>
+          </div>
+        </section>
+
+        <section class="aside-section">
+          <h2 class="aside-heading">Certification</h2>
+          <div class="credential">
+            <strong>Google Cloud Associate Cloud Engineer</strong>
+            <span>Completed by 2025</span>
+          </div>
+        </section>
+
+        <section class="aside-section" id="publications">
+          <h2 class="aside-heading">Public work</h2>
+          <ul class="link-list">
+            <li>
+              <a href="https://www.chowagiken.co.jp/future-studio/combating_malicious_use/">Protecting Images from Malicious Generative Editing ↗</a>
+              <span>Authored technical article · 2024</span>
+            </li>
+            <li>
+              <a href="https://www.chowagiken.co.jp/future-studio/visual-response-rag/">Visual Response RAG Overview ↗</a>
+              <span>Official project overview · 2026</span>
+            </li>
+            <li>
+              <a href="https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/">Visual Response RAG Demo ↗</a>
+              <span>Published video demonstration · 2026</span>
+            </li>
+            <li>
+              <a href="https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/">Forecast Visualization AI ↗</a>
+              <span>Official high-level overview · 2026</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="aside-section">
+          <h2 class="aside-heading">Working profile</h2>
+          <p class="aside-copy">Strongest in roles that require technical investigation, practical AI engineering, system ownership, and communication across research, product, and infrastructure concerns.</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <strong>Nazmus Sakib Abir · Web CV</strong>
+      <span>Detailed case studies and verified supporting material can be provided during the hiring process.</span>
+    </footer>
+  </div>
+</body>
+</html>
