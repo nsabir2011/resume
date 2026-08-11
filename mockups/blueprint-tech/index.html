@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nazmus Sakib Abir — AI systems engineer and development lead.">
+  <title>Nazmus Sakib Abir — Blueprint Tech</title>
+  <style>
+    * { box-sizing:border-box; }
+    :root { --blue:#092b5d; --deep:#061f45; --ink:#eef6ff; --muted:#a8c2e5; --grid:rgba(139,188,255,.13); --line:#4b7cba; --orange:#ff9e46; --panel:rgba(6,31,69,.76); }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background-color:var(--blue); background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),linear-gradient(rgba(139,188,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(139,188,255,.05) 1px,transparent 1px); background-size:64px 64px,64px 64px,16px 16px,16px 16px; font-family:"Segoe UI",Arial,sans-serif; }
+    a { color:inherit; }
+    .shell { width:min(1220px,calc(100% - 48px)); margin:auto; }
+    .label { color:var(--orange); font:700 11px/1.2 "Cascadia Code",Consolas,monospace; letter-spacing:.16em; text-transform:uppercase; }
+    nav { background:var(--deep); border-bottom:1px solid var(--line); }
+    nav .shell { min-height:70px; display:flex; justify-content:space-between; align-items:center; gap:24px; }
+    .brand { text-decoration:none; font:700 16px/1 "Cascadia Code",Consolas,monospace; letter-spacing:.04em; }
+    .brand span { color:var(--orange); }
+    .links { display:flex; gap:30px; }
+    .links a { color:var(--muted); font-size:13px; text-decoration:none; }
+    .links a:hover,.links a:focus-visible { color:var(--orange); }
+    .hero { min-height:720px; display:grid; grid-template-columns:1.15fr .85fr; gap:64px; align-items:center; padding:80px 0; }
+    h1 { max-width:800px; margin:24px 0 26px; font-size:clamp(58px,8vw,112px); line-height:.88; letter-spacing:-.065em; text-transform:uppercase; }
+    .hero-copy p { max-width:680px; color:var(--muted); font-size:19px; line-height:1.6; }
+    .hero-links { display:flex; flex-wrap:wrap; gap:14px; margin-top:34px; }
+    .action { display:inline-flex; align-items:center; min-height:46px; padding:0 18px; border:1px solid var(--line); text-decoration:none; font-weight:700; font-size:13px; background:var(--panel); }
+    .action.primary { color:var(--deep); background:var(--orange); border-color:var(--orange); }
+    .schematic { position:relative; padding:34px; background:var(--panel); border:1px solid var(--line); box-shadow:12px 12px 0 rgba(3,20,45,.8); }
+    .schematic::before,.schematic::after { content:""; position:absolute; width:18px; height:18px; }
+    .schematic::before { left:-1px; top:-1px; border-left:3px solid var(--orange); border-top:3px solid var(--orange); }
+    .schematic::after { right:-1px; bottom:-1px; border-right:3px solid var(--orange); border-bottom:3px solid var(--orange); }
+    .schematic-title { display:flex; justify-content:space-between; gap:20px; padding-bottom:24px; border-bottom:1px solid var(--line); }
+    .schematic-title strong { font:700 13px/1.3 "Cascadia Code",Consolas,monospace; }
+    .flow { padding:28px 0 4px; }
+    .node { position:relative; padding:15px 16px; margin-bottom:28px; border:1px solid var(--line); background:var(--deep); font:700 13px/1.4 "Cascadia Code",Consolas,monospace; }
+    .node:not(:last-child)::after { content:"↓"; position:absolute; left:50%; bottom:-24px; color:var(--orange); }
+    .node small { display:block; margin-top:6px; color:var(--muted); font:400 11px/1.4 "Segoe UI",Arial,sans-serif; }
+    .coordinates { display:flex; justify-content:space-between; color:var(--muted); font:11px/1 "Cascadia Code",Consolas,monospace; }
+    section { padding:100px 0; border-top:1px solid var(--line); }
+    .section-head { display:grid; grid-template-columns:180px 1fr; gap:28px; margin-bottom:44px; }
+    .section-head h2 { margin:0; font-size:clamp(40px,5vw,68px); line-height:.95; letter-spacing:-.045em; text-transform:uppercase; }
+    .project-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+    .project { min-height:370px; padding:30px; display:flex; flex-direction:column; background:var(--panel); border:1px solid var(--line); position:relative; }
+    .project::before { content:attr(data-index); position:absolute; top:28px; right:28px; color:var(--line); font:700 42px/1 "Cascadia Code",Consolas,monospace; }
+    .project h3 { max-width:440px; margin:70px 0 20px; font-size:30px; line-height:1; letter-spacing:-.035em; }
+    .project p { margin:0; max-width:520px; color:var(--muted); line-height:1.62; }
+    .project footer { margin-top:auto; padding-top:28px; display:flex; justify-content:space-between; gap:12px; color:var(--orange); border-top:1px solid var(--line); font:700 11px/1.3 "Cascadia Code",Consolas,monospace; letter-spacing:.08em; text-transform:uppercase; }
+    .stack { display:grid; grid-template-columns:220px 1fr; border-top:1px solid var(--line); }
+    .stack aside { padding:30px 28px 30px 0; border-right:1px solid var(--line); }
+    .stack-main { display:grid; grid-template-columns:repeat(3,1fr); }
+    .stack-col { padding:30px; min-height:270px; }
+    .stack-col + .stack-col { border-left:1px solid var(--line); }
+    .stack-col h3 { margin:0 0 28px; color:var(--orange); font:700 13px/1.3 "Cascadia Code",Consolas,monospace; text-transform:uppercase; letter-spacing:.12em; }
+    .stack-col ul { margin:0; padding:0; list-style:none; color:var(--muted); }
+    .stack-col li { padding:10px 0; border-bottom:1px dashed rgba(168,194,229,.32); }
+    .trajectory { display:grid; grid-template-columns:repeat(4,1fr); }
+    .year { padding:28px; min-height:290px; border-top:4px solid var(--line); position:relative; }
+    .year::before { content:""; position:absolute; width:12px; height:12px; top:-8px; left:27px; background:var(--orange); border:2px solid var(--deep); }
+    .year + .year { border-left:1px solid var(--line); }
+    .year strong { display:block; margin:36px 0 24px; font:700 34px/1 "Cascadia Code",Consolas,monospace; }
+    .year p { color:var(--muted); line-height:1.55; }
+    .public-links { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .public-link { min-height:220px; padding:26px; display:flex; flex-direction:column; border:1px solid var(--line); background:var(--panel); text-decoration:none; }
+    .public-link:hover,.public-link:focus-visible { border-color:var(--orange); }
+    .public-link h3 { margin:48px 0 20px; font-size:23px; line-height:1.1; }
+    .public-link span:last-child { margin-top:auto; color:var(--orange); font-size:13px; }
+    .contact { display:grid; grid-template-columns:1fr auto; gap:40px; align-items:end; }
+    .contact h2 { margin:0; max-width:900px; font-size:clamp(50px,7vw,96px); line-height:.88; letter-spacing:-.06em; text-transform:uppercase; }
+    .contact div { display:grid; gap:12px; text-align:right; }
+    .contact a { color:var(--orange); text-underline-offset:5px; }
+    body>footer { padding:26px 0 40px; color:var(--muted); background:var(--deep); border-top:1px solid var(--line); font:11px/1.4 "Cascadia Code",Consolas,monospace; }
+    @media (max-width:900px) {
+      .hero { grid-template-columns:1fr; }
+      .schematic { max-width:620px; }
+      .stack { grid-template-columns:1fr; }
+      .stack aside { border-right:0; border-bottom:1px solid var(--line); }
+      .trajectory { grid-template-columns:repeat(2,1fr); }
+      .public-links { grid-template-columns:1fr; }
+    }
+    @media (max-width:650px) {
+      .shell { width:min(100% - 28px,1220px); }
+      .links a:not(:last-child) { display:none; }
+      h1 { font-size:clamp(54px,16vw,80px); }
+      .hero { padding-top:60px; gap:48px; }
+      section { padding:72px 0; }
+      .section-head { grid-template-columns:1fr; }
+      .project-grid,.stack-main,.trajectory,.contact { grid-template-columns:1fr; }
+      .stack-col + .stack-col,.year + .year { border-left:0; border-top:1px solid var(--line); }
+      .contact div { text-align:left; }
+    }
+  </style>
+</head>
+<body>
+  <nav><div class="shell"><a class="brand" href="#top">NA<span>_</span>SYSTEMS</a><div class="links"><a href="#projects">Projects</a><a href="#stack">Stack</a><a href="#trajectory">Trajectory</a><a href="#contact">Connect</a></div></div></nav>
+  <main id="top">
+    <header class="hero shell">
+      <div class="hero-copy"><span class="label">AI systems engineer / Development lead</span><h1>Designing for constraints.</h1><p>I’m Nazmus Sakib Abir. I lead and build practical AI systems across vision, generative models, document intelligence, interfaces, APIs, and infrastructure—turning research questions into deployable tools.</p><div class="hero-links"><a class="action primary" href="#projects">Inspect projects</a><a class="action" href="mailto:nsabir2011@gmail.com">Open channel</a></div></div>
+      <aside class="schematic" aria-label="AI delivery pipeline"><div class="schematic-title"><strong>DELIVERY_PIPELINE</strong><span class="label">ACTIVE</span></div><div class="flow"><div class="node">01 / INVESTIGATE<small>Research models, constraints, data, and feasibility</small></div><div class="node">02 / ARCHITECT<small>Decompose the problem and define the system</small></div><div class="node">03 / IMPLEMENT<small>Models, APIs, interfaces, and retrieval pipelines</small></div><div class="node">04 / DEPLOY<small>Cloud infrastructure, demos, maintenance, iteration</small></div></div><div class="coordinates"><span>DHAKA / BD</span><span>CHOWA GIKEN / 2022—NOW</span></div></aside>
+    </header>
+
+    <section id="projects"><div class="shell"><div class="section-head"><span class="label">01 / Project systems</span><h2>Selected technical blueprints.</h2></div><div class="project-grid">
+      <article class="project" data-index="01"><span class="label">Document intelligence</span><h3>OCR-driven multi-document RAG</h3><p>Led a V2 architecture that extracts complex PDF content, maps topics and subtopics across pages, generates image descriptions, and retrieves structured evidence through a multi-step query pipeline.</p><footer><span>Development lead</span><span>2026</span></footer></article>
+      <article class="project" data-index="02"><span class="label">Inference systems</span><h3>High-resolution 360° enhancement</h3><p>Optimized a memory-constrained four-part image pipeline from approximately 42 seconds to 12–13 seconds per sample without retraining or changing outputs.</p><footer><span>3.2× speed-up</span><span>2023</span></footer></article>
+      <article class="project" data-index="03"><span class="label">Generative vision</span><h3>Elevation-constrained house generation</h3><p>Generated four visually continuous exterior sides from elevation plans, client textures, and design rules using SDXL under strict model-selection constraints.</p><footer><span>House-side generation</span><span>2025—26</span></footer></article>
+      <article class="project" data-index="04"><span class="label">Explainable AI</span><h3>Forecast reasons for business users</h3><p>Led a system that converts forecast-model analysis into natural-language explanations and business insight, making predictions easier to understand and trust.</p><footer><span>Tech lead</span><span>2024</span></footer></article>
+    </div></div></section>
+
+    <section id="stack"><div class="shell"><div class="section-head"><span class="label">02 / Capability map</span><h2>Across the system boundary.</h2></div><div class="stack"><aside><span class="label">Operating range</span><p style="color:var(--muted);line-height:1.6;margin-top:24px">I work where model behavior, product experience, and deployment constraints meet.</p></aside><div class="stack-main"><div class="stack-col"><h3>Models + research</h3><ul><li>Computer vision</li><li>Stable Diffusion / SDXL</li><li>GDINO / SAM / LoRA</li><li>OCR + multimodal RAG</li><li>Benchmarking + optimization</li></ul></div><div class="stack-col"><h3>Product</h3><ul><li>REST APIs</li><li>React interfaces</li><li>Kivy / Gradio demos</li><li>Training + inference UX</li><li>Sales prototypes</li></ul></div><div class="stack-col"><h3>Operations</h3><ul><li>Azure / GCP</li><li>Nginx / SSL</li><li>Private VM architecture</li><li>Serverless deployment</li><li>Maintenance + support</li></ul></div></div></div></div></section>
+
+    <section id="trajectory"><div class="shell"><div class="section-head"><span class="label">03 / Trajectory</span><h2>Increasing scope and ownership.</h2></div><div class="trajectory"><article class="year"><span class="label">Grade III-2</span><strong>2023</strong><p>Full-stack AI products, inference optimization, segmentation research, secure demo infrastructure.</p></article><article class="year"><span class="label">Grade III-4</span><strong>2024</strong><p>Technical leadership, presales systems, model licensing research, MRAG and forecast explainability.</p></article><article class="year"><span class="label">Grade III-5</span><strong>2025</strong><p>Patent-oriented generative systems, university teaching, multi-view house generation, cloud ownership.</p></article><article class="year"><span class="label">Development lead</span><strong>2026</strong><p>MRAG V2, OCR and multi-document retrieval, new-model feasibility, second mentoring cohort.</p></article></div></div></section>
+
+    <section><div class="shell"><div class="section-head"><span class="label">04 / Public evidence</span><h2>See the ideas in context.</h2></div><div class="public-links"><a class="public-link" href="https://www.chowagiken.co.jp/future-studio/combating_malicious_use/"><span class="label">Authored research</span><h3>Adversarial defense against malicious image editing</h3><span>Open article →</span></a><a class="public-link" href="https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/"><span class="label">Demo video</span><h3>Visual Response RAG in action</h3><span>Open demo →</span></a><a class="public-link" href="https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/"><span class="label">Public prototype</span><h3>Forecast visualization AI</h3><span>Open overview →</span></a></div></div></section>
+
+    <section id="contact"><div class="shell contact"><h2>Build the next system.</h2><div><a href="mailto:nsabir2011@gmail.com">nsabir2011@gmail.com</a><a href="https://linkedin.com/in/nsabir2011">linkedin.com/in/nsabir2011</a></div></div></section>
+  </main>
+  <footer><div class="shell">STATIC_CONCEPT_03 // BLUEPRINT_TECH // NAZMUS_SAKIB_ABIR</div></footer>
+</body>
+</html>

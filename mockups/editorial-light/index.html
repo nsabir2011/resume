@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nazmus Sakib Abir — AI engineer, technical lead, researcher, and mentor.">
+  <title>Nazmus Sakib Abir — Editorial Light</title>
+  <style>
+    * { box-sizing:border-box; }
+    :root { --paper:#f2eee5; --ink:#191714; --muted:#6c6760; --red:#b54135; --rule:#c9c1b4; --soft:#e6dfd2; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--paper); font-family:Arial,"Segoe UI",sans-serif; }
+    a { color:inherit; }
+    .page { width:min(1240px,calc(100% - 56px)); margin:auto; }
+    .serif { font-family:Georgia,"Times New Roman",serif; }
+    .kicker { color:var(--red); font-size:11px; font-weight:800; letter-spacing:.19em; text-transform:uppercase; }
+    nav { border-bottom:1px solid var(--ink); }
+    nav .page { min-height:76px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:20px; }
+    .name { font-family:Georgia,"Times New Roman",serif; font-size:22px; text-decoration:none; }
+    .nav-center { font-size:11px; letter-spacing:.16em; text-transform:uppercase; }
+    .nav-right { display:flex; justify-content:flex-end; gap:24px; }
+    .nav-right a { text-decoration:none; font-size:13px; }
+    .hero { display:grid; grid-template-columns:1.5fr .5fr; min-height:690px; border-bottom:1px solid var(--ink); }
+    .hero-main { padding:74px 72px 66px 0; border-right:1px solid var(--ink); display:flex; flex-direction:column; }
+    .hero h1 { margin:32px 0 30px; max-width:910px; font-family:Georgia,"Times New Roman",serif; font-size:clamp(58px,8.4vw,120px); font-weight:400; line-height:.87; letter-spacing:-.065em; }
+    .hero h1 em { color:var(--red); font-weight:400; }
+    .standfirst { max-width:720px; margin:0; font-family:Georgia,"Times New Roman",serif; font-size:clamp(19px,2.1vw,27px); line-height:1.45; }
+    .hero-foot { margin-top:auto; display:flex; align-items:end; justify-content:space-between; gap:24px; padding-top:60px; }
+    .hero-foot p { max-width:580px; margin:0; color:var(--muted); line-height:1.65; }
+    .hero-foot a { color:var(--red); text-underline-offset:6px; font-weight:700; white-space:nowrap; }
+    .hero-side { padding:74px 0 56px 32px; display:flex; flex-direction:column; }
+    .issue { color:var(--red); font-family:Georgia,"Times New Roman",serif; font-size:96px; line-height:1; }
+    .side-note { margin-top:auto; }
+    .side-note p { margin:8px 0 24px; line-height:1.55; }
+    .side-rule { border-top:1px solid var(--rule); padding-top:18px; }
+    section { padding:94px 0; border-bottom:1px solid var(--ink); }
+    .section-title { display:grid; grid-template-columns:1fr 2fr; gap:34px; margin-bottom:48px; }
+    .section-title h2 { margin:0; font:400 clamp(40px,5vw,72px)/.98 Georgia,"Times New Roman",serif; letter-spacing:-.045em; }
+    .section-title p { max-width:640px; margin:10px 0 0; color:var(--muted); line-height:1.65; }
+    .feature { display:grid; grid-template-columns:1.12fr .88fr; border-top:1px solid var(--ink); border-bottom:1px solid var(--ink); }
+    .feature-copy { padding:44px 54px 48px 0; border-right:1px solid var(--ink); }
+    .feature-copy h3 { margin:18px 0 24px; font:400 clamp(38px,5vw,70px)/.98 Georgia,"Times New Roman",serif; letter-spacing:-.045em; }
+    .feature-copy p { max-width:700px; color:var(--muted); font-size:17px; line-height:1.7; }
+    .feature-copy a { display:inline-block; margin-top:24px; color:var(--red); font-weight:700; text-underline-offset:6px; }
+    .feature-aside { padding:44px 0 44px 36px; display:flex; flex-direction:column; justify-content:space-between; }
+    blockquote { margin:0; font:400 clamp(26px,3vw,42px)/1.13 Georgia,"Times New Roman",serif; }
+    .result { margin-top:50px; padding-top:24px; border-top:1px solid var(--rule); }
+    .result strong { display:block; color:var(--red); font:400 66px/1 Georgia,"Times New Roman",serif; }
+    .result span { color:var(--muted); }
+    .stories { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--ink); }
+    .story { min-height:360px; padding:30px 28px 34px 0; display:flex; flex-direction:column; }
+    .story + .story { border-left:1px solid var(--ink); padding-left:28px; }
+    .story h3 { margin:68px 0 18px; font:400 34px/1.03 Georgia,"Times New Roman",serif; letter-spacing:-.035em; }
+    .story p { margin:0; color:var(--muted); line-height:1.62; }
+    .story a { margin-top:auto; color:var(--red); text-underline-offset:5px; }
+    .practice { display:grid; grid-template-columns:repeat(2,1fr); gap:70px; }
+    .practice h3 { font:400 34px/1.1 Georgia,"Times New Roman",serif; margin:0 0 18px; }
+    .practice p { color:var(--muted); line-height:1.7; }
+    .list { margin:30px 0 0; padding:0; list-style:none; border-top:1px solid var(--rule); }
+    .list li { padding:15px 0; border-bottom:1px solid var(--rule); }
+    .contact { display:grid; grid-template-columns:1.4fr .6fr; align-items:end; gap:50px; }
+    .contact h2 { margin:0; font:400 clamp(52px,7vw,98px)/.9 Georgia,"Times New Roman",serif; letter-spacing:-.06em; }
+    .contact-links { display:grid; gap:16px; justify-items:start; }
+    .contact-links a { color:var(--red); font-weight:700; text-underline-offset:5px; }
+    footer { padding:28px 0 42px; display:flex; justify-content:space-between; color:var(--muted); font-size:12px; }
+    @media (max-width:860px) {
+      nav .page { grid-template-columns:1fr auto; }
+      .nav-center { display:none; }
+      .hero { grid-template-columns:1fr; }
+      .hero-main { border-right:0; padding-right:0; }
+      .hero-side { min-height:230px; padding:34px 0; border-top:1px solid var(--ink); flex-direction:row; gap:34px; align-items:flex-start; }
+      .side-note { margin:0 0 0 auto; max-width:320px; }
+      .section-title,.feature { grid-template-columns:1fr; }
+      .feature-copy { border-right:0; padding-right:0; }
+      .feature-aside { border-top:1px solid var(--ink); padding-left:0; }
+      .stories { grid-template-columns:1fr; }
+      .story { min-height:auto; padding:30px 0; }
+      .story + .story { border-left:0; border-top:1px solid var(--ink); padding-left:0; }
+      .story h3 { margin-top:32px; }
+      .story a { margin-top:28px; }
+    }
+    @media (max-width:620px) {
+      .page { width:min(100% - 28px,1240px); }
+      .nav-right a:first-child { display:none; }
+      .hero-main { padding-top:52px; }
+      .hero h1 { font-size:clamp(54px,17vw,82px); }
+      .hero-foot { align-items:flex-start; flex-direction:column; }
+      .hero-side { flex-direction:column; }
+      .side-note { margin:0; }
+      section { padding:70px 0; }
+      .section-title { grid-template-columns:1fr; }
+      .practice,.contact { grid-template-columns:1fr; }
+      footer { gap:18px; flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <nav><div class="page"><a class="name" href="#top">Nazmus Sakib Abir</a><span class="nav-center">Engineer · Researcher · Mentor</span><div class="nav-right"><a href="#work">Selected work</a><a href="#contact">Contact</a></div></div></nav>
+  <main id="top" class="page">
+    <header class="hero">
+      <div class="hero-main">
+        <span class="kicker">Portfolio / Dhaka, Bangladesh</span>
+        <h1>Useful AI begins with <em>good judgment.</em></h1>
+        <p class="standfirst">I build intelligent systems that work within the messiness of the real world—limited data, finite GPUs, licensing constraints, complex documents, and people who need clear answers.</p>
+        <div class="hero-foot"><p>Nazmus Sakib Abir is an AI/ML engineer and technical lead at Chowa Giken, working across computer vision, generative AI, multimodal RAG, full-stack delivery, and cloud operations.</p><a href="#work">Read the work ↓</a></div>
+      </div>
+      <aside class="hero-side"><div><span class="kicker">Selected issue</span><div class="issue">04</div></div><div class="side-note"><div class="side-rule"><span class="kicker">Current chapter</span><p>Building and leading applied AI projects at Chowa Giken since October 2022.</p></div><div class="side-rule"><span class="kicker">Beyond delivery</span><p>Research writing, university lectures, mentoring, and technical communication.</p></div></div></aside>
+    </header>
+
+    <section id="work">
+      <div class="section-title"><span class="kicker">Selected work</span><div><h2>Engineering stories worth telling.</h2><p>Each project is shaped by a constraint: a limited GPU, an unreliable PDF, an old model, or an explanation users could not yet trust.</p></div></div>
+      <article class="feature">
+        <div class="feature-copy"><span class="kicker">Lead case study / Multimodal systems</span><h3>Teaching RAG to answer with the right image, in the right place.</h3><p>I originated and led an image-aware document RAG system for manuals and technical material. The hard part was not simply extracting images from PDFs—it was connecting them to meaning, placing them naturally inside an answer, and streaming text and visuals without exposing rendering artifacts.</p><a href="https://www.chowagiken.co.jp/future-studio/visual-response-rag/">See the public prototype →</a></div>
+        <aside class="feature-aside"><blockquote>“A response becomes easier to trust when its evidence is visible—not merely cited.”</blockquote><div class="result"><strong>V2</strong><span>Now supports OCR-led, multi-document topic and subtopic retrieval.</span></div></aside>
+      </article>
+      <div class="stories">
+        <article class="story"><span class="kicker">Performance</span><h3>42 seconds became 12–13.</h3><p>Optimized high-resolution 360° image inference under a 16 GB GPU constraint, without retraining the model or changing its outputs.</p><a href="#contact">Discuss the approach →</a></article>
+        <article class="story"><span class="kicker">Explainability</span><h3>From forecast numbers to reasons people can act on.</h3><p>Led a product that explains likely causes behind AI forecasts so business users can understand, trust, and act on predictions.</p><a href="https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/">View the public overview →</a></article>
+        <article class="story"><span class="kicker">Generative systems</span><h3>Floorplans built when the best models were off-limits.</h3><p>Decomposed generation into color segments, walls, inpainting, and image processing—then led a study showing a newer model could simplify the pipeline.</p><a href="#contact">Ask about the case study →</a></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><span class="kicker">Practice</span><div><h2>Depth across the whole delivery path.</h2></div></div>
+      <div class="practice">
+        <div><h3>From model to usable product</h3><p>I work across AI research, backend design, APIs, user interfaces, deployment, and maintenance. That range helps me make technical decisions with the complete product in view.</p><ul class="list"><li>Computer vision and generative AI</li><li>OCR, multimodal RAG, and document intelligence</li><li>React, Kivy, Gradio, and REST APIs</li><li>Azure, GCP, Nginx, SSL, and serverless systems</li></ul></div>
+        <div><h3>From individual output to team capability</h3><p>I propose projects, lead development, contribute code, document research, mentor engineers, and teach university students. The goal is not only to finish the work, but to leave the team more capable.</p><ul class="list"><li>Technical and development leadership</li><li>Reusable model-evaluation research</li><li>Lecturer-equivalent university mentoring</li><li>Stakeholder and presales communication</li></ul></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title"><span class="kicker">Writing</span><div><h2>Public notes from the work.</h2></div></div>
+      <div class="stories">
+        <article class="story"><span class="kicker">Authored / 2024</span><h3>Combating malicious AI-powered image editing.</h3><p>A technical exploration of adversarial image defense, its promise, and its practical limits.</p><a href="https://www.chowagiken.co.jp/future-studio/combating_malicious_use/">Read the article →</a></article>
+        <article class="story"><span class="kicker">Prototype / 2026</span><h3>Visual Response RAG.</h3><p>A public overview of answering document questions with relevant text and images.</p><a href="https://www.chowagiken.co.jp/future-studio/visual-response-rag/">Open the prototype →</a></article>
+        <article class="story"><span class="kicker">Demo / 2026</span><h3>MRAG in action.</h3><p>A concise demonstration of the user experience, intentionally presented without internal implementation details.</p><a href="https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/">Watch the demo →</a></article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact"><h2>Let’s make a difficult idea useful.</h2><div class="contact-links"><a href="mailto:nsabir2011@gmail.com">nsabir2011@gmail.com</a><a href="https://linkedin.com/in/nsabir2011">LinkedIn profile ↗</a></div></section>
+  </main>
+  <footer class="page"><span>© Nazmus Sakib Abir</span><span>Static concept 02 · Editorial Light</span></footer>
+</body>
+</html>
