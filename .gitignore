@@ -1,0 +1,12 @@
+# Generated working artifacts
+tmp/
+
+# Presentation source files
+*.ppt
+*.pptx
+*.odp
+*.key
+
+# Operating system files
+.DS_Store
+Thumbs.db
