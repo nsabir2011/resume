@@ -1,0 +1,142 @@
+# Career Contribution Timeline
+
+> Dated evidence organized by annual presentation. Use [projects.md](projects.md) for canonical project explanations and [sources-and-publication.md](sources-and-publication.md) for provenance and publication restrictions.
+
+## Employment baseline
+
+- **Employer:** Chowa Giken Corporation
+- **Start:** October 2022
+- **Status:** Current employment
+- **Start-date evidence:** Confirmed by the author biography on Nazmus's published Chowa Giken article dated 2024-06-07
+
+## Through 2023
+
+**Presentation prepared:** 2023-11-20  
+**Organization:** R&D Offshore AI Development Team (ASJ)  
+**Grade:** III-2
+
+### Product and project delivery
+
+- Led ASJ-side work on the [Anomaly Detection Platform](projects.md#anomaly-detection-platform), contributing backend and React frontend development, UI performance/usability ideas, implementation, and `17 + 8` merged pull requests.
+- Optimized [IFL 360](projects.md#ifl-360-image-enhancement) from approximately 42 seconds to 12-13 seconds per sample without retraining or output changes; the deck reports 3.2x speed-up against a 2x target.
+- Trained artist-specific LoRA models and delivered Kivy GUI, backend, and deployment work for [Ukiyolator-v2](projects.md#ukiyolator-v2).
+- Prepared approximately four research/project demos and built the portal, Azure VM infrastructure, Nginx proxy, SSL, deployment, and maintenance for the [Sapporo Subsidy Demo Portal](projects.md#sapporo-subsidy-demo-portal).
+
+### Research and knowledge-sharing
+
+- Compared state-of-the-art approaches, prepared reusable internal documentation, and gave three Vision Group presentations for [Overlapped-Object Segmentation Research](projects.md#overlapped-object-segmentation-research).
+- Proposed and conducted [Generative Image Privacy and Adversarial Defense Research](projects.md#generative-image-privacy-and-adversarial-defense-research), delivering one Vision Group presentation and submitting a blog.
+
+### Reliability and working style
+
+- Reported never exceeding a deadline.
+- Reported rarely missing meetings.
+- Described the working approach as: "plan first then work."
+
+### Organizational contributions
+
+- Represented the company at Code Samurai 2023, where Chowa Giken was a sponsor.
+- Judged participants for internship opportunities.
+- Helped colleagues complete tasks; the deck names Takuma Suzuki, Mursalin, Shafiqul, Innat, and Jahirul.
+- Attended meetings with DU.
+- Purchased laptops for four ASJ members, purchased business cards, and handled other equipment-related work, including broken HDDs.
+
+## Through 2024
+
+**Presentation prepared:** 2024-11-21  
+**Organization:** R&D Offshore AI Development Team (ASJ)  
+**Grade:** III-4
+
+### Product and project delivery
+
+- Extended [Ukiyolator-v2](projects.md#ukiyolator-v2) with multi-region backend/frontend work and a GDINO/SAM/SDXL pipeline constrained to one 16 GB GPU.
+- Continued the [Sapporo Subsidy Demo Portal](projects.md#sapporo-subsidy-demo-portal), including the web portal, Nginx, SSL, deployment, and maintenance.
+- Added Apple Silicon / ARM-based M-series MacBook support to the [Anomaly Detection Platform](projects.md#anomaly-detection-platform) without direct Mac hardware, using coworker feedback for testing.
+
+### Presales demos
+
+- Delivered the [FanMagic Stadium Demo](projects.md#fanmagic-stadium-demo) in a short time and within the deadline.
+- Built the [Executive Speech Generator](projects.md#executive-speech-generator) for easier introductory client meetings.
+- Built the [Smart Water Meter Chatbot](projects.md#smart-water-meter-chatbot) UI in one week and contributed sales materials.
+
+### Technical-development leadership
+
+- Served as Tech Lead and primary contributor for [Prediction + GPT / ForecastSense](projects.md#prediction--gpt--forecastsense), completing development early and contributing more than 75% by first-hand estimate to the related patent application.
+- Originated and began leading the [MRAG Multimodal Document Chatbot](projects.md#mrag-multimodal-document-chatbot) near the end of 2024. It was marked in progress in the 2024 deck and completed in February 2025.
+- Developed only the Gradio UI for the [2D Image to 3D Demo](projects.md#2d-image-to-3d-demo-ui).
+
+### Research and writing
+
+- Proposed and led the [Commercial-Friendly Object Detection Benchmark](projects.md#commercial-friendly-object-detection-benchmark), creating a reusable alternative-model reference and mentoring Jahirul-san.
+- Wrote the blog associated with the 2023 image privacy research and addressed reviewer concerns.
+
+### Infrastructure, external engagement, and team support
+
+- Began managing internal company servers and portions of GCP and Azure used for client projects.
+- Studied Google Cloud Associate Cloud Engineer and Azure Solutions Architect material to support company certification goals.
+- Represented Chowa Giken at Code Samurai 2024 and judged participants.
+- The selected participant won a prize. The team's initially preferred candidate achieved a higher placement but was unavailable because a company with a larger sponsorship commitment had already selected that person.
+- Attended meetings with JICA, BCC, the ICT Minister, CodeBreaks, and a2i.
+- Presented company projects and technical capabilities to a2i, the ICT Minister, and BCC.
+- Helped other members solve problems and complete tasks.
+- Ordered and purchased ID cards for ASJ members.
+
+## Through 2025
+
+**Presentation prepared:** 2025-12-07  
+**Organization:** R&D Offshore AI Development Team (ASJ)  
+**Grade:** III-5
+
+### Project delivery
+
+- Completed the [MRAG Multimodal Document Chatbot](projects.md#mrag-multimodal-document-chatbot) in February 2025, including PDF image extraction, semantic image placement, clean text/image streaming, a sales demo, a patent application, and mentoring.
+- Owned Stable Diffusion 1.5 color-segment generation, contributed dataset annotation, prepared the REST API, and handled deployment/operations for [EII FloorPlan Generation](projects.md#eii-floorplan-generation). The client supplied 150 samples initially and later 580, compared with 50,000 used by the reference publication. First-hand patent contribution estimate: 20-30%.
+- Owned design-rule-aware house-side generation using SDXL for [KMEW House Image Generation](projects.md#kmew-house-image-generation), while another engineer primarily handled texture retrieval.
+- Researched feasibility and created an implementation plan and estimate for [Morita Foil Stamping Anomaly Detection](projects.md#morita-foil-stamping-anomaly-detection).
+
+### Education and mentoring
+
+- Performed lecturer-equivalent work for [Global South Subsidy / Dhaka AI Dojo](projects.md#global-south-subsidy--dhaka-ai-dojo).
+- Prepared one-third of the lecture materials and delivered some lectures.
+- Lectures were broadcast to North South University.
+- Mentored BRAC University students; one mentored group won the final prize across participating BRACU and NSU teams.
+- Prepared all material for an ICT Ministry seminar and helped address practical student issues such as Colab Pro access.
+
+### Research and writing
+
+- Wrote a technical blog about Prediction + GPT. Issues involving the name "ForecastSense" and competing project commitments made publication harder.
+
+### Infrastructure and team support
+
+- Continued managing internal servers and portions of GCP and Azure.
+- Completed the Google Cloud Associate Cloud Engineer certification.
+- Helped colleagues tackle problems and complete tasks.
+- Handled car rental for Japanese members visiting Bangladesh.
+
+## 2026 to date
+
+**Coverage date:** 2026-08-11  
+**Source:** First-hand account; no annual presentation has been reviewed for this period
+
+### Project progression
+
+- Continued [KMEW House Image Generation](projects.md#kmew-house-image-generation) until that project phase ended in May 2026.
+- During the final KMEW phase, proposed and led the [FLUX.2 Klein 4B Floorplan Feasibility Study](projects.md#flux2-klein-4b-floorplan-feasibility-study).
+- Served primarily as Development Lead while contributing a smaller amount of research and coding.
+- Completed the feasibility project successfully and established that the candidate model could directly generate final floorplans, potentially replacing the older two-stage Stable Diffusion 1.5 workflow.
+
+### MRAG v2 technical development
+
+- Prepared an additional MRAG V1 demo published by Chowa Giken as ["Demo Video No.2 Visual Response RAG"](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) on 2026-03-13; the public page is intentionally high-level and does not disclose internal techniques.
+- After the KMEW phase ended, proposed the [MRAG v2 / OCR-Based Multi-Document RAG](projects.md#mrag-v2--ocr-based-multi-document-rag) technical-development project.
+- Led the complete project and also contributed as a hands-on engineer.
+- Replaced V1's single-document limitation with a robust multi-document corpus workflow.
+- Used OCR-extracted text and page images to improve text, image, table, and formula extraction; organize topics/subtopics across pages; and generate image descriptions for RAG input.
+- Implemented multi-step retrieval of appropriate subtopics or complete topics as evidence for answer generation.
+- Completed the project successfully. V2 was more capable, performed better, and generated responses faster than V1; exact metrics are not yet recorded.
+
+### Education and mentoring
+
+- Began a second phase of [Nippon AI Dojo](projects.md#nippon-ai-dojo---phase-2) mentoring with BRAC University students.
+- Reused earlier lectures and made minor updates to previous slides when necessary.
+- Continued lecturer-equivalent mentoring and student guidance.
