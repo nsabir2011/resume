@@ -63,11 +63,11 @@ export const experiences = [
     role: 'Full Stack Developer · Deep Learning Engineer',
     period: 'Jun 2018 — 2022',
     summary:
-      'Development of AI-powered video-surveillance products and the production software required to deploy, operate, and expose them to users.',
+      'Created and evolved computer-vision products for live video monitoring, owning core AI pipelines and production backends while expanding into full-stack product delivery.',
     highlights: [
-      'Object detection, tracking, face recognition, vehicle ANPR, and analytics.',
-      'Deep-learning services, REST APIs, production inference optimization, and deployment.',
-      'React interfaces, application features, and SQL/NoSQL data workflows.',
+      'Built real-time systems spanning face recognition, vehicle detection and ANPR, REST APIs, databases, caching, and WebSocket interactions.',
+      'Improved recognition accuracy, multi-camera throughput, query performance, and application responsiveness.',
+      'Expanded into frontend features and workflow improvements, including a substantial registration-system redesign.',
     ],
   },
 ] as const;
@@ -116,6 +116,20 @@ export const projects = [
     tags: ['Image generation', 'Multi-view'],
   },
   {
+    title: 'Multi-Camera Face Intelligence',
+    period: '2018–2022',
+    summary:
+      'Created the original prototype and built the production AI and backend system for real-time CCTV face monitoring, then expanded into performance optimization and full-stack product improvements.',
+    tags: ['Face recognition', 'Real-time systems', 'Backend ownership'],
+  },
+  {
+    title: 'Vehicle & Number-Plate Intelligence',
+    period: '2019–2022',
+    summary:
+      'Created a vehicle-monitoring prototype and owned its core AI and backend work for detecting vehicles and extracting number plates from CCTV feeds; later fixed and improved the adapted interface.',
+    tags: ['Object detection', 'ANPR', 'Prototype'],
+  },
+  {
     title: 'Multi-Style Image Transformation',
     period: '2023–2024',
     summary:
@@ -150,10 +164,14 @@ export const skillGroups = [
     title: 'AI & machine learning',
     skills: [
       'Computer Vision',
+      'Face Recognition',
       'Anomaly Detection',
       'Object Detection',
+      'Object Tracking',
       'Keypoint Detection',
       'Segmentation',
+      'Video Analytics',
+      'ANPR',
       'Generative AI',
       'Inpainting',
       'Multimodal RAG',
@@ -181,6 +199,7 @@ export const skillGroups = [
       'FastAPI',
       'Flask',
       'REST APIs',
+      'WebSockets',
       'React',
       'Next.js',
       'JavaScript',
@@ -200,6 +219,7 @@ export const skillGroups = [
       'PostgreSQL',
       'MongoDB',
       'SQLite',
+      'Redis',
       'Git',
       'Shell',
     ],
@@ -207,6 +227,17 @@ export const skillGroups = [
 ] as const;
 
 export const publications = [
+  {
+    type: 'Product walkthrough',
+    title: 'Multi-Camera Face Intelligence Platform',
+    year: '2020',
+    links: [
+      {
+        label: 'Watch',
+        href: 'https://www.youtube.com/watch?v=htZk24_gaVs',
+      },
+    ],
+  },
   {
     type: 'Authored article',
     title: 'Combating the Malicious Use of AI-Powered Image Editing',
