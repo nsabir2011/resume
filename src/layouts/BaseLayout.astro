@@ -26,7 +26,31 @@ const socialImageAlt =
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#0e1117" />
+    <meta id="theme-color" name="theme-color" content="#0e1117" />
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        let savedTheme = null;
+
+        try {
+          savedTheme = window.localStorage.getItem('portfolio-theme');
+        } catch {
+          savedTheme = null;
+        }
+
+        const theme =
+          savedTheme === 'light' || savedTheme === 'dark'
+            ? savedTheme
+            : window.matchMedia('(prefers-color-scheme: light)').matches
+              ? 'light'
+              : 'dark';
+
+        root.dataset.theme = theme;
+        document
+          .querySelector('#theme-color')
+          ?.setAttribute('content', theme === 'light' ? '#f4f7fb' : '#0e1117');
+      })();
+    </script>
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />

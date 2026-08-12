@@ -7,8 +7,39 @@
   --muted: #a8b1bf;
   --quiet: #798493;
   --line: #2a323e;
+  --line-hover: #3b485a;
+  --line-hover-strong: #445165;
   --accent: #62c7bd;
   --accent-2: #79a9ff;
+  --brand-ink: #0e1117;
+  --header-bg: rgba(14, 17, 23, 0.92);
+  --header-line: rgba(42, 50, 62, 0.8);
+  --intro-strong: #c1c9d4;
+  --list-text: #c6ced9;
+  --detail-text: #c5ceda;
+  --portrait-border: #344154;
+  --tag-text: #9daabc;
+  --tag-border: #303a48;
+  --skill-text: #c1cad6;
+  --skill-border: #2f3946;
+  --support-link: #c5ceda;
+  --support-underline: #536071;
+  --credential-bg: rgba(121, 169, 255, 0.1);
+  --credential-border: rgba(121, 169, 255, 0.2);
+  --project-icon-color: #8393a8;
+  --project-icon-bg: rgba(121, 169, 255, 0.055);
+  --project-icon-border: rgba(121, 169, 255, 0.13);
+  --hero-cyan-glow: rgba(98, 199, 189, 0.11);
+  --hero-blue-glow: rgba(121, 169, 255, 0.12);
+  --grid-line: rgba(121, 169, 255, 0.026);
+  --pointer-glow: rgba(98, 199, 189, 0.035);
+  --pointer-grid: rgba(121, 169, 255, 0.085);
+  --projects-glow: rgba(121, 169, 255, 0.055);
+  --timeline-signal-soft: rgba(121, 169, 255, 0.12);
+  --timeline-signal-blue: rgba(121, 169, 255, 0.82);
+  --timeline-signal-cyan: rgba(98, 199, 189, 0.64);
+  --timeline-signal-shadow: rgba(121, 169, 255, 0.28);
+  --card-shadow: none;
   --max: 1080px;
   --radius: 14px;
   color-scheme: dark;
@@ -20,6 +51,51 @@
     'Segoe UI',
     sans-serif;
   font-synthesis: none;
+}
+
+:root[data-theme='light'] {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --surface-3: #edf2f7;
+  --ink: #0f172a;
+  --muted: #475569;
+  --quiet: #64748b;
+  --line: #d8e0ea;
+  --line-hover: #b8c5d5;
+  --line-hover-strong: #aab9cb;
+  --accent: #0f766e;
+  --accent-2: #2563eb;
+  --brand-ink: #f8fafc;
+  --header-bg: rgba(244, 247, 251, 0.9);
+  --header-line: rgba(203, 213, 225, 0.9);
+  --intro-strong: #334155;
+  --list-text: #334155;
+  --detail-text: #334155;
+  --portrait-border: #c5d0df;
+  --tag-text: #52627a;
+  --tag-border: #d2dbe7;
+  --skill-text: #334155;
+  --skill-border: #d7e0eb;
+  --support-link: #334155;
+  --support-underline: #94a3b8;
+  --credential-bg: rgba(37, 99, 235, 0.075);
+  --credential-border: rgba(37, 99, 235, 0.16);
+  --project-icon-color: #53677f;
+  --project-icon-bg: rgba(37, 99, 235, 0.055);
+  --project-icon-border: rgba(37, 99, 235, 0.13);
+  --hero-cyan-glow: rgba(15, 118, 110, 0.1);
+  --hero-blue-glow: rgba(37, 99, 235, 0.085);
+  --grid-line: rgba(37, 99, 235, 0.04);
+  --pointer-glow: rgba(15, 118, 110, 0.045);
+  --pointer-grid: rgba(37, 99, 235, 0.085);
+  --projects-glow: rgba(37, 99, 235, 0.055);
+  --timeline-signal-soft: rgba(37, 99, 235, 0.08);
+  --timeline-signal-blue: rgba(37, 99, 235, 0.62);
+  --timeline-signal-cyan: rgba(15, 118, 110, 0.5);
+  --timeline-signal-shadow: rgba(37, 99, 235, 0.18);
+  --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  color-scheme: light;
 }
 
 * {
@@ -37,6 +113,9 @@ body {
   background: var(--bg);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease;
 }
 
 main {
@@ -62,8 +141,8 @@ svg {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(14, 17, 23, 0.92);
-  border-bottom: 1px solid rgba(42, 50, 62, 0.8);
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--header-line);
   backdrop-filter: blur(14px);
 }
 
@@ -89,7 +168,7 @@ svg {
   height: 32px;
   display: grid;
   place-items: center;
-  color: var(--bg);
+  color: var(--brand-ink);
   background: var(--accent);
   border-radius: 8px;
   font-size: 0.64rem;
@@ -122,6 +201,54 @@ svg {
   border-radius: 8px;
 }
 
+.theme-toggle {
+  width: 35px;
+  height: 35px;
+  display: grid;
+  flex: 0 0 35px;
+  place-items: center;
+  padding: 0;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus-visible {
+  color: var(--ink);
+  border-color: var(--line-hover-strong);
+}
+
+.theme-toggle-icon,
+.theme-toggle-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.theme-toggle-icon svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.theme-toggle-moon {
+  display: none;
+}
+
+:root[data-theme='light'] .theme-toggle-sun {
+  display: none;
+}
+
+:root[data-theme='light'] .theme-toggle-moon {
+  display: block;
+}
+
 .intro {
   position: relative;
   min-height: 630px;
@@ -144,16 +271,16 @@ svg {
   background:
     radial-gradient(
       circle at 18% 31%,
-      rgba(98, 199, 189, 0.11),
+      var(--hero-cyan-glow),
       transparent 31rem
     ),
     radial-gradient(
       circle at 82% 38%,
-      rgba(121, 169, 255, 0.12),
+      var(--hero-blue-glow),
       transparent 28rem
     ),
-    linear-gradient(rgba(121, 169, 255, 0.026) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(121, 169, 255, 0.026) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size:
     auto,
     auto,
@@ -181,11 +308,11 @@ svg {
   background:
     radial-gradient(
       circle 230px at var(--pointer-x, 50vw) var(--pointer-y, 50%),
-      rgba(98, 199, 189, 0.035),
+      var(--pointer-glow),
       transparent 72%
     ),
-    linear-gradient(rgba(121, 169, 255, 0.085) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(121, 169, 255, 0.085) 1px, transparent 1px);
+    linear-gradient(var(--pointer-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--pointer-grid) 1px, transparent 1px);
   background-size:
     auto,
     44px 44px,
@@ -220,7 +347,7 @@ h1 {
 .intro-summary {
   max-width: 680px;
   margin: 24px 0 0;
-  color: #c1c9d4;
+  color: var(--intro-strong);
   font-size: 1.05rem;
   line-height: 1.75;
 }
@@ -275,7 +402,7 @@ h1 {
   aspect-ratio: 1;
   overflow: hidden;
   background: var(--surface);
-  border: 1px solid #344154;
+  border: 1px solid var(--portrait-border);
   border-radius: 18px;
 }
 
@@ -309,7 +436,7 @@ h1 {
 
 .social-card:hover,
 .social-card:focus-visible {
-  border-color: #445165;
+  border-color: var(--line-hover-strong);
 }
 
 .social-icon {
@@ -379,7 +506,7 @@ h1 {
   pointer-events: none;
   background: radial-gradient(
     ellipse at 78% 42%,
-    rgba(121, 169, 255, 0.055),
+    var(--projects-glow),
     transparent 46rem
   );
   transform: translateX(-50%);
@@ -431,7 +558,7 @@ h1 {
 .about-list li {
   position: relative;
   padding: 17px 20px 17px 29px;
-  color: #c6ced9;
+  color: var(--list-text);
   border-bottom: 1px solid var(--line);
   font-size: 0.89rem;
 }
@@ -478,15 +605,15 @@ h1 {
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(121, 169, 255, 0.12) 22%,
-    rgba(121, 169, 255, 0.82) 48%,
-    rgba(98, 199, 189, 0.64) 62%,
+    var(--timeline-signal-soft) 22%,
+    var(--timeline-signal-blue) 48%,
+    var(--timeline-signal-cyan) 62%,
     transparent
   );
   background-repeat: no-repeat;
   background-position: 0 70%;
   background-size: 100% 112px;
-  filter: drop-shadow(0 0 3px rgba(121, 169, 255, 0.28));
+  filter: drop-shadow(0 0 3px var(--timeline-signal-shadow));
   animation: timeline-signal 8s linear infinite;
 }
 
@@ -611,7 +738,7 @@ h1 {
 .support-card li {
   position: relative;
   padding-left: 16px;
-  color: #c5ceda;
+  color: var(--detail-text);
   font-size: 0.79rem;
 }
 
@@ -642,6 +769,7 @@ h1 {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
   transition:
     border-color 160ms ease,
     transform 160ms ease;
@@ -655,7 +783,7 @@ h1 {
 .support-card:hover,
 .support-card:focus-within,
 .credential-card:hover {
-  border-color: #3b485a;
+  border-color: var(--line-hover);
   transform: translateY(-1px);
 }
 
@@ -733,9 +861,9 @@ h1 {
 
 .tag-list li {
   padding: 4px 7px;
-  color: #9daabc;
+  color: var(--tag-text);
   background: var(--surface-3);
-  border: 1px solid #303a48;
+  border: 1px solid var(--tag-border);
   border-radius: 6px;
   font-size: 0.61rem;
   font-weight: 620;
@@ -759,9 +887,9 @@ h1 {
 
 .skill-items li {
   padding: 7px 9px;
-  color: #c1cad6;
+  color: var(--skill-text);
   background: var(--surface-2);
-  border: 1px solid #2f3946;
+  border: 1px solid var(--skill-border);
   border-radius: 7px;
   font-size: 0.67rem;
   font-weight: 620;
@@ -776,7 +904,7 @@ h1 {
 
 .article-card:hover,
 .article-card:focus-within {
-  border-color: #445165;
+  border-color: var(--line-hover-strong);
 }
 
 .article-card h3 {
@@ -840,10 +968,10 @@ h1 {
   display: inline-flex;
   gap: 6px;
   margin-top: 19px;
-  color: #c5ceda;
+  color: var(--support-link);
   font-size: 0.74rem;
   font-weight: 650;
-  text-decoration-color: #536071;
+  text-decoration-color: var(--support-underline);
   text-underline-offset: 4px;
 }
 
@@ -864,8 +992,8 @@ h1 {
   place-items: center;
   margin-bottom: 22px;
   color: var(--accent-2);
-  background: rgba(121, 169, 255, 0.1);
-  border: 1px solid rgba(121, 169, 255, 0.2);
+  background: var(--credential-bg);
+  border: 1px solid var(--credential-border);
   border-radius: 10px;
   font-size: 0.7rem;
   font-weight: 760;
@@ -915,7 +1043,7 @@ h1 {
 
 .contact-options a:hover,
 .contact-options a:focus-visible {
-  border-color: #445165;
+  border-color: var(--line-hover-strong);
 }
 
 .contact-options strong,
@@ -981,16 +1109,16 @@ h1 {
     background:
       radial-gradient(
         circle at 12% 18%,
-        rgba(98, 199, 189, 0.1),
+        var(--hero-cyan-glow),
         transparent 22rem
       ),
       radial-gradient(
         circle at 76% 66%,
-        rgba(121, 169, 255, 0.095),
+        var(--hero-blue-glow),
         transparent 24rem
       ),
-      linear-gradient(rgba(121, 169, 255, 0.022) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(121, 169, 255, 0.022) 1px, transparent 1px);
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size:
       auto,
       auto,
