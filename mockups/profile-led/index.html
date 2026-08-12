@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Professional portfolio of Nazmus Sakib Abir, an AI/ML engineer and technical lead working across computer vision, generative AI, multimodal RAG, and production systems.">
+  <title>Nazmus Sakib Abir — AI/ML Engineer</title>
+  <style>
+    :root {
+      --bg: #0e1117;
+      --surface: #141922;
+      --surface-2: #191f29;
+      --surface-3: #202733;
+      --ink: #f1f4f8;
+      --muted: #a8b1bf;
+      --quiet: #798493;
+      --line: #2a323e;
+      --accent: #62c7bd;
+      --accent-2: #79a9ff;
+      --accent-soft: rgba(98, 199, 189, 0.1);
+      --max: 1080px;
+      --radius: 14px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+    svg { display: block; }
+
+    .container {
+      width: min(calc(100% - 40px), var(--max));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(14, 17, 23, 0.92);
+      border-bottom: 1px solid rgba(42, 50, 62, 0.8);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      margin-right: auto;
+      font-size: 0.86rem;
+      font-weight: 750;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      color: var(--bg);
+      background: var(--accent);
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-weight: 850;
+      letter-spacing: -0.05em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.77rem;
+      font-weight: 620;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    .contact-link {
+      padding: 8px 12px;
+      color: var(--ink) !important;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(290px, 0.65fr);
+      gap: 76px;
+      align-items: center;
+      min-height: 630px;
+      padding-block: 76px;
+    }
+
+    .role-label {
+      margin: 0 0 16px;
+      color: var(--accent);
+      font-size: 0.73rem;
+      font-weight: 760;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 4.65rem);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+    }
+
+    .intro-summary {
+      max-width: 680px;
+      margin: 24px 0 0;
+      color: #c1c9d4;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .intro-detail {
+      max-width: 650px;
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .intro-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 29px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .intro-meta li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .intro-meta svg { color: var(--accent-2); }
+
+    .profile-column { width: 100%; max-width: 340px; justify-self: end; }
+
+    .portrait {
+      position: relative;
+      aspect-ratio: 4 / 4.55;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 72% 25%, rgba(121, 169, 255, 0.25), transparent 28%),
+        linear-gradient(145deg, #1c2737, #151a22 70%);
+      border: 1px solid #344154;
+      border-radius: 18px;
+    }
+
+    .portrait::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.15;
+      background-image:
+        linear-gradient(rgba(255,255,255,.13) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.13) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, #000, transparent 85%);
+    }
+
+    .portrait-placeholder {
+      position: relative;
+      width: 165px;
+      height: 165px;
+      display: grid;
+      place-items: center;
+      color: #dbe6f6;
+      background: #26354b;
+      border: 1px solid #40536f;
+      border-radius: 50%;
+      font-size: 2.6rem;
+      font-weight: 780;
+      letter-spacing: -0.08em;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+    }
+
+    .portrait-note {
+      position: absolute;
+      left: 18px;
+      bottom: 16px;
+      z-index: 1;
+      color: #8592a4;
+      font-size: 0.66rem;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .social-row {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+      margin-top: 10px;
+    }
+
+    .social-card {
+      display: grid;
+      grid-template-columns: 34px 1fr auto;
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+      padding: 11px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      text-decoration: none;
+    }
+
+    .social-icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      background: var(--surface-3);
+      border-radius: 8px;
+    }
+
+    .social-card strong {
+      display: block;
+      overflow: hidden;
+      font-size: 0.73rem;
+      line-height: 1.2;
+      text-overflow: ellipsis;
+    }
+
+    .social-card span {
+      display: block;
+      overflow: hidden;
+      margin-top: 3px;
+      color: var(--quiet);
+      font-size: 0.62rem;
+      line-height: 1.2;
+      text-overflow: ellipsis;
+    }
+
+    .social-arrow { color: var(--quiet); font-size: 0.72rem; }
+
+    .section {
+      padding: 78px 0;
+      border-top: 1px solid var(--line);
+      scroll-margin-top: 64px;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 38px;
+      align-items: start;
+      margin-bottom: 37px;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: 1.55rem;
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p {
+      max-width: 680px;
+      margin: 2px 0 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .section-count {
+      margin-left: 5px;
+      color: var(--quiet);
+      font-size: 0.7rem;
+      font-weight: 600;
+      vertical-align: top;
+    }
+
+    .about-list {
+      display: grid;
+      gap: 0;
+      margin: 0 0 0 248px;
+      padding: 0;
+      list-style: none;
+      border-top: 1px solid var(--line);
+    }
+
+    .about-list li {
+      position: relative;
+      padding: 17px 20px 17px 29px;
+      color: #c6ced9;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.89rem;
+    }
+
+    .about-list li::before {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 1.7em;
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .experience-timeline {
+      position: relative;
+      display: grid;
+      gap: 15px;
+      margin-left: 248px;
+      padding-left: 30px;
+    }
+
+    .experience-timeline::before {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      background: linear-gradient(var(--accent), var(--accent-2));
+    }
+
+    .experience-card {
+      position: relative;
+      padding: 27px 29px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .experience-card::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 34px;
+      width: 9px;
+      height: 9px;
+      background: var(--bg);
+      border: 3px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    .experience-card.previous::before { border-color: var(--accent-2); }
+
+    .experience-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .experience-status {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--accent);
+      font-size: 0.65rem;
+      font-weight: 760;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .experience-card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .experience-role {
+      margin: 5px 0 0;
+      color: var(--accent-2);
+      font-size: 0.8rem;
+      font-weight: 650;
+    }
+
+    .experience-period {
+      color: var(--muted);
+      font-size: 0.72rem;
+      white-space: nowrap;
+    }
+
+    .experience-summary {
+      margin: 20px 0 0;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .experience-points {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .experience-points li {
+      position: relative;
+      padding-left: 16px;
+      color: #c5ceda;
+      font-size: 0.79rem;
+    }
+
+    .experience-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.72em;
+      width: 4px;
+      height: 4px;
+      background: var(--accent-2);
+      border-radius: 50%;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-left: 248px;
+    }
+
+    .project-card {
+      min-height: 215px;
+      display: flex;
+      flex-direction: column;
+      padding: 23px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .project-card h3 {
+      margin: 0;
+      font-size: 0.98rem;
+      line-height: 1.35;
+      letter-spacing: -0.018em;
+    }
+
+    .project-card time {
+      color: var(--quiet);
+      font-size: 0.66rem;
+      white-space: nowrap;
+    }
+
+    .project-card p {
+      margin: 15px 0 0;
+      color: var(--muted);
+      font-size: 0.79rem;
+      line-height: 1.65;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 20px;
+    }
+
+    .tag {
+      padding: 4px 7px;
+      color: #9daabc;
+      background: var(--surface-3);
+      border: 1px solid #303a48;
+      border-radius: 6px;
+      font-size: 0.61rem;
+      font-weight: 620;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-left: 248px;
+    }
+
+    .skill-group {
+      padding: 23px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .skill-group h3 {
+      margin: 0;
+      padding-bottom: 13px;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      font-size: 0.82rem;
+      letter-spacing: -0.01em;
+    }
+
+    .skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 17px;
+    }
+
+    .skill {
+      padding: 7px 9px;
+      color: #c1cad6;
+      background: var(--surface-2);
+      border: 1px solid #2f3946;
+      border-radius: 7px;
+      font-size: 0.67rem;
+      font-weight: 620;
+    }
+
+    .writing-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-left: 248px;
+    }
+
+    .article-card {
+      min-height: 165px;
+      display: flex;
+      flex-direction: column;
+      padding: 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      text-decoration: none;
+    }
+
+    .article-type {
+      color: var(--accent);
+      font-size: 0.62rem;
+      font-weight: 730;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .article-card h3 {
+      margin: 13px 0 0;
+      font-size: 0.9rem;
+      line-height: 1.45;
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--quiet);
+      font-size: 0.65rem;
+    }
+
+    .support-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 12px;
+      margin-left: 248px;
+    }
+
+    .support-card {
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .support-card h3 {
+      margin: 0;
+      font-size: 0.94rem;
+      letter-spacing: -0.02em;
+    }
+
+    .support-card p {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 0.79rem;
+    }
+
+    .support-points {
+      display: grid;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .support-points li {
+      position: relative;
+      padding-left: 15px;
+      color: #c3ccd7;
+      font-size: 0.76rem;
+    }
+
+    .support-points li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-left: 248px;
+    }
+
+    .credential-card {
+      min-height: 185px;
+      padding: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .credential-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 22px;
+      color: var(--accent-2);
+      background: rgba(121, 169, 255, 0.1);
+      border: 1px solid rgba(121, 169, 255, 0.2);
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 760;
+    }
+
+    .credential-card h3 {
+      margin: 0;
+      font-size: 0.91rem;
+      line-height: 1.4;
+    }
+
+    .credential-card p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .contact-section {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 38px;
+      align-items: start;
+      padding: 72px 0 86px;
+      border-top: 1px solid var(--line);
+    }
+
+    .contact-section h2 {
+      margin: 0;
+      font-size: 1.55rem;
+      letter-spacing: -0.035em;
+    }
+
+    .contact-content p {
+      max-width: 610px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9px;
+      margin-top: 25px;
+    }
+
+    .contact-option {
+      padding: 14px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 9px;
+      text-decoration: none;
+    }
+
+    .contact-option strong { display: block; font-size: 0.72rem; }
+    .contact-option span { display: block; margin-top: 4px; color: var(--quiet); font-size: 0.62rem; overflow-wrap: anywhere; }
+
+    .site-footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 22px 0 30px;
+      color: var(--quiet);
+      border-top: 1px solid var(--line);
+      font-size: 0.66rem;
+    }
+
+    @media (max-width: 900px) {
+      .intro { grid-template-columns: 1fr 300px; gap: 42px; }
+      .section-heading { grid-template-columns: 165px 1fr; gap: 28px; }
+      .about-list,
+      .experience-timeline,
+      .projects,
+      .skills-grid,
+      .writing-grid,
+      .support-grid,
+      .credentials { margin-left: 193px; }
+      .contact-section { grid-template-columns: 165px 1fr; gap: 28px; }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links a:not(.contact-link) { display: none; }
+      .intro { grid-template-columns: 1fr; min-height: 0; padding-block: 70px; }
+      .profile-column { max-width: 390px; justify-self: start; }
+      .section-heading { grid-template-columns: 1fr; gap: 10px; }
+      .about-list,
+      .experience-timeline,
+      .projects,
+      .skills-grid,
+      .writing-grid,
+      .support-grid,
+      .credentials { margin-left: 0; }
+      .contact-section { grid-template-columns: 1fr; gap: 18px; }
+      .projects,
+      .skills-grid,
+      .writing-grid,
+      .support-grid,
+      .credentials { grid-template-columns: 1fr; }
+      .contact-options { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 520px) {
+      .container { width: min(calc(100% - 24px), var(--max)); }
+      .brand > span:last-child { display: none; }
+      .intro { padding-block: 55px; }
+      h1 { font-size: 2.75rem; }
+      .intro-summary { font-size: 0.94rem; }
+      .social-row { grid-template-columns: 1fr; }
+      .section { padding-block: 61px; }
+      .experience-timeline { padding-left: 23px; }
+      .experience-card::before { left: -24px; }
+      .experience-top { display: block; }
+      .experience-period { display: block; margin-top: 12px; }
+      .project-card { min-height: 0; }
+      .site-footer { display: block; }
+      .site-footer span { display: block; margin-top: 5px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#top"><span class="brand-mark">SA</span><span>Nazmus Sakib Abir</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#writing">Writing</a>
+        <a class="contact-link" href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="intro container" aria-labelledby="intro-title">
+      <div>
+        <p class="role-label">AI/ML Engineer · Technical Lead</p>
+        <h1 id="intro-title">Nazmus Sakib Abir</h1>
+        <p class="intro-summary">Applied AI engineer with professional experience since 2018, working across computer vision, generative AI, multimodal RAG, product engineering, and cloud deployment.</p>
+        <p class="intro-detail">Current responsibilities combine technical investigation, project leadership, hands-on implementation, and delivery of usable AI systems under practical hardware, data, licensing, and timeline constraints.</p>
+        <ul class="intro-meta">
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s7-5.2 7-12A7 7 0 0 0 5 9c0 6.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2"/></svg>Dhaka, Bangladesh</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4h8v2"/></svg>Chowa Giken Corporation</li>
+          <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v14H4zM4 7l8 6 8-6"/></svg>nsabir2011@gmail.com</li>
+        </ul>
+      </div>
+
+      <div class="profile-column">
+        <div class="portrait" aria-label="Portrait placeholder">
+          <div class="portrait-placeholder" aria-hidden="true">SA</div>
+          <span class="portrait-note">Portrait placeholder</span>
+        </div>
+        <div class="social-row" aria-label="Professional profiles">
+          <a class="social-card" href="https://www.linkedin.com/in/nsabir2011/">
+            <span class="social-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.3H3.2V21h3.3V8.3ZM4.8 3A1.9 1.9 0 1 0 4.8 6.8 1.9 1.9 0 0 0 4.8 3ZM21 13.7c0-3.8-2-5.6-4.7-5.6-2.2 0-3.1 1.2-3.7 2v-1.8H9.3V21h3.3v-6.3c0-1.7.3-3.3 2.4-3.3 2 0 2.1 1.9 2.1 3.4V21H21v-7.3Z"/></svg></span>
+            <span><strong>LinkedIn</strong><span>in/nsabir2011</span></span><span class="social-arrow">↗</span>
+          </a>
+          <a class="social-card" href="https://github.com/nsabir2011">
+            <span class="social-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2A10 10 0 0 0 8.8 21.5c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.4-1.1.6-1.3-2.3-.3-4.6-1.1-4.6-5A3.9 3.9 0 0 1 6.5 8.6c-.1-.3-.5-1.3.1-2.7 0 0 .8-.3 2.8 1A9.5 9.5 0 0 1 12 6.6a9.5 9.5 0 0 1 2.6.3c2-1.3 2.8-1 2.8-1 .6 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.8-4.6 5 .4.3.7 1 .7 2V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg></span>
+            <span><strong>GitHub</strong><span>@nsabir2011</span></span><span class="social-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="section-heading">
+        <h2 id="about-title">About</h2>
+        <p>A concise view of the capabilities and working style developed across applied AI, software engineering, and technical-development leadership.</p>
+      </div>
+      <ul class="about-list">
+        <li>End-to-end delivery across model research, AI pipelines, REST APIs, product interfaces, deployment, and operations.</li>
+        <li>Experience proposing and leading technical projects while remaining directly involved in engineering and evaluation.</li>
+        <li>Strong focus on practical constraints—including GPU memory, latency, data availability, commercial-use restrictions, and delivery time.</li>
+        <li>Regular contributions beyond implementation through research documentation, mentoring, university teaching, demos, and technical presentations.</li>
+      </ul>
+    </section>
+
+    <section class="section container" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading">
+        <h2 id="experience-title">Experience</h2>
+        <p>Professional roles and the scope of work carried in each organization.</p>
+      </div>
+      <div class="experience-timeline">
+        <article class="experience-card">
+          <div class="experience-top">
+            <div>
+              <span class="experience-status">Current employer</span>
+              <h3>Chowa Giken Corporation</h3>
+              <p class="experience-role">AI/ML Engineering · Technical-Development Leadership</p>
+            </div>
+            <time class="experience-period">Oct 2022 — Present</time>
+          </div>
+          <p class="experience-summary">Applied research and product development spanning computer vision, generative AI, multimodal RAG, backend and frontend engineering, infrastructure, and technical leadership.</p>
+          <ul class="experience-points">
+            <li>Proposed and led internal technical-development and research initiatives.</li>
+            <li>Delivered AI systems, APIs, interfaces, demonstrations, and cloud deployments.</li>
+            <li>Contributed to patents, public technical material, mentoring, and stakeholder presentations.</li>
+          </ul>
+        </article>
+
+        <article class="experience-card previous">
+          <div class="experience-top">
+            <div>
+              <span class="experience-status">Previous</span>
+              <h3>MononAI Limited</h3>
+              <p class="experience-role">Full Stack Developer · Deep Learning Engineer</p>
+            </div>
+            <time class="experience-period">Jun 2018 — 2022</time>
+          </div>
+          <p class="experience-summary">Development of AI-powered video-surveillance products and the production software required to deploy, operate, and expose them to users.</p>
+          <ul class="experience-points">
+            <li>Object detection, tracking, face recognition, vehicle ANPR, and analytics.</li>
+            <li>Deep-learning services, REST APIs, production inference optimization, and deployment.</li>
+            <li>React interfaces, application features, and SQL/NoSQL data workflows.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Selected projects <span class="section-count">10</span></h2>
+        <p>High-level summaries of personal responsibilities and contributions. Client and internal implementation details are intentionally omitted.</p>
+      </div>
+      <div class="projects">
+        <article class="project-card"><div class="project-top"><h3>Multimodal RAG</h3><time>2024–2026</time></div><p>Proposed and led two generations of document-chat systems that combine written answers with relevant source visuals; contributed directly to engineering, demos, and team guidance.</p><div class="tag-list"><span class="tag">RAG</span><span class="tag">OCR</span><span class="tag">LLMs</span><span class="tag">Development lead</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Vision Inference Optimization</h3><time>2023</time></div><p>Optimized a high-resolution image-processing pipeline and reduced per-sample runtime from approximately 42 seconds to 12–13 seconds without retraining or output changes.</p><div class="tag-list"><span class="tag">Computer vision</span><span class="tag">PyTorch</span><span class="tag">Performance</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Generative Floorplan Development</h3><time>2025–2026</time></div><p>Contributed model development, dataset annotation, REST API work, and deployment; later proposed and led an evaluation that demonstrated a simpler generation workflow.</p><div class="tag-list"><span class="tag">Generative AI</span><span class="tag">Stable Diffusion</span><span class="tag">FastAPI</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Product Anomaly Detection</h3><time>2023–2024</time></div><p>Led ASJ-side work across the backend and React interface for data upload, model training, and inference, including performance and usability improvements.</p><div class="tag-list"><span class="tag">Anomaly detection</span><span class="tag">React</span><span class="tag">Backend</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Forecast Explainability</h3><time>2024</time></div><p>Led development of an AI system that provides useful context around forecast-model predictions, with responsibility spanning the solution, demonstration, and related patent contribution.</p><div class="tag-list"><span class="tag">Explainable AI</span><span class="tag">LLMs</span><span class="tag">Tech lead</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Generative House Exterior</h3><time>2025–2026</time></div><p>Developed model workflows for generating consistent house-exterior views from elevation plans while following supplied textures and design requirements.</p><div class="tag-list"><span class="tag">SDXL</span><span class="tag">Image generation</span><span class="tag">Multi-view</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Multi-Style Image Transformation</h3><time>2023–2024</time></div><p>Worked across model training, desktop GUI, backend, frontend, and deployment for a component-aware artistic image-transformation system.</p><div class="tag-list"><span class="tag">LoRA</span><span class="tag">Kivy</span><span class="tag">SDXL</span><span class="tag">SAM</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>AI Demo Delivery Platform</h3><time>2023–2024</time></div><p>Prepared several AI demonstrations and developed the shared portal, cloud infrastructure, Nginx setup, SSL, deployments, and ongoing maintenance.</p><div class="tag-list"><span class="tag">Azure</span><span class="tag">Nginx</span><span class="tag">Deployment</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Commercial-Friendly Model Research</h3><time>2023–2024</time></div><p>Proposed and conducted model-comparison studies for segmentation and object detection, producing reusable internal references for future project selection.</p><div class="tag-list"><span class="tag">Model evaluation</span><span class="tag">Computer vision</span><span class="tag">Research</span></div></article>
+        <article class="project-card"><div class="project-top"><h3>Applied AI Demonstrations</h3><time>2024</time></div><p>Delivered multiple short-cycle demonstrations covering conversational AI, executive communication, stadium experiences, and 2D-to-3D interfaces.</p><div class="tag-list"><span class="tag">LLMs</span><span class="tag">Gradio</span><span class="tag">Rapid prototyping</span></div></article>
+      </div>
+    </section>
+
+    <section class="section container" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <h2 id="skills-title">Technical skills</h2>
+        <p>Grouped by working area to show how the technologies fit into complete AI systems.</p>
+      </div>
+      <div class="skills-grid">
+        <article class="skill-group"><h3>AI &amp; machine learning</h3><div class="skill-items"><span class="skill">Computer Vision</span><span class="skill">Anomaly Detection</span><span class="skill">Object Detection</span><span class="skill">Segmentation</span><span class="skill">Generative AI</span><span class="skill">Inpainting</span><span class="skill">Multimodal RAG</span><span class="skill">OCR</span><span class="skill">Forecast Explainability</span></div></article>
+        <article class="skill-group"><h3>Models &amp; frameworks</h3><div class="skill-items"><span class="skill">PyTorch</span><span class="skill">OpenCV</span><span class="skill">Stable Diffusion 1.5</span><span class="skill">SDXL</span><span class="skill">LoRA</span><span class="skill">GDINO</span><span class="skill">SAM</span><span class="skill">TensorRT</span><span class="skill">Language Models</span></div></article>
+        <article class="skill-group"><h3>Backend &amp; interfaces</h3><div class="skill-items"><span class="skill">Python</span><span class="skill">FastAPI</span><span class="skill">Flask</span><span class="skill">REST APIs</span><span class="skill">React</span><span class="skill">JavaScript</span><span class="skill">Kivy</span><span class="skill">Gradio</span><span class="skill">Testing</span></div></article>
+        <article class="skill-group"><h3>Infrastructure &amp; data</h3><div class="skill-items"><span class="skill">Docker</span><span class="skill">Linux</span><span class="skill">Google Cloud</span><span class="skill">Azure</span><span class="skill">Nginx</span><span class="skill">PostgreSQL</span><span class="skill">MongoDB</span><span class="skill">Git</span><span class="skill">Shell</span></div></article>
+      </div>
+    </section>
+
+    <section class="section container" id="writing" aria-labelledby="writing-title">
+      <div class="section-heading">
+        <h2 id="writing-title">Public work</h2>
+        <p>Published technical writing and public, high-level demonstrations connected to recent work.</p>
+      </div>
+      <div class="writing-grid">
+        <a class="article-card" href="https://www.chowagiken.co.jp/future-studio/combating_malicious_use/"><span class="article-type">Authored article</span><h3>Combating the Malicious Use of AI-Powered Image Editing</h3><span class="article-meta"><span>2024</span><span>Read ↗</span></span></a>
+        <a class="article-card" href="https://www.chowagiken.co.jp/future-studio/visual-response-rag/"><span class="article-type">Project overview</span><h3>Visual Response RAG</h3><span class="article-meta"><span>2026</span><span>View ↗</span></span></a>
+        <a class="article-card" href="https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/"><span class="article-type">Video demonstration</span><h3>Visual Response RAG in Action</h3><span class="article-meta"><span>2026</span><span>View ↗</span></span></a>
+        <a class="article-card" href="https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/"><span class="article-type">Project overview</span><h3>Forecast Visualization AI</h3><span class="article-meta"><span>2026</span><span>View ↗</span></span></a>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="community-title">
+      <div class="section-heading">
+        <h2 id="community-title">Teaching &amp; contribution</h2>
+        <p>Work that supports other engineers, students, and the broader organization.</p>
+      </div>
+      <div class="support-grid">
+        <article class="support-card"><h3>University AI mentoring</h3><p>Lecturer-equivalent contribution to university AI programs through material preparation, lecture delivery, technical guidance, and project mentoring.</p><ul class="support-points"><li>Prepared approximately one-third of the first program's lecture material.</li><li>Delivered sessions shared with BRAC University and North South University students.</li><li>Supported a mentored group that won the program's final prize.</li></ul></article>
+        <article class="support-card"><h3>Team and external contribution</h3><p>Research documentation, junior-engineer support, Code Samurai participation, and presentation of company projects and technical capabilities to external stakeholders.</p><ul class="support-points"><li>Reusable model-comparison documentation.</li><li>Mentoring for engineers moving into unfamiliar AI work.</li><li>Technical and project presentations for varied audiences.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="credentials-title">
+      <div class="section-heading">
+        <h2 id="credentials-title">Education &amp; certification</h2>
+        <p>Formal academic background and current cloud credential.</p>
+      </div>
+      <div class="credentials">
+        <article class="credential-card"><div class="credential-icon">GCP</div><h3>Google Cloud Associate Cloud Engineer</h3><p>Professional cloud certification · Completed by 2025</p></article>
+        <article class="credential-card"><div class="credential-icon">BSc</div><h3>Electrical &amp; Electronic Engineering</h3><p>BRAC University · 2014–2018 · CGPA 3.67</p></article>
+      </div>
+    </section>
+
+    <section class="contact-section container" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="contact-content">
+        <p>Professional enquiries and hiring conversations can be sent through email or either professional profile.</p>
+        <div class="contact-options">
+          <a class="contact-option" href="mailto:nsabir2011@gmail.com"><strong>Email</strong><span>nsabir2011@gmail.com</span></a>
+          <a class="contact-option" href="https://www.linkedin.com/in/nsabir2011/"><strong>LinkedIn</strong><span>in/nsabir2011 ↗</span></a>
+          <a class="contact-option" href="https://github.com/nsabir2011"><strong>GitHub</strong><span>@nsabir2011 ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <strong>Nazmus Sakib Abir · AI/ML Engineer</strong>
+    <span>Static portfolio concept · Updated August 2026</span>
+  </footer>
+</body>
+</html>
