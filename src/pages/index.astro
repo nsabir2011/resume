@@ -150,7 +150,7 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
       aria-labelledby="projects-title"
     >
       <SectionHeading
-        title="Selected projects"
+        title="Projects"
         count={projects.length}
         description="High-level summaries of personal responsibilities and contributions. Client and internal implementation details are intentionally omitted."
       />
@@ -211,14 +211,18 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
       <div class="offset-content writing-grid">
         {
           publications.map((publication) => (
-            <a class="article-card" href={publication.href}>
+            <article class="article-card">
               <span class="article-type">{publication.type}</span>
               <h3>{publication.title}</h3>
-              <span class="article-meta">
+              <div class="article-meta">
                 <span>{publication.year}</span>
-                <span>View ↗</span>
-              </span>
-            </a>
+                <div class="article-links">
+                  {publication.links.map((link) => (
+                    <a href={link.href}>{link.label} ↗</a>
+                  ))}
+                </div>
+              </div>
+            </article>
           ))
         }
       </div>

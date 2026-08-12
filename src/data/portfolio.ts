@@ -2,7 +2,7 @@ export const profile = {
   name: 'Nazmus Sakib Abir',
   role: 'AI/ML Engineer · Technical Lead',
   location: 'Dhaka, Bangladesh',
-  employer: 'Chowa Giken Corporation',
+  employer: 'Chowa Giken Corporation | Japan',
   email: 'nsabir2011@gmail.com',
   summary:
     'Applied AI engineer with professional experience since 2018, working across computer vision, generative AI, multimodal RAG, product engineering, and cloud deployment.',
@@ -79,7 +79,7 @@ export const projects = [
     title: 'Vision Inference Optimization',
     period: '2023',
     summary:
-      'Optimized a high-resolution image-processing pipeline and reduced per-sample runtime from approximately 42 seconds to 12–13 seconds without retraining or output changes.',
+      'Optimized a 360-degree image-processing pipeline to run more than 3× faster without retraining or changing its outputs.',
     tags: ['Computer vision', 'PyTorch', 'Performance'],
   },
   {
@@ -87,13 +87,13 @@ export const projects = [
     period: '2025–2026',
     summary:
       'Contributed model development, dataset annotation, REST API work, and deployment; later proposed and led an evaluation that demonstrated a simpler generation workflow.',
-    tags: ['Generative AI', 'Stable Diffusion', 'FastAPI'],
+    tags: ['Generative AI', 'Image generation', 'FastAPI'],
   },
   {
     title: 'Product Anomaly Detection',
     period: '2023–2024',
     summary:
-      'Led ASJ-side work across the backend and React interface for data upload, model training, and inference, including performance and usability improvements.',
+      'Led the Bangladesh engineering team across backend and React interface development for data upload, model training, and inference, including performance and usability improvements.',
     tags: ['Anomaly detection', 'React', 'Backend'],
   },
   {
@@ -108,14 +108,14 @@ export const projects = [
     period: '2025–2026',
     summary:
       'Developed model workflows for generating consistent house-exterior views from elevation plans while following supplied textures and design requirements.',
-    tags: ['SDXL', 'Image generation', 'Multi-view'],
+    tags: ['Image generation', 'Multi-view'],
   },
   {
     title: 'Multi-Style Image Transformation',
     period: '2023–2024',
     summary:
-      'Worked across model training, desktop GUI, backend, frontend, and deployment for a component-aware artistic image-transformation system.',
-    tags: ['LoRA', 'Kivy', 'SDXL', 'SAM'],
+      'Worked across model training, backend development, web UI development, and deployment for a component-aware artistic image-transformation system.',
+    tags: ['Image generation', 'Web UI', 'Segmentation', 'Deployment'],
   },
   {
     title: 'AI Demo Delivery Platform',
@@ -147,6 +147,7 @@ export const skillGroups = [
       'Computer Vision',
       'Anomaly Detection',
       'Object Detection',
+      'Keypoint Detection',
       'Segmentation',
       'Generative AI',
       'Inpainting',
@@ -156,17 +157,16 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Models & frameworks',
+    title: 'Frameworks & model tooling',
     skills: [
       'PyTorch',
       'OpenCV',
-      'Stable Diffusion 1.5',
-      'SDXL',
-      'LoRA',
-      'GDINO',
-      'SAM',
+      'Hugging Face Diffusers',
+      'PEFT',
       'TensorRT',
       'Language Models',
+      'Image Generation Models',
+      'Detection & Segmentation Models',
     ],
   },
   {
@@ -177,6 +177,7 @@ export const skillGroups = [
       'Flask',
       'REST APIs',
       'React',
+      'Next.js',
       'JavaScript',
       'Kivy',
       'Gradio',
@@ -193,6 +194,7 @@ export const skillGroups = [
       'Nginx',
       'PostgreSQL',
       'MongoDB',
+      'SQLite',
       'Git',
       'Shell',
     ],
@@ -204,25 +206,38 @@ export const publications = [
     type: 'Authored article',
     title: 'Combating the Malicious Use of AI-Powered Image Editing',
     year: '2024',
-    href: 'https://www.chowagiken.co.jp/future-studio/combating_malicious_use/',
+    links: [
+      {
+        label: 'View',
+        href: 'https://www.chowagiken.co.jp/future-studio/combating_malicious_use/',
+      },
+    ],
   },
   {
-    type: 'Project overview',
+    type: 'Project overview & demonstration',
     title: 'Visual Response RAG',
     year: '2026',
-    href: 'https://www.chowagiken.co.jp/future-studio/visual-response-rag/',
-  },
-  {
-    type: 'Video demonstration',
-    title: 'Visual Response RAG in Action',
-    year: '2026',
-    href: 'https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/',
+    links: [
+      {
+        label: 'Overview',
+        href: 'https://www.chowagiken.co.jp/future-studio/visual-response-rag/',
+      },
+      {
+        label: 'Video demo',
+        href: 'https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/',
+      },
+    ],
   },
   {
     type: 'Project overview',
     title: 'Forecast Visualization AI',
     year: '2026',
-    href: 'https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/',
+    links: [
+      {
+        label: 'View',
+        href: 'https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/',
+      },
+    ],
   },
 ] as const;
 
@@ -233,7 +248,7 @@ export const contributionCards = [
       'Lecturer-equivalent contribution to university AI programs through material preparation, lecture delivery, technical guidance, and project mentoring.',
     points: [
       "Prepared approximately one-third of the first program's lecture material.",
-      'Delivered sessions shared with BRAC University and North South University students.',
+      'Delivered lecture sessions shared with BRAC University and North South University students.',
       "Supported a mentored group that won the program's final prize.",
     ],
   },
