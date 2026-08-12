@@ -5,6 +5,7 @@ import ProjectIcon from '../components/ProjectIcon.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import heroIllustration from '../assets/ai-workstation-illustration.png';
+import heroIllustrationLight from '../assets/ai-workstation-illustration-light.png';
 import {
   aboutPoints,
   contributionCards,
@@ -89,17 +90,31 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
       </div>
 
       <div class="profile-column">
-        <div class="portrait">
+        <div
+          class="portrait"
+          role="img"
+          aria-label="Illustration of an AI engineering workstation viewed from behind a seated engineer"
+        >
           <Image
-            class="portrait-image"
+            class="portrait-image portrait-image-dark"
             src={heroIllustration}
-            alt="Illustration of an AI engineering workstation viewed from behind a seated engineer"
+            alt=""
             width={680}
             height={680}
             format="webp"
             quality={85}
             loading="eager"
             fetchpriority="high"
+          />
+          <Image
+            class="portrait-image portrait-image-light"
+            src={heroIllustrationLight}
+            alt=""
+            width={680}
+            height={680}
+            format="webp"
+            quality={85}
+            loading="eager"
           />
         </div>
         <div class="social-row" aria-label="Professional profiles">
