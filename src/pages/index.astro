@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 
 import SectionHeading from '../components/SectionHeading.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import profilePhoto from '../assets/nazmus-sakib-abir.jpg';
+import heroIllustration from '../assets/ai-workstation-illustration.png';
 import {
   aboutPoints,
   contributionCards,
@@ -87,10 +87,10 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
         <div class="portrait">
           <Image
             class="portrait-image"
-            src={profilePhoto}
-            alt="Nazmus Sakib Abir"
+            src={heroIllustration}
+            alt="Illustration of an AI engineering workstation viewed from behind a seated engineer"
             width={680}
-            height={680}
+            height={924}
             format="webp"
             quality={85}
             loading="eager"
