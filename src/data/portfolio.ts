@@ -250,7 +250,7 @@ export const contributionCards = [
   {
     title: 'University AI teaching & mentoring',
     summary:
-      'Delivered university-level AI lectures and mentored students through NIPPON AI Dojo at BRAC University.',
+      'Helped conduct two annual NIPPON AI Dojo cohorts at BRAC University since 2025, delivering university-level AI lectures and mentoring students in both cohorts.',
     points: [
       "Prepared approximately one-third of the first program's lecture material.",
       'Delivered lecture sessions shared with BRAC University and North South University students.',
