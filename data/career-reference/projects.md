@@ -26,6 +26,26 @@
 - **Engineering context:** This work was implemented and optimized before AI coding assistants were available, using conventional hands-on development, profiling, debugging, and systems engineering.
 - **Public evidence:** The public [FaceLens Version 1.0 walkthrough](https://www.youtube.com/watch?v=htZk24_gaVs), published on 2020-01-28, demonstrates live monitoring, identity matching, alerts and status categories, face search, people registration and management, attendance/activity analytics, and person- and device-level video summaries. The video supports the visible product capabilities, while the contribution and ownership details above are first-hand.
 
+## StreetLens
+
+**Period:** Prototype began March 2019; development continued during Nazmus's MononAI employment, but he left while the customer-focused work was still in progress; exact end date needs confirmation
+
+**Role:** Prototype creator; AI and backend owner; later frontend maintenance and improvement contributor
+
+**Public label suggestion:** Camera-Based Vehicle Detection and Number-Plate Intelligence
+
+**Portfolio treatment:** Supporting earlier-career project; describe as a prototype and incomplete customer pursuit rather than a completed deployment
+
+- **Purpose:** A vehicle-focused monitoring system that detected and logged vehicles passing through CCTV camera feeds and extracted their number plates into searchable records.
+- **Origin:** Built the prototype and owned its main AI and backend work.
+- **Product relationship:** Reused the FaceLens interface and its per-camera dashboard pattern, adapting the experience from people and face monitoring to vehicles and number plates.
+- **Per-camera workflow:** A user could select a particular camera feed, observe passing vehicles, and review the number plates logged for that camera.
+- **Backend ownership:** Implemented the vehicle-related AI processing and backend system. The exact APIs, storage architecture, recognition pipeline, and performance characteristics are not yet recorded.
+- **Frontend contribution boundary:** Another developer made the initial, relatively small frontend modifications needed to adapt the FaceLens UI for vehicles. Nazmus later fixed frontend issues and improved parts of the interface.
+- **Commercial context:** Developed as a prototype intended to help acquire another customer within the Bangladesh government. The specific prospective organization should remain private unless publication is approved.
+- **Completion boundary:** Nazmus left MononAI while this effort was still underway, so the reference must not imply that he completed the customer engagement, secured the customer, or delivered the final production system.
+- **Supporting material:** A confidential local prototype recording is stored at `../streetlens-prototype.mp4`. Its publication status and whether screenshots or feature details may be used externally need confirmation.
+
 ## Anomaly Detection Platform
 
 **Period:** 2023-2024  

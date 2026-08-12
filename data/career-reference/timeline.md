@@ -24,6 +24,16 @@
 - Another engineer had developed the baseline frontend, and a second engineer provided product guidance for roughly the first year without writing the backend implementation. Nazmus therefore built most, but not all, of the final system.
 - A public [FaceLens Version 1.0 walkthrough](https://www.youtube.com/watch?v=htZk24_gaVs) was published on 2020-01-28 and demonstrates the product's monitoring, search, registration, alerting, analytics, and video-summary workflows.
 
+### StreetLens development
+
+- Began the [StreetLens](projects.md#streetlens) prototype in March 2019 as a vehicle-focused counterpart to FaceLens.
+- Built the prototype and owned the primary AI and backend work for detecting vehicles in CCTV feeds and extracting and logging their number plates.
+- Reused FaceLens's per-camera dashboard pattern so users could select a feed and review passing vehicles and their logged plates.
+- Another developer made the initial small frontend adaptation for vehicles; Nazmus later fixed issues and improved parts of that frontend.
+- The prototype was intended to support acquisition of another Bangladesh government customer.
+- Left MononAI while the customer-focused work was still underway; do not describe the engagement or final product as completed without further evidence.
+- A confidential prototype video is retained at `../streetlens-prototype.mp4` as supporting material.
+
 ## Employment baseline
 
 - **Employer:** Chowa Giken Corporation

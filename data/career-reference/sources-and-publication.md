@@ -10,6 +10,8 @@ The career reference combines confidential company presentations, an older image
 | --- | --- | --- | --- |
 | Resume history | Source resume predates Chowa Giken work | `../DL-CV-5th-reference.md` | Structured transcription of image-based `DL-CV-5th.pdf` |
 | FaceLens ownership, architecture, performance, and team context | 2026-08-12 conversation | First-hand clarifications from Nazmus Sakib Abir | Adds prototype origin, backend ownership, Redis/WebSocket/database work, throughput, full-stack expansion, registration overhaul, and contribution boundaries |
+| StreetLens purpose, ownership, customer context, and completion boundary | 2026-08-12 conversation | First-hand clarifications from Nazmus Sakib Abir | Adds prototype ownership, vehicle/ANPR workflow, FaceLens UI reuse, frontend contribution boundary, government prospect context, and the fact that Nazmus left mid-project |
+| StreetLens prototype recording | Date needs confirmation | `../streetlens-prototype.mp4` | Confidential local video; retained as supporting evidence and not approved for publication; automated visual review was unavailable when this entry was prepared |
 | Contributions through 2023 | 2023-11-20 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus - Nazmus Sakib Abir.pptx` | Confidential; Grade III-2 |
 | Contributions through 2024 | 2024-11-21 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus 2024 - Nazmus Sakib Abir.pptx` | Confidential; Grade III-4 |
 | Contributions through 2025 | 2025-12-07 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus 2025 - Nazmus Sakib Abir.pptx` | Confidential; Grade III-5 |
@@ -40,6 +42,7 @@ Use these labels internally when deciding how strongly to phrase a claim:
 - All three annual contribution presentations are labeled **CONFIDENTIAL**.
 - Treat project names, client names, infrastructure design, patent details, internal personnel names, unpublished research, and company-specific metrics as non-public by default.
 - Treat the FaceLens staffing history, exact deployment topology, 14-camera capacity, hardware configuration, and non-visible implementation details as non-public until Nazmus explicitly approves the final wording. The public video makes the shown product name and workflows public, but not every internal engineering detail.
+- Treat the StreetLens recording, prospective Bangladesh government customer, customer-acquisition context, and non-public implementation details as confidential. Do not publish the local video or identify the prospective organization without explicit approval.
 - Do not publish information merely because it appears in `projects.md`; that file is an internal source of truth.
 - Chowa Giken may be named as the employer, but public descriptions of its work should still be reviewed for contractual, patent, client, and confidentiality constraints.
 - Never publish contact information or references from the old resume without explicit approval.
@@ -86,6 +89,7 @@ Use this structure for each portfolio project:
 | Supporting | Ukiyolator-v2 | Component-Aware Multi-Style Image Transformation | LoRA, Kivy, multi-model GPU integration |
 | Supporting | Sapporo Subsidy Demo Portal | Secure Delivery Platform for AI Demos | Azure isolation, Nginx proxy, portal, deployments |
 | Supporting | Commercial-Friendly OD Benchmark | Model Selection Under Licensing Constraints | Practical research with reusable team value and mentoring |
+| Supporting | StreetLens | Camera-Based Vehicle Detection and Number-Plate Intelligence | Prototype creation, AI/backend ownership, FaceLens UI reuse, and clear incomplete-delivery boundary |
 | Community | Dhaka AI Dojo | University AI Teaching and Mentoring | Lecturer-equivalent work and winning mentored group |
 
 ## Claims that need confirmation before formal use
@@ -96,6 +100,10 @@ Use this structure for each portfolio project:
 - Whether the COVID-era staffing history should be published.
 - Whether the 14-camera, six-core CPU, RTX GPU, and single-machine full-stack configuration may be stated publicly, and the exact hardware and test conditions supporting it.
 - How much technical detail about the FaceLens database, Redis caching, WebSockets, monitoring architecture, and registration redesign may be disclosed.
+- Exact StreetLens development end date and the state of the product when Nazmus left MononAI.
+- Whether StreetLens may be named directly and whether any part of `streetlens-prototype.mp4` may be published.
+- Whether the general Bangladesh government prospect context may be stated publicly; the specific prospective organization remains unidentified and private.
+- StreetLens backend architecture, AI/ANPR implementation, performance, accuracy, and scale details.
 - Exact number of Sapporo demos; current recollection is approximately four.
 - Current legal/status details of all patent applications.
 - Whether the `>75%`, `>75%`, and `20-30%` patent contribution estimates may be stated publicly.
@@ -111,6 +119,7 @@ Use this structure for each portfolio project:
 
 - FaceLens: Nazmus built the initial prototype and the complete production backend, then became the sole maintaining engineer and expanded into frontend work. Another engineer developed the baseline frontend, and an early engineer guided product requirements without implementing the backend.
 - FaceLens capacity: 14 live cameras processed in real time on one six-core CPU and an RTX GPU while the database, backend API, and frontend ran on the same computer. Exact hardware and reproducible test conditions are not yet recorded.
+- StreetLens: Nazmus built the prototype and owned the primary AI and backend work. Another developer performed the initial small frontend adaptation from FaceLens, after which Nazmus fixed issues and improved parts of the UI. Nazmus left while the prospective-customer effort was still underway.
 - Prediction + GPT patent contribution: largest individual contributor, estimated at more than 75%.
 - MRAG patent contribution: largest individual contributor, estimated at more than 75%.
 - EII FloorPlan Generation patent contribution: estimated at 20-30%.

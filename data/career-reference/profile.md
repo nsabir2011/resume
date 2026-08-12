@@ -25,7 +25,7 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 ### AI and machine learning
 
 - Computer vision, anomaly detection, object detection, segmentation, image enhancement, image generation, inpainting, and texture-aware generation
-- Real-time face detection and recognition, multi-camera video monitoring, identity matching, and video analytics
+- Real-time face and vehicle detection, face recognition, vehicle ANPR, multi-camera video monitoring, identity matching, and video analytics
 - Generative AI systems using Stable Diffusion 1.5, SDXL, LoRA, GDINO, SAM, FLUX.2 Klein 4B, and language models
 - Forecast explainability, document-image-enhanced RAG/MRAG, OCR-based document understanding, and multi-document retrieval
 - Topic/subtopic-based evidence organization across multi-page document corpora
