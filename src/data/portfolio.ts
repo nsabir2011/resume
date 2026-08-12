@@ -41,7 +41,7 @@ export const aboutPoints = [
 export const experiences = [
   {
     status: 'Current employer',
-    organization: 'Chowa Giken Corporation',
+    organization: 'Chowa Giken Corporation | Japan',
     role: 'AI/ML Engineering · Technical-Development Leadership',
     period: 'Oct 2022 — Present',
     summary:
@@ -69,7 +69,7 @@ export const experiences = [
 
 export const projects = [
   {
-    title: 'Multimodal RAG',
+    title: 'Visual Response RAG',
     period: '2024–2026',
     summary:
       'Proposed and led two generations of document-chat systems that combine written answers with relevant source visuals; contributed directly to engineering, demos, and team guidance.',
@@ -86,7 +86,7 @@ export const projects = [
     title: 'Generative Floorplan Development',
     period: '2025–2026',
     summary:
-      'Contributed model development, dataset annotation, REST API work, and deployment; later proposed and led an evaluation that demonstrated a simpler generation workflow.',
+      'Focused primarily on model development and evaluation for constrained floorplan generation, alongside dataset annotation; also delivered the REST API and deployment, then later proposed and led research that enabled a simpler generation workflow.',
     tags: ['Generative AI', 'Image generation', 'FastAPI'],
   },
   {
@@ -164,9 +164,9 @@ export const skillGroups = [
       'Hugging Face Diffusers',
       'PEFT',
       'TensorRT',
+      'vLLM',
       'Language Models',
       'Image Generation Models',
-      'Detection & Segmentation Models',
     ],
   },
   {
