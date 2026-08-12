@@ -1,6 +1,17 @@
 # Generated working artifacts
 tmp/
 
+# Production site dependencies and build output
+node_modules/
+dist/
+.astro/
+
+# Local environment and tool output
+.env
+.env.*
+!.env.example
+*.log
+
 # Presentation source files
 *.ppt
 *.pptx
