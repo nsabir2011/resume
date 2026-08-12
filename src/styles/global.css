@@ -196,7 +196,7 @@ h1 {
 
 .portrait {
   position: relative;
-  aspect-ratio: 538 / 731;
+  aspect-ratio: 1;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid #344154;
@@ -492,6 +492,21 @@ h1 {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.project-card:hover,
+.project-card:focus-within,
+.skill-group:hover,
+.article-card:hover,
+.article-card:focus-within,
+.support-card:hover,
+.support-card:focus-within,
+.credential-card:hover {
+  border-color: #3b485a;
+  transform: translateY(-1px);
 }
 
 .project-card {
@@ -505,6 +520,13 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 18px;
+}
+
+.project-heading {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
 }
 
 .project-card h3 {
@@ -541,7 +563,7 @@ h1 {
 
 .project-link:hover,
 .project-link:focus-visible {
-  color: var(--text);
+  color: var(--ink);
 }
 
 .tag-list,
@@ -896,5 +918,13 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .project-card,
+  .skill-group,
+  .article-card,
+  .support-card,
+  .credential-card {
+    transition: none;
   }
 }

@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
+import ProjectIcon from '../components/ProjectIcon.astro';
 import SectionHeading from '../components/SectionHeading.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 import heroIllustration from '../assets/ai-workstation-illustration.png';
@@ -90,7 +91,7 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
             src={heroIllustration}
             alt="Illustration of an AI engineering workstation viewed from behind a seated engineer"
             width={680}
-            height={924}
+            height={680}
             format="webp"
             quality={85}
             loading="eager"
@@ -182,7 +183,10 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
           projects.map((project) => (
             <article class="project-card">
               <div class="project-top">
-                <h3>{project.title}</h3>
+                <div class="project-heading">
+                  <ProjectIcon name={project.icon} />
+                  <h3>{project.title}</h3>
+                </div>
                 <time>{project.period}</time>
               </div>
               <p>{project.summary}</p>

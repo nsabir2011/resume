@@ -1,0 +1,130 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<span class="project-icon" aria-hidden="true">
+  {
+    name === 'document-visuals' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M6 3h9l3 3v15H6z" />
+        <path d="M15 3v4h4M9 11h6M9 15h2" />
+        <rect x="13" y="14" width="3" height="3" rx=".5" />
+      </svg>
+    )
+  }
+  {
+    name === 'speed' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M4 18a8 8 0 1 1 16 0" />
+        <path d="m12 18 4-6M7 18h10" />
+      </svg>
+    )
+  }
+  {
+    name === 'floorplan' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M4 4h16v16H4zM11 4v7H4M11 11h9M15 11v9M4 16h5" />
+      </svg>
+    )
+  }
+  {
+    name === 'anomaly' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M4 12h3l2-5 3 10 2-5h6" />
+        <path d="M5 4H3v2M19 4h2v2M5 20H3v-2M19 20h2v-2" />
+      </svg>
+    )
+  }
+  {
+    name === 'forecast' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M4 19V5M4 19h16" />
+        <path d="m7 15 4-4 3 2 5-6M16 7h3v3" />
+      </svg>
+    )
+  }
+  {
+    name === 'house' && (
+      <svg viewBox="0 0 24 24">
+        <path d="m3 11 9-7 9 7" />
+        <path d="M5 10v10h14V10M9 20v-6h6v6" />
+      </svg>
+    )
+  }
+  {
+    name === 'face-camera' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M4 8V5h3M17 5h3v3M20 16v3h-3M7 19H4v-3" />
+        <circle cx="12" cy="10" r="3" />
+        <path d="M7.5 17c.8-2.3 2.3-3.5 4.5-3.5s3.7 1.2 4.5 3.5" />
+      </svg>
+    )
+  }
+  {
+    name === 'vehicle' && (
+      <svg viewBox="0 0 24 24">
+        <path d="m5 9 2-4h10l2 4 2 2v6H3v-6z" />
+        <path d="M6 17v2M18 17v2M7 13h2M15 13h2M6 9h12" />
+      </svg>
+    )
+  }
+  {
+    name === 'styles' && (
+      <svg viewBox="0 0 24 24">
+        <path d="m12 3 8 4-8 4-8-4zM4 12l8 4 8-4M4 17l8 4 8-4" />
+      </svg>
+    )
+  }
+  {
+    name === 'platform' && (
+      <svg viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="13" rx="2" />
+        <path d="M8 21h8M12 17v4M7 9h3v3H7zM13 9h4M13 12h3" />
+      </svg>
+    )
+  }
+  {
+    name === 'research' && (
+      <svg viewBox="0 0 24 24">
+        <circle cx="10" cy="10" r="6" />
+        <path d="m14.5 14.5 5 5M8 8h4M8 11h3" />
+      </svg>
+    )
+  }
+  {
+    name === 'demo' && (
+      <svg viewBox="0 0 24 24">
+        <path d="M4 5h16v11H4zM9 20h6M12 16v4" />
+        <path d="m12 8 .7 1.5 1.6.2-1.2 1.1.3 1.6-1.4-.8-1.4.8.3-1.6-1.2-1.1 1.6-.2z" />
+      </svg>
+    )
+  }
+</span>
+
+<style>
+  .project-icon {
+    width: 30px;
+    height: 30px;
+    flex: 0 0 30px;
+    display: grid;
+    place-items: center;
+    color: #8393a8;
+    background: rgba(121, 169, 255, 0.055);
+    border: 1px solid rgba(121, 169, 255, 0.13);
+    border-radius: 8px;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.55;
+  }
+</style>

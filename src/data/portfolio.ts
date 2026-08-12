@@ -75,6 +75,7 @@ export const experiences = [
 export const projects = [
   {
     title: 'Visual Response RAG',
+    icon: 'document-visuals',
     period: '2024–2026',
     summary:
       'Proposed and led two generations of document-chat systems that combine written answers with relevant source visuals; contributed directly to engineering, demos, and team guidance.',
@@ -82,6 +83,7 @@ export const projects = [
   },
   {
     title: 'Vision Inference Optimization',
+    icon: 'speed',
     period: '2023',
     summary:
       'Optimized a 360-degree image-processing pipeline in about one week, making it more than 3× faster without retraining or changing its outputs.',
@@ -89,6 +91,7 @@ export const projects = [
   },
   {
     title: 'Generative Floorplan Development',
+    icon: 'floorplan',
     period: '2025–2026',
     summary:
       'Focused primarily on model development and evaluation for constrained floorplan generation, alongside dataset annotation; also delivered the REST API and deployment, then later proposed and led research that enabled a simpler generation workflow.',
@@ -96,6 +99,7 @@ export const projects = [
   },
   {
     title: 'Product Anomaly Detection',
+    icon: 'anomaly',
     period: '2023–2024',
     summary:
       'Led the Bangladesh engineering team across backend and React interface development for data upload, model training, and inference, including performance and usability improvements.',
@@ -103,6 +107,7 @@ export const projects = [
   },
   {
     title: 'Forecast Explainability',
+    icon: 'forecast',
     period: '2024',
     summary:
       'Led development of an AI system that provides useful context around forecast-model predictions, with responsibility spanning the solution, demonstration, and related patent contribution.',
@@ -110,6 +115,7 @@ export const projects = [
   },
   {
     title: 'Generative House Exterior',
+    icon: 'house',
     period: '2025–2026',
     summary:
       'Developed model workflows for generating consistent house-exterior views from elevation plans while following supplied textures and design requirements.',
@@ -117,6 +123,7 @@ export const projects = [
   },
   {
     title: 'Multi-Camera Face Intelligence',
+    icon: 'face-camera',
     period: '2018–2022',
     summary:
       'Created the original prototype and built the production AI and backend system for real-time CCTV face monitoring, then expanded into performance optimization and full-stack product improvements.',
@@ -128,6 +135,7 @@ export const projects = [
   },
   {
     title: 'Vehicle & Number-Plate Intelligence',
+    icon: 'vehicle',
     period: '2019–2022',
     summary:
       'Created a vehicle-monitoring prototype and owned its core AI and backend work for detecting vehicles and extracting number plates from CCTV feeds; later fixed and improved the adapted interface.',
@@ -135,6 +143,7 @@ export const projects = [
   },
   {
     title: 'Multi-Style Image Transformation',
+    icon: 'styles',
     period: '2023–2024',
     summary:
       'Worked across model training, backend development, web UI development, and deployment for a component-aware artistic image-transformation system.',
@@ -142,6 +151,7 @@ export const projects = [
   },
   {
     title: 'AI Demo Delivery Platform',
+    icon: 'platform',
     period: '2023–2024',
     summary:
       'Prepared several AI demonstrations and developed the shared portal, cloud infrastructure, Nginx setup, SSL, deployments, and ongoing maintenance.',
@@ -149,6 +159,7 @@ export const projects = [
   },
   {
     title: 'Commercial-Friendly Model Research',
+    icon: 'research',
     period: '2023–2024',
     summary:
       'Proposed and led model-comparison research with a junior engineer across segmentation and object detection, producing reusable internal references for future project selection.',
@@ -156,6 +167,7 @@ export const projects = [
   },
   {
     title: 'Applied AI Demonstrations',
+    icon: 'demo',
     period: '2024',
     summary:
       'Delivered multiple short-cycle demonstrations covering conversational AI, executive communication, stadium experiences, and 2D-to-3D interfaces.',
