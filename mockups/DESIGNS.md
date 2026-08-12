@@ -2,6 +2,14 @@
 
 These are local static drafts for choosing a visual direction. They are not yet publication-ready; confidential project details and metrics must be reviewed before deployment.
 
+## Accepted baseline
+
+The **Profile-Led Portfolio** in [`profile-led/index.html`](profile-led/index.html) was accepted on 2026-08-12 as the baseline for the actual website.
+
+It combines a restrained professional introduction, portrait with LinkedIn and GitHub, concise About section, structured experience, overview-only projects, categorized skills, public work, mentoring, and credentials. The implementation decisions and remaining inputs are recorded in [`BASELINE.md`](BASELINE.md).
+
+The four directions below are retained as earlier visual experiments rather than implementation candidates.
+
 ## 1. Precision Dark
 
 - **Mood:** Technical, confident, modern, high-contrast

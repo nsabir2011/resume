@@ -3,45 +3,22 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Nazmus Sakib Abir — AI/ML engineer and technical lead working across computer vision, generative AI, multimodal RAG, and production systems.">
-  <title>Nazmus Sakib Abir — AI/ML Engineer</title>
+  <meta name="description" content="Portfolio mockup index for Nazmus Sakib Abir.">
+  <title>Portfolio Mockups — Nazmus Sakib Abir</title>
   <style>
     :root {
-      --bg: #f7f8fa;
-      --surface: #ffffff;
-      --surface-soft: #f0f3f7;
-      --ink: #101828;
-      --muted: #5f6b7b;
-      --line: #dde3ea;
-      --navy: #0b1628;
-      --navy-soft: #14243d;
-      --blue: #3976ed;
-      --blue-bright: #73a0ff;
-      --blue-soft: #e9f0ff;
-      --green: #1b7d66;
-      --green-soft: #e6f5f0;
-      --orange: #b65b23;
-      --orange-soft: #fff0e6;
-      --shadow: 0 22px 70px rgba(16, 24, 40, 0.09);
-      --radius: 20px;
-      --max: 1160px;
-    }
-
-    [data-theme="dark"] {
-      --bg: #0b111b;
-      --surface: #111a28;
-      --surface-soft: #172232;
-      --ink: #edf3fb;
-      --muted: #a4b1c2;
-      --line: #263448;
-      --blue-soft: #182b4e;
-      --green-soft: #16362f;
-      --orange-soft: #3a281e;
-      --shadow: 0 22px 70px rgba(0, 0, 0, 0.2);
+      --bg: #0e1117;
+      --surface: #151a22;
+      --surface-2: #1c222d;
+      --ink: #f1f4f8;
+      --muted: #9ea8b6;
+      --line: #2a323e;
+      --accent: #62c7bd;
+      --blue: #79a9ff;
+      --max: 980px;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -49,1253 +26,215 @@
       background: var(--bg);
       font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
 
-    a { color: inherit; }
-    button { font: inherit; }
-    svg { display: block; }
-
-    .shell {
-      width: min(calc(100% - 40px), var(--max));
-      margin-inline: auto;
+    .page {
+      width: min(calc(100% - 36px), var(--max));
+      margin: 0 auto;
+      padding: 72px 0;
     }
-
-    .site-header {
-      position: sticky;
-      top: 14px;
-      z-index: 20;
-      padding-top: 14px;
-    }
-
-    .nav-shell {
-      min-height: 62px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-      padding: 9px 11px 9px 18px;
-      color: var(--ink);
-      background: color-mix(in srgb, var(--surface) 88%, transparent);
-      border: 1px solid color-mix(in srgb, var(--line) 85%, transparent);
-      border-radius: 16px;
-      box-shadow: 0 10px 34px rgba(16, 24, 40, 0.08);
-      backdrop-filter: blur(18px);
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.9rem;
-      font-weight: 760;
-      text-decoration: none;
-      letter-spacing: -0.01em;
-    }
-
-    .brand-mark {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: var(--navy);
-      border-radius: 10px;
-      font-size: 0.7rem;
-      letter-spacing: -0.04em;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      margin-left: auto;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.8rem;
-      font-weight: 620;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover { color: var(--ink); }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .icon-button {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      color: var(--muted);
-      background: var(--surface-soft);
-      border: 0;
-      border-radius: 10px;
-      cursor: pointer;
-    }
-
-    .icon-button:hover { color: var(--ink); }
-
-    .nav-contact {
-      min-height: 40px;
-      display: inline-flex;
-      align-items: center;
-      padding: 0 15px;
-      color: #fff;
-      background: var(--ink);
-      border-radius: 10px;
-      font-size: 0.78rem;
-      font-weight: 680;
-      text-decoration: none;
-    }
-
-    .hero {
-      padding: 44px 0 0;
-    }
-
-    .hero-card {
-      position: relative;
-      min-height: 630px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.38fr) minmax(340px, 0.72fr);
-      gap: 60px;
-      align-items: center;
-      overflow: hidden;
-      padding: 76px 68px;
-      color: #f5f8fd;
-      background:
-        radial-gradient(circle at 82% 18%, rgba(80, 132, 255, 0.28), transparent 31%),
-        radial-gradient(circle at 3% 100%, rgba(58, 117, 237, 0.18), transparent 30%),
-        var(--navy);
-      border-radius: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .hero-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.13;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.18) 1px, transparent 1px);
-      background-size: 44px 44px;
-      mask-image: linear-gradient(90deg, transparent, #000 55%, #000);
-      pointer-events: none;
-    }
-
-    .hero-copy,
-    .profile-panel { position: relative; z-index: 1; }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
-      margin: 0 0 22px;
-      color: #a9c4ff;
-      font-size: 0.72rem;
+      margin: 0 0 11px;
+      color: var(--accent);
+      font-size: 0.7rem;
       font-weight: 750;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      background: #7dd9c1;
-      border-radius: 50%;
-      box-shadow: 0 0 0 5px rgba(125, 217, 193, 0.12);
-    }
-
-    h1 {
-      max-width: 700px;
-      margin: 0;
-      font-size: clamp(3.2rem, 6.5vw, 6.25rem);
-      line-height: 0.96;
-      letter-spacing: -0.065em;
-    }
-
-    h1 span { color: var(--blue-bright); }
-
-    .hero-summary {
-      max-width: 670px;
-      margin: 28px 0 0;
-      color: #b9c6d8;
-      font-size: 1.04rem;
-      line-height: 1.75;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 11px;
-      margin-top: 34px;
-    }
-
-    .button {
-      min-height: 48px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 0 18px;
-      border-radius: 12px;
-      font-size: 0.83rem;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 160ms ease, background 160ms ease;
-    }
-
-    .button:hover { transform: translateY(-2px); }
-    .button-primary { color: #fff; background: var(--blue); }
-    .button-quiet { color: #d6e0ee; border: 1px solid rgba(255, 255, 255, 0.18); }
-
-    .profile-panel {
-      padding: 28px;
-      background: rgba(255, 255, 255, 0.075);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 22px;
-      backdrop-filter: blur(12px);
-    }
-
-    .profile-top {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .avatar {
-      width: 68px;
-      height: 68px;
-      flex: 0 0 auto;
-      display: grid;
-      place-items: center;
-      color: #fff;
-      background: linear-gradient(140deg, #3976ed, #754de8);
-      border: 3px solid rgba(255, 255, 255, 0.13);
-      border-radius: 21px;
-      font-size: 1.1rem;
-      font-weight: 800;
-      letter-spacing: -0.06em;
-    }
-
-    .profile-top h2 {
-      margin: 0;
-      font-size: 1.04rem;
-      letter-spacing: -0.02em;
-    }
-
-    .profile-top p {
-      margin: 3px 0 0;
-      color: #9fb0c7;
-      font-size: 0.78rem;
-    }
-
-    .current-focus {
-      padding: 21px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .panel-label {
-      margin: 0 0 7px;
-      color: #7f91aa;
-      font-size: 0.65rem;
-      font-weight: 730;
       letter-spacing: 0.13em;
       text-transform: uppercase;
     }
 
-    .current-focus strong {
-      display: block;
-      font-size: 0.93rem;
-      line-height: 1.5;
-    }
-
-    .profile-list {
-      display: grid;
-      gap: 13px;
-      margin: 20px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .profile-list li {
-      display: flex;
-      align-items: center;
-      gap: 11px;
-      color: #c7d2e1;
-      font-size: 0.78rem;
-    }
-
-    .profile-list svg { color: #78a2ff; flex: 0 0 auto; }
-
-    .hero-footnote {
-      position: absolute;
-      left: 68px;
-      bottom: 31px;
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      color: #8292a8;
-      font-size: 0.72rem;
-    }
-
-    .hero-footnote span + span::before {
-      content: "";
-      width: 3px;
-      height: 3px;
-      display: inline-block;
-      margin: 0 18px 2px 0;
-      background: #52627a;
-      border-radius: 50%;
-    }
-
-    .section {
-      padding: 108px 0 0;
-      scroll-margin-top: 90px;
-    }
-
-    .section-heading-row {
-      display: grid;
-      grid-template-columns: 110px minmax(0, 1fr) minmax(260px, 0.65fr);
-      gap: 30px;
-      align-items: end;
-      margin-bottom: 40px;
-    }
-
-    .section-number {
-      color: var(--blue);
-      font-size: 0.72rem;
-      font-weight: 780;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .section-heading-row h2 {
+    h1 {
       margin: 0;
-      font-size: clamp(2rem, 4.8vw, 4rem);
-      line-height: 1.02;
-      letter-spacing: -0.05em;
-    }
-
-    .section-heading-row > p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .capability-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
-    }
-
-    .capability-card {
-      min-height: 260px;
-      padding: 25px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: 0 12px 34px rgba(16, 24, 40, 0.045);
-    }
-
-    .capability-icon {
-      width: 46px;
-      height: 46px;
-      display: grid;
-      place-items: center;
-      margin-bottom: 42px;
-      color: var(--blue);
-      background: var(--blue-soft);
-      border-radius: 13px;
-    }
-
-    .capability-card:nth-child(2) .capability-icon { color: var(--green); background: var(--green-soft); }
-    .capability-card:nth-child(3) .capability-icon { color: var(--orange); background: var(--orange-soft); }
-    .capability-card:nth-child(4) .capability-icon { color: #7c50cc; background: #f0eaff; }
-
-    .capability-card h3 {
-      margin: 0 0 9px;
-      font-size: 1rem;
-      letter-spacing: -0.025em;
-    }
-
-    .capability-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.82rem;
-      line-height: 1.65;
-    }
-
-    .featured-work {
-      display: grid;
-      gap: 18px;
-    }
-
-    .work-card {
-      display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
-      gap: 48px;
-      align-items: center;
-      min-height: 500px;
-      padding: 48px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      box-shadow: 0 14px 45px rgba(16, 24, 40, 0.05);
-    }
-
-    .work-card:nth-child(even) .work-copy { order: 2; }
-    .work-card:nth-child(even) .work-visual { order: 1; }
-
-    .work-kicker {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin: 0 0 16px;
-      color: var(--blue);
-      font-size: 0.7rem;
-      font-weight: 760;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .work-kicker::before {
-      content: "";
-      width: 25px;
-      height: 1px;
-      background: currentColor;
-    }
-
-    .work-copy h3 {
-      margin: 0;
-      font-size: clamp(1.7rem, 3vw, 2.65rem);
-      line-height: 1.08;
-      letter-spacing: -0.045em;
-    }
-
-    .work-lede {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .work-facts {
-      display: grid;
-      gap: 13px;
-      margin: 25px 0 0;
-    }
-
-    .work-fact {
-      display: grid;
-      grid-template-columns: 62px 1fr;
-      gap: 15px;
-      font-size: 0.8rem;
-    }
-
-    .work-fact dt {
-      color: var(--muted);
-      font-weight: 650;
-    }
-
-    .work-fact dd { margin: 0; }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 27px;
-    }
-
-    .tag {
-      padding: 6px 9px;
-      color: var(--muted);
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      font-size: 0.68rem;
-      font-weight: 640;
-    }
-
-    .work-visual {
-      position: relative;
-      min-height: 360px;
-      overflow: hidden;
-      padding: 28px;
-      background: var(--navy);
-      border-radius: 19px;
-    }
-
-    .work-visual::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      opacity: 0.16;
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.13) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.13) 1px, transparent 1px);
-      background-size: 30px 30px;
-    }
-
-    .rag-diagram {
-      position: relative;
-      z-index: 1;
-      height: 304px;
-      display: grid;
-      grid-template-columns: 1fr 46px 1fr;
-      align-items: center;
-    }
-
-    .document-stack {
-      position: relative;
-      height: 220px;
-    }
-
-    .document {
-      position: absolute;
-      width: 138px;
-      height: 180px;
-      padding: 16px;
-      background: #eaf0fa;
-      border: 1px solid #fff;
-      border-radius: 8px;
-      box-shadow: 0 14px 25px rgba(0, 0, 0, 0.25);
-    }
-
-    .document:nth-child(1) { left: 0; top: 34px; transform: rotate(-7deg); opacity: 0.55; }
-    .document:nth-child(2) { left: 27px; top: 16px; transform: rotate(-2deg); opacity: 0.76; }
-    .document:nth-child(3) { left: 54px; top: 0; transform: rotate(4deg); }
-
-    .doc-image { height: 58px; margin-bottom: 14px; background: linear-gradient(135deg, #83a9f7, #596dd8); border-radius: 5px; }
-    .doc-line { height: 5px; margin-top: 8px; background: #b2bfd3; border-radius: 10px; }
-    .doc-line.short { width: 68%; }
-
-    .flow-arrow {
-      color: #6f9bff;
-      animation: drift 2s ease-in-out infinite;
-    }
-
-    .answer-card {
-      padding: 18px;
-      color: #dce7f7;
-      background: #172740;
-      border: 1px solid #2a4268;
-      border-radius: 13px;
-      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
-    }
-
-    .answer-head {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-bottom: 15px;
-      color: #86aaff;
-      font-size: 0.65rem;
-      font-weight: 740;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-    }
-
-    .answer-image { height: 90px; margin: 11px 0; background: linear-gradient(135deg, #3d6ac4, #5f4fae); border-radius: 7px; }
-    .answer-line { height: 5px; margin-top: 8px; background: #617694; border-radius: 20px; }
-    .answer-line.short { width: 78%; }
-
-    .speed-visual {
-      position: relative;
-      z-index: 1;
-      min-height: 304px;
-      display: grid;
-      align-content: center;
-      gap: 20px;
-    }
-
-    .speed-row {
-      display: grid;
-      grid-template-columns: 70px 1fr 70px;
-      gap: 13px;
-      align-items: center;
-      color: #becbe0;
-      font-size: 0.72rem;
-    }
-
-    .speed-track {
-      height: 30px;
-      overflow: hidden;
-      background: #18263b;
-      border: 1px solid #293b56;
-      border-radius: 8px;
-    }
-
-    .speed-fill {
-      height: 100%;
-      background: linear-gradient(90deg, #66758b, #8b97a8);
-      border-radius: 7px;
-    }
-
-    .speed-fill.after { width: 30%; background: linear-gradient(90deg, #3976ed, #71a0ff); }
-    .speed-row strong { color: #fff; text-align: right; }
-
-    .speed-result {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .speed-stat {
-      padding: 16px;
-      background: #14243a;
-      border: 1px solid #263b5c;
-      border-radius: 10px;
-    }
-
-    .speed-stat strong { display: block; color: #fff; font-size: 1.15rem; }
-    .speed-stat span { color: #8296b4; font-size: 0.66rem; }
-
-    .generation-visual {
-      position: relative;
-      z-index: 1;
-      min-height: 304px;
-      display: grid;
-      grid-template-columns: 1fr 42px 1fr;
-      align-items: center;
-    }
-
-    .floorplan {
-      aspect-ratio: 1;
-      padding: 10px;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      grid-template-rows: 0.85fr 1.15fr;
-      gap: 6px;
-      background: #e9eef7;
-      border: 6px solid #fafcff;
-      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
-    }
-
-    .room { position: relative; border: 3px solid #21324d; }
-    .room:nth-child(1) { background: #d6e3ff; }
-    .room:nth-child(2) { background: #ffe0ca; }
-    .room:nth-child(3) { background: #d8f0e8; }
-    .room:nth-child(4) { background: #eadcf6; }
-    .room::after { content: ""; position: absolute; width: 40%; height: 20%; left: 18%; top: 31%; border: 2px solid rgba(24, 40, 63, 0.55); border-radius: 3px; }
-
-    .model-card {
-      padding: 17px;
-      color: #e6eefb;
-      background: #172840;
-      border: 1px solid #2a4268;
-      border-radius: 12px;
-    }
-
-    .model-card span { display: block; color: #8498b8; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.1em; }
-    .model-card strong { display: block; margin-top: 5px; font-size: 0.84rem; }
-    .model-card em { display: block; margin-top: 12px; color: #7fd4ba; font-size: 0.68rem; font-style: normal; }
-
-    .more-work-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .mini-work {
-      min-height: 220px;
-      display: flex;
-      flex-direction: column;
-      padding: 26px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .mini-work-number {
-      color: var(--muted);
-      font-size: 0.67rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .mini-work h3 {
-      margin: 30px 0 9px;
-      font-size: 1.14rem;
-      letter-spacing: -0.025em;
-    }
-
-    .mini-work p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.8rem;
-    }
-
-    .mini-work .tags { margin-top: auto; padding-top: 20px; }
-
-    .journey {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    .journey-card {
-      padding: 34px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .journey-card.current { border-top: 4px solid var(--blue); }
-    .journey-card.previous { border-top: 4px solid #9aa7b8; }
-
-    .journey-meta {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      color: var(--muted);
-      font-size: 0.7rem;
-      font-weight: 680;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-
-    .journey-card h3 {
-      margin: 23px 0 3px;
-      font-size: 1.35rem;
-      letter-spacing: -0.03em;
-    }
-
-    .journey-role {
-      margin: 0;
-      color: var(--blue);
-      font-size: 0.82rem;
-      font-weight: 650;
-    }
-
-    .journey-copy {
-      margin: 18px 0 0;
-      color: var(--muted);
-      font-size: 0.83rem;
-    }
-
-    .journey-highlights {
-      display: grid;
-      gap: 10px;
-      margin: 24px 0 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .journey-highlights li {
-      position: relative;
-      padding-left: 17px;
-      color: var(--ink);
-      font-size: 0.78rem;
-    }
-
-    .journey-highlights li::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0.65em;
-      width: 5px;
-      height: 5px;
-      background: var(--blue);
-      border-radius: 50%;
-    }
-
-    .knowledge-grid {
-      display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 18px;
-    }
-
-    .article-list,
-    .community-card {
-      padding: 34px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .subheading {
-      margin: 0 0 24px;
-      font-size: 0.75rem;
-      letter-spacing: 0.11em;
-      text-transform: uppercase;
-    }
-
-    .article-link {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
-      padding: 19px 0;
-      border-top: 1px solid var(--line);
-      text-decoration: none;
-    }
-
-    .article-link:first-of-type { border-top: 0; padding-top: 0; }
-    .article-link:last-child { padding-bottom: 0; }
-    .article-link strong { display: block; font-size: 0.9rem; line-height: 1.4; }
-    .article-link span { display: block; margin-top: 4px; color: var(--muted); font-size: 0.72rem; }
-
-    .article-arrow {
-      width: 34px;
-      height: 34px;
-      display: grid;
-      place-items: center;
-      color: var(--blue);
-      background: var(--blue-soft);
-      border-radius: 10px;
-    }
-
-    .community-card {
-      color: #eef4fc;
-      background: var(--navy);
-      border-color: var(--navy);
-    }
-
-    .community-card .subheading { color: #87a9ec; }
-    .community-card h3 { margin: 0; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.035em; }
-    .community-card p { margin: 18px 0 0; color: #a9b8cd; font-size: 0.82rem; }
-
-    .community-stat {
-      margin-top: 43px;
-      padding-top: 22px;
-      border-top: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .community-stat strong { display: block; color: #7fd4ba; font-size: 1.5rem; }
-    .community-stat span { color: #899ab2; font-size: 0.7rem; }
-
-    .stack-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 9px;
-      padding: 28px;
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-    }
-
-    .stack-pill {
-      padding: 9px 12px;
-      color: var(--muted);
-      background: var(--surface-soft);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      font-size: 0.75rem;
-      font-weight: 650;
-    }
-
-    .closing {
-      padding: 108px 0 38px;
-    }
-
-    .closing-card {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 40px;
-      align-items: end;
-      padding: 58px;
-      color: #eef4fc;
-      background: var(--navy);
-      border-radius: 26px;
-    }
-
-    .closing-card p {
-      margin: 0 0 10px;
-      color: #84a8ef;
-      font-size: 0.72rem;
-      font-weight: 730;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .closing-card h2 {
-      max-width: 730px;
-      margin: 0;
-      font-size: clamp(2rem, 4.8vw, 4.1rem);
-      line-height: 1.03;
+      font-size: clamp(2.3rem, 6vw, 4.4rem);
+      line-height: 1.04;
       letter-spacing: -0.055em;
     }
 
-    .closing-card h2 span { color: var(--blue-bright); }
+    .intro {
+      max-width: 700px;
+      margin: 19px 0 0;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
 
-    .closing-links {
+    .baseline {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 32px;
+      align-items: center;
+      margin-top: 47px;
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-size: 0.67rem;
+      font-weight: 740;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .status::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 0 5px rgba(98, 199, 189, 0.1);
+    }
+
+    .baseline h2 {
+      margin: 13px 0 0;
+      font-size: 1.55rem;
+      letter-spacing: -0.035em;
+    }
+
+    .baseline p {
+      max-width: 630px;
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
+    .button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 16px;
+      color: #0e1117;
+      background: var(--accent);
+      border-radius: 9px;
+      font-size: 0.78rem;
+      font-weight: 730;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .section-heading {
+      margin: 66px 0 18px;
+      padding-bottom: 11px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.75rem;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 11px;
+    }
+
+    .card {
+      min-height: 170px;
       display: flex;
       flex-direction: column;
-      align-items: stretch;
-      gap: 9px;
-      min-width: 180px;
+      padding: 23px;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 13px;
+      text-decoration: none;
     }
 
-    .site-footer {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      padding: 27px 0 36px;
+    .card:hover { border-color: #435064; }
+
+    .card span {
+      color: var(--blue);
+      font-size: 0.66rem;
+      font-weight: 710;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .card h2 {
+      margin: 18px 0 7px;
+      font-size: 1rem;
+    }
+
+    .card p {
+      margin: 0;
       color: var(--muted);
-      font-size: 0.71rem;
+      font-size: 0.76rem;
     }
 
-    @keyframes drift {
-      0%, 100% { transform: translateX(0); }
-      50% { transform: translateX(5px); }
+    .card strong {
+      margin-top: auto;
+      padding-top: 17px;
+      color: var(--muted);
+      font-size: 0.68rem;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .flow-arrow { animation: none; }
-      .button { transition: none; }
+    .notes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 24px;
     }
 
-    @media (max-width: 980px) {
-      .hero-card { min-height: auto; grid-template-columns: 1fr; padding: 68px 48px 95px; }
-      .profile-panel { max-width: 550px; }
-      .hero-footnote { left: 48px; }
-      .section-heading-row { grid-template-columns: 78px 1fr; }
-      .section-heading-row > p { grid-column: 2; }
-      .capability-grid { grid-template-columns: repeat(2, 1fr); }
-      .work-card { grid-template-columns: 1fr; }
-      .work-card:nth-child(even) .work-copy,
-      .work-card:nth-child(even) .work-visual { order: initial; }
-      .work-visual { min-height: 380px; }
-      .knowledge-grid { grid-template-columns: 1fr; }
+    .notes a {
+      padding: 8px 10px;
+      color: var(--muted);
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.7rem;
+      text-decoration: none;
     }
 
-    @media (max-width: 760px) {
-      .nav-links { display: none; }
-      .hero { padding-top: 24px; }
-      .hero-card { padding: 58px 30px 98px; border-radius: 22px; }
-      h1 { font-size: clamp(3rem, 13vw, 4.8rem); }
-      .section { padding-top: 82px; }
-      .section-heading-row { display: block; }
-      .section-number { display: block; margin-bottom: 11px; }
-      .section-heading-row > p { margin-top: 17px; }
-      .work-card { padding: 30px; gap: 32px; }
-      .more-work-grid, .journey { grid-template-columns: 1fr; }
-      .knowledge-grid { grid-template-columns: 1fr; }
-      .closing-card { grid-template-columns: 1fr; padding: 40px 30px; }
-      .closing-links { flex-direction: row; flex-wrap: wrap; }
+    footer {
+      margin-top: 65px;
+      padding-top: 20px;
+      color: #717d8d;
+      border-top: 1px solid var(--line);
+      font-size: 0.68rem;
     }
 
-    @media (max-width: 560px) {
-      .shell { width: min(calc(100% - 22px), var(--max)); }
-      .site-header { top: 7px; padding-top: 7px; }
-      .nav-shell { min-height: 56px; padding-left: 11px; border-radius: 13px; }
-      .brand > span:last-child { display: none; }
-      .nav-contact { display: none; }
-      .hero-card { padding: 48px 22px 108px; }
-      .hero-summary { font-size: 0.91rem; }
-      .profile-panel { padding: 21px; }
-      .hero-footnote { left: 22px; bottom: 27px; gap: 0; }
-      .hero-footnote span:last-child { display: none; }
-      .hero-footnote span + span::before { display: none; }
-      .capability-grid { grid-template-columns: 1fr; }
-      .capability-card { min-height: 210px; }
-      .capability-icon { margin-bottom: 28px; }
-      .work-card { padding: 22px; border-radius: 18px; }
-      .work-visual { min-height: 310px; padding: 18px; }
-      .rag-diagram { grid-template-columns: 1fr 30px 1fr; height: 274px; }
-      .document { width: 91px; height: 137px; padding: 10px; }
-      .document:nth-child(2) { left: 15px; }
-      .document:nth-child(3) { left: 31px; }
-      .doc-image { height: 41px; }
-      .answer-card { padding: 11px; }
-      .answer-image { height: 62px; }
-      .generation-visual { grid-template-columns: 1fr 26px 1fr; }
-      .speed-row { grid-template-columns: 49px 1fr 55px; }
-      .journey-card, .article-list, .community-card { padding: 25px; }
-      .closing { padding-top: 82px; }
-      .site-footer { display: block; }
-      .site-footer span { display: block; margin-top: 5px; }
+    @media (max-width: 680px) {
+      .page { padding: 52px 0; }
+      .baseline { grid-template-columns: 1fr; padding: 25px; }
+      .button { width: 100%; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <header class="site-header shell">
-    <nav class="nav-shell" aria-label="Primary navigation">
-      <a class="brand" href="#top">
-        <span class="brand-mark">SA</span>
-        <span>Nazmus Sakib Abir</span>
-      </a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#work">Selected work</a>
-        <a href="#experience">Experience</a>
-        <a href="#writing">Writing</a>
-      </div>
-      <div class="nav-actions">
-        <button class="icon-button" id="theme-toggle" type="button" aria-label="Toggle color theme" title="Toggle color theme">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3a6.8 6.8 0 1 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-        <a class="nav-contact" href="mailto:nsabir2011@gmail.com">Contact</a>
-      </div>
-    </nav>
-  </header>
+  <main class="page">
+    <p class="eyebrow">Portfolio design workspace</p>
+    <h1>Nazmus Sakib Abir</h1>
+    <p class="intro">Static concepts developed to establish the visual direction and information hierarchy for the final portfolio website.</p>
 
-  <main id="top">
-    <section class="hero shell" aria-labelledby="hero-title">
-      <div class="hero-card">
-        <div class="hero-copy">
-          <p class="eyebrow">AI/ML engineer · Technical lead</p>
-          <h1 id="hero-title">Research to <span>real systems.</span></h1>
-          <p class="hero-summary">
-            I turn applied AI ideas into usable software—working across model research, computer vision, generative AI, multimodal RAG, backend and frontend engineering, and cloud deployment.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#work">
-              Explore selected work
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m5 12 14 0m-6-6 6 6-6 6"/></svg>
-            </a>
-            <a class="button button-quiet" href="https://www.linkedin.com/in/nsabir2011/">LinkedIn ↗</a>
-          </div>
-        </div>
-
-        <aside class="profile-panel" aria-label="Profile summary">
-          <div class="profile-top">
-            <div class="avatar" aria-hidden="true">SA</div>
-            <div>
-              <h2>Nazmus Sakib Abir</h2>
-              <p>Chowa Giken Corporation · Since Oct 2022</p>
-            </div>
-          </div>
-          <div class="current-focus">
-            <p class="panel-label">Current focus</p>
-            <strong>Multimodal document intelligence and practical generative-AI systems</strong>
-          </div>
-          <ul class="profile-list">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8m-4-4v8"/></svg>Propose, research, build, and deploy</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4zM8 10h8m-8 4h5"/></svg>AI pipelines, APIs, product UI, and cloud</li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 18v-5m6 5V6m6 12v-8"/></svg>Lead development and stay hands-on</li>
-          </ul>
-        </aside>
-
-        <div class="hero-footnote">
-          <span>Based in Dhaka, Bangladesh</span>
-          <span>Professional AI/software work since 2018</span>
-        </div>
+    <section class="baseline" aria-labelledby="baseline-title">
+      <div>
+        <span class="status">Accepted baseline · 12 August 2026</span>
+        <h2 id="baseline-title">Profile-Led Portfolio</h2>
+        <p>A restrained, hiring-focused professional site with structured experience, overview-only projects, categorized skills, publications, mentoring, and credentials.</p>
       </div>
+      <a class="button" href="profile-led/index.html">Open baseline →</a>
     </section>
 
-    <section class="section shell" id="about" aria-labelledby="about-heading">
-      <div class="section-heading-row">
-        <span class="section-number">01 · About</span>
-        <h2 id="about-heading">What I bring to a team</h2>
-        <p>My value is the range between investigation and delivery: understanding an unfamiliar problem, choosing a workable approach, and carrying it through to a usable system.</p>
-      </div>
+    <h2 class="section-heading">Earlier visual explorations</h2>
+    <div class="grid">
+      <a class="card" href="precision-dark/index.html"><span>Exploration 01</span><h2>Precision Dark</h2><p>High-contrast technical presentation centered on engineering outcomes.</p><strong>Open concept →</strong></a>
+      <a class="card" href="editorial-light/index.html"><span>Exploration 02</span><h2>Editorial Light</h2><p>Research-oriented editorial layout with a narrative emphasis.</p><strong>Open concept →</strong></a>
+      <a class="card" href="blueprint-tech/index.html"><span>Exploration 03</span><h2>Blueprint Tech</h2><p>Diagram-inspired direction focused on systems and architecture.</p><strong>Open concept →</strong></a>
+      <a class="card" href="warm-minimal/index.html"><span>Exploration 04</span><h2>Warm Minimal</h2><p>Calm professional direction emphasizing leadership and accessibility.</p><strong>Open concept →</strong></a>
+    </div>
 
-      <div class="capability-grid">
-        <article class="capability-card">
-          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
-          <h3>Applied AI</h3>
-          <p>Computer vision, generative models, multimodal RAG, OCR, document understanding, and explainable forecasting.</p>
-        </article>
-        <article class="capability-card">
-          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4zM8 10h8m-8 4h5"/></svg></div>
-          <h3>Complete systems</h3>
-          <p>Model pipelines, REST APIs, React and Python interfaces, deployments, Nginx, and cloud infrastructure.</p>
-        </article>
-        <article class="capability-card">
-          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m4 15 4-4 4 3 7-8m0 0v5m0-5h-5"/></svg></div>
-          <h3>Constraint-driven engineering</h3>
-          <p>Optimization and model selection under tight GPU memory, latency, licensing, data, and delivery constraints.</p>
-        </article>
-        <article class="capability-card">
-          <div class="capability-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="7" r="2"/><path d="M3 20c0-4 2-7 5-7s5 3 5 7m1-6c3 0 5 2 5 5"/></svg></div>
-          <h3>Technical leadership</h3>
-          <p>Project proposals, development leadership, hands-on delivery, research documentation, teaching, and mentoring.</p>
-        </article>
-      </div>
-    </section>
+    <div class="notes">
+      <a href="BASELINE.md">Baseline decision record</a>
+      <a href="DESIGNS.md">Design notes</a>
+    </div>
 
-    <section class="section shell" id="work" aria-labelledby="work-heading">
-      <div class="section-heading-row">
-        <span class="section-number">02 · Work</span>
-        <h2 id="work-heading">Selected engineering stories</h2>
-        <p>A few projects that show how I work: define the problem clearly, navigate the constraints, and own the result.</p>
-      </div>
-
-      <div class="featured-work">
-        <article class="work-card">
-          <div class="work-copy">
-            <p class="work-kicker">Multimodal AI · Development lead</p>
-            <h3>Making technical documents easier to understand</h3>
-            <p class="work-lede">I proposed and led two generations of a multimodal RAG system designed to answer questions with both written evidence and the right source-document visuals.</p>
-            <dl class="work-facts">
-              <div class="work-fact"><dt>Challenge</dt><dd>Extract complex PDF content, support multiple documents, retrieve reliable evidence, and place images without disrupting streamed responses.</dd></div>
-              <div class="work-fact"><dt>My role</dt><dd>Idea originator, project and development lead, hands-on engineer, demo builder, and mentor.</dd></div>
-              <div class="work-fact"><dt>Outcome</dt><dd>A faster, more capable OCR-based V2 with topic/subtopic evidence organization and multi-step retrieval.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">Multimodal RAG</span><span class="tag">OCR</span><span class="tag">LLMs</span><span class="tag">PDF understanding</span><span class="tag">Streaming UI</span></div>
-          </div>
-          <div class="work-visual" aria-label="Illustration of documents becoming a visual answer">
-            <div class="rag-diagram">
-              <div class="document-stack" aria-hidden="true">
-                <div class="document"><div class="doc-image"></div><div class="doc-line"></div><div class="doc-line short"></div></div>
-                <div class="document"><div class="doc-image"></div><div class="doc-line"></div><div class="doc-line short"></div></div>
-                <div class="document"><div class="doc-image"></div><div class="doc-line"></div><div class="doc-line short"></div></div>
-              </div>
-              <svg class="flow-arrow" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m5 12 14 0m-5-5 5 5-5 5"/></svg>
-              <div class="answer-card" aria-hidden="true"><div class="answer-head">Evidence-based response</div><div class="answer-line"></div><div class="answer-line short"></div><div class="answer-image"></div><div class="answer-line"></div><div class="answer-line short"></div></div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-copy">
-            <p class="work-kicker">Computer vision · Optimization</p>
-            <h3>3.2× faster inference, without retraining</h3>
-            <p class="work-lede">A high-resolution 360° image pipeline split every sample into four parts because the complete image could not fit in 16 GB of GPU memory.</p>
-            <dl class="work-facts">
-              <div class="work-fact"><dt>Challenge</dt><dd>Reduce processing time while preserving the existing model and its outputs.</dd></div>
-              <div class="work-fact"><dt>My role</dt><dd>Analyzed and optimized inference execution and data movement between pipeline stages.</dd></div>
-              <div class="work-fact"><dt>Outcome</dt><dd>Runtime fell from about 42 seconds to 12–13 seconds per sample with unchanged outputs.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">PyTorch</span><span class="tag">Computer vision</span><span class="tag">GPU optimization</span><span class="tag">Image processing</span></div>
-          </div>
-          <div class="work-visual" aria-label="Comparison of inference time before and after optimization">
-            <div class="speed-visual">
-              <div class="speed-row"><span>Before</span><div class="speed-track"><div class="speed-fill" style="width:100%"></div></div><strong>~42s</strong></div>
-              <div class="speed-row"><span>After</span><div class="speed-track"><div class="speed-fill after"></div></div><strong>12–13s</strong></div>
-              <div class="speed-result">
-                <div class="speed-stat"><strong>3.2×</strong><span>reported speed-up</span></div>
-                <div class="speed-stat"><strong>Same</strong><span>model outputs preserved</span></div>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <div class="work-copy">
-            <p class="work-kicker">Generative vision · Research to delivery</p>
-            <h3>Generating floorplans under hard model constraints</h3>
-            <p class="work-lede">Commercial-use and model-origin requirements ruled out many newer systems, while the available Stable Diffusion 1.5 model and limited client data made direct generation unreliable.</p>
-            <dl class="work-facts">
-              <div class="work-fact"><dt>Approach</dt><dd>Split generation into color segments, walls, inpainting, and image-processing stages; later evaluate a viable newer model.</dd></div>
-              <div class="work-fact"><dt>My role</dt><dd>Owned color-segment generation, contributed annotation, built the REST API and deployment, then led the newer-model feasibility study.</dd></div>
-              <div class="work-fact"><dt>Outcome</dt><dd>Delivered the constrained pipeline and demonstrated that a newer 4B model could generate the final floorplan directly.</dd></div>
-            </dl>
-            <div class="tags"><span class="tag">Stable Diffusion 1.5</span><span class="tag">FLUX.2 Klein 4B</span><span class="tag">Inpainting</span><span class="tag">FastAPI</span></div>
-          </div>
-          <div class="work-visual" aria-label="Illustration of a generated floorplan and simplified model workflow">
-            <div class="generation-visual">
-              <div class="floorplan" aria-hidden="true"><div class="room"></div><div class="room"></div><div class="room"></div><div class="room"></div></div>
-              <svg class="flow-arrow" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="m5 12 14 0m-5-5 5 5-5 5"/></svg>
-              <div class="model-card" aria-hidden="true"><span>Evaluation result</span><strong>Two-stage workflow</strong><span style="margin-top:5px">↓ simplified to</span><strong>Direct generation</strong><em>Feasibility confirmed</em></div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <div class="more-work-grid" aria-label="Additional selected work">
-        <article class="mini-work"><span class="mini-work-number">04</span><h3>Self-service anomaly detection</h3><p>Led ASJ-side development across a performant backend and React interface for uploading data, training models, and running inference.</p><div class="tags"><span class="tag">Anomaly detection</span><span class="tag">React</span><span class="tag">Backend</span></div></article>
-        <article class="mini-work"><span class="mini-work-number">05</span><h3>Forecast explainability</h3><p>Led an AI system that explains plausible context behind forecast predictions to make model results easier for users to trust and evaluate.</p><div class="tags"><span class="tag">LLMs</span><span class="tag">Forecasting</span><span class="tag">Tech lead</span></div></article>
-        <article class="mini-work"><span class="mini-work-number">06</span><h3>Multi-model image generation</h3><p>Delivered backend and frontend work for a GDINO, SAM, and SDXL pipeline that had to fit entirely on one 16 GB GPU.</p><div class="tags"><span class="tag">GDINO</span><span class="tag">SAM</span><span class="tag">SDXL</span></div></article>
-        <article class="mini-work"><span class="mini-work-number">07</span><h3>Secure AI demo delivery</h3><p>Built a web portal and cloud deployment architecture for several internal AI demos, covering Nginx, SSL, VM setup, and maintenance.</p><div class="tags"><span class="tag">Azure</span><span class="tag">Nginx</span><span class="tag">Deployment</span></div></article>
-      </div>
-    </section>
-
-    <section class="section shell" id="experience" aria-labelledby="experience-heading">
-      <div class="section-heading-row">
-        <span class="section-number">03 · Journey</span>
-        <h2 id="experience-heading">Where I have worked</h2>
-        <p>The detailed chronology belongs in the CV. Here, the career story stays short and focuses on how my scope has grown.</p>
-      </div>
-
-      <div class="journey">
-        <article class="journey-card current">
-          <div class="journey-meta"><span>Current</span><time>Oct 2022 — Present</time></div>
-          <h3>Chowa Giken Corporation</h3>
-          <p class="journey-role">AI/ML engineering · Technical-development leadership</p>
-          <p class="journey-copy">Joined as a hands-on AI engineer and grew into proposing and leading R&amp;D initiatives while continuing to design, implement, deploy, and explain the systems.</p>
-          <ul class="journey-highlights"><li>Computer vision, generative AI, and multimodal RAG</li><li>Backend, frontend, cloud, and operations ownership</li><li>Research, patents, demos, mentoring, and public presentations</li></ul>
-        </article>
-        <article class="journey-card previous">
-          <div class="journey-meta"><span>Previous</span><time>Jun 2018 — 2022</time></div>
-          <h3>MononAI Limited</h3>
-          <p class="journey-role">Full Stack Developer · Deep Learning Engineer</p>
-          <p class="journey-copy">Built AI-powered video-surveillance products and the production software around them, from model pipelines and REST APIs to interfaces and analytics.</p>
-          <ul class="journey-highlights"><li>Detection, tracking, face recognition, and vehicle ANPR</li><li>Production inference optimization and deployment</li><li>React UI, APIs, and SQL/NoSQL analytics</li></ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section shell" id="writing" aria-labelledby="writing-heading">
-      <div class="section-heading-row">
-        <span class="section-number">04 · Beyond code</span>
-        <h2 id="writing-heading">Research shared with others</h2>
-        <p>I document technical findings, present work to different audiences, and help other engineers and students build stronger foundations.</p>
-      </div>
-
-      <div class="knowledge-grid">
-        <div class="article-list">
-          <h3 class="subheading">Published work</h3>
-          <a class="article-link" href="https://www.chowagiken.co.jp/future-studio/combating_malicious_use/"><span><strong>Combating malicious use of AI-powered image editing</strong><span>Authored technical article · 2024</span></span><span class="article-arrow">↗</span></a>
-          <a class="article-link" href="https://www.chowagiken.co.jp/future-studio/visual-response-rag/"><span><strong>Visual Response RAG</strong><span>Official project overview · 2026</span></span><span class="article-arrow">↗</span></a>
-          <a class="article-link" href="https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/"><span><strong>Visual Response RAG in action</strong><span>Published video demo · 2026</span></span><span class="article-arrow">↗</span></a>
-          <a class="article-link" href="https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/"><span><strong>Forecast visualization AI</strong><span>Official high-level project overview · 2026</span></span><span class="article-arrow">↗</span></a>
-        </div>
-
-        <aside class="community-card">
-          <h3 class="subheading">Teaching &amp; mentoring</h3>
-          <h3>Helping people turn concepts into working AI projects.</h3>
-          <p>Prepared lecture material, delivered university-level AI sessions, mentored BRAC University students, and supported junior engineers through unfamiliar research and development work.</p>
-          <div class="community-stat"><strong>Winning group</strong><span>One mentored student team won the final AI program prize across participating universities.</span></div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section shell" aria-labelledby="stack-heading">
-      <div class="section-heading-row">
-        <span class="section-number">05 · Toolkit</span>
-        <h2 id="stack-heading">Technologies I work with</h2>
-        <p>Tools change by project. These are the ones that appear repeatedly across my recent engineering work.</p>
-      </div>
-      <div class="stack-row">
-        <span class="stack-pill">Python</span><span class="stack-pill">PyTorch</span><span class="stack-pill">OpenCV</span><span class="stack-pill">FastAPI</span><span class="stack-pill">React</span><span class="stack-pill">JavaScript</span><span class="stack-pill">Stable Diffusion</span><span class="stack-pill">SDXL</span><span class="stack-pill">LoRA</span><span class="stack-pill">GDINO</span><span class="stack-pill">SAM</span><span class="stack-pill">Multimodal RAG</span><span class="stack-pill">OCR</span><span class="stack-pill">PostgreSQL</span><span class="stack-pill">MongoDB</span><span class="stack-pill">Docker</span><span class="stack-pill">Linux</span><span class="stack-pill">Google Cloud</span><span class="stack-pill">Azure</span><span class="stack-pill">Nginx</span>
-      </div>
-    </section>
-
-    <section class="closing shell" aria-labelledby="closing-heading">
-      <div class="closing-card">
-        <div>
-          <p>For hiring conversations</p>
-          <h2 id="closing-heading">The full CV is concise. This site shows <span>how I work.</span></h2>
-        </div>
-        <div class="closing-links">
-          <a class="button button-primary" href="mailto:nsabir2011@gmail.com">Email me</a>
-          <a class="button button-quiet" href="https://www.linkedin.com/in/nsabir2011/">LinkedIn ↗</a>
-        </div>
-      </div>
-    </section>
+    <footer>Mockups contain confidential working material and require a publication review before deployment.</footer>
   </main>
-
-  <footer class="site-footer shell">
-    <strong>Nazmus Sakib Abir · AI/ML Engineer</strong>
-    <span>BSc in EEE, BRAC University · Google Cloud Associate Cloud Engineer</span>
-  </footer>
-
-  <script>
-    const root = document.documentElement;
-    const toggle = document.getElementById('theme-toggle');
-    let savedTheme = null;
-    try { savedTheme = localStorage.getItem('portfolio-theme'); } catch (_) {}
-    if (savedTheme) root.dataset.theme = savedTheme;
-    toggle.addEventListener('click', () => {
-      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-      root.dataset.theme = next;
-      try { localStorage.setItem('portfolio-theme', next); } catch (_) {}
-    });
-  </script>
 </body>
 </html>
