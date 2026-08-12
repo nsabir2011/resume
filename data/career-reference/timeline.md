@@ -28,11 +28,11 @@
 
 - Began the [StreetLens](projects.md#streetlens) prototype in March 2019 as a vehicle-focused counterpart to FaceLens.
 - Built the prototype and owned the primary AI and backend work for detecting vehicles in CCTV feeds and extracting and logging their number plates.
-- Reused FaceLens's per-camera dashboard pattern so users could select a feed and review passing vehicles and their logged plates.
+- Reused FaceLens's per-camera dashboard pattern so users could select a location and feed, review passing traffic, and inspect timestamped records containing vehicle crops, plate crops, recognized plate text, and vehicle classes.
 - Another developer made the initial small frontend adaptation for vehicles; Nazmus later fixed issues and improved parts of that frontend.
 - The prototype was intended to support acquisition of another Bangladesh government customer.
 - Left MononAI while the customer-focused work was still underway; do not describe the engagement or final product as completed without further evidence.
-- A confidential prototype video is retained at `../streetlens-prototype.mp4` as supporting material.
+- A confidential prototype video is retained at `../streetlens-prototype.mp4` as supporting material and was visually reviewed on 2026-08-12.
 
 ## Employment baseline
 

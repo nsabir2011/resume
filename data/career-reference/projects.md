@@ -39,12 +39,14 @@
 - **Purpose:** A vehicle-focused monitoring system that detected and logged vehicles passing through CCTV camera feeds and extracted their number plates into searchable records.
 - **Origin:** Built the prototype and owned its main AI and backend work.
 - **Product relationship:** Reused the FaceLens interface and its per-camera dashboard pattern, adapting the experience from people and face monitoring to vehicles and number plates.
-- **Per-camera workflow:** A user could select a particular camera feed, observe passing vehicles, and review the number plates logged for that camera.
+- **Per-camera workflow:** A user could select a location and camera feed, observe passing traffic, open device video logs, and review detections logged for that camera.
+- **Visible detection records:** The prototype video shows timestamped records pairing a vehicle crop with a number-plate crop and recognized plate text. Visible classifications include cars, trucks, and motorcycles.
+- **Additional monitoring strip:** The reused dashboard also shows a strip of recent people or rider detections below the live feed.
 - **Backend ownership:** Implemented the vehicle-related AI processing and backend system. The exact APIs, storage architecture, recognition pipeline, and performance characteristics are not yet recorded.
 - **Frontend contribution boundary:** Another developer made the initial, relatively small frontend modifications needed to adapt the FaceLens UI for vehicles. Nazmus later fixed frontend issues and improved parts of the interface.
 - **Commercial context:** Developed as a prototype intended to help acquire another customer within the Bangladesh government. The specific prospective organization should remain private unless publication is approved.
 - **Completion boundary:** Nazmus left MononAI while this effort was still underway, so the reference must not imply that he completed the customer engagement, secured the customer, or delivered the final production system.
-- **Supporting material:** A confidential local prototype recording is stored at `../streetlens-prototype.mp4`. Its publication status and whether screenshots or feature details may be used externally need confirmation.
+- **Supporting material:** A confidential local prototype recording is stored at `../streetlens-prototype.mp4` and was reviewed on 2026-08-12. The footage is approximately 61 seconds at 1920x1080 and visibly supports the per-camera monitoring and vehicle/plate logging workflow described above. Its publication status and whether screenshots may be used externally still need confirmation.
 
 ## Anomaly Detection Platform
 
