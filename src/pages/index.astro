@@ -30,6 +30,11 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
         <h1 id="intro-title">{profile.name}</h1>
         <p class="intro-summary">{profile.summary}</p>
         <p class="intro-detail">{profile.detail}</p>
+        <p class="intro-proof">
+          {profile.patentHighlight.lead}{' '}
+          <strong>{profile.patentHighlight.emphasis}</strong>,{' '}
+          {profile.patentHighlight.detail}
+        </p>
         <ul class="intro-meta" aria-label="Profile details">
           <li>
             <svg
@@ -262,6 +267,11 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
                   <li>{point}</li>
                 ))}
               </ul>
+              {card.link && (
+                <a class="support-link" href={card.link.href}>
+                  {card.link.label} <span aria-hidden="true">↗</span>
+                </a>
+              )}
             </article>
           ))
         }

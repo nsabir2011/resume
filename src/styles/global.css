@@ -156,6 +156,17 @@ h1 {
   font-size: 0.9rem;
 }
 
+.intro-proof {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.intro-proof strong {
+  color: var(--ink);
+  font-weight: 720;
+}
+
 .intro-meta {
   display: flex;
   flex-wrap: wrap;
@@ -637,6 +648,23 @@ h1 {
 
 .support-card li::before {
   background: var(--accent);
+}
+
+.support-link {
+  display: inline-flex;
+  gap: 6px;
+  margin-top: 19px;
+  color: #c5ceda;
+  font-size: 0.74rem;
+  font-weight: 650;
+  text-decoration-color: #536071;
+  text-underline-offset: 4px;
+}
+
+.support-link:hover,
+.support-link:focus-visible {
+  color: var(--ink);
+  text-decoration-color: var(--accent);
 }
 
 .credential-card {

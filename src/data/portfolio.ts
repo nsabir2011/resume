@@ -8,6 +8,11 @@ export const profile = {
     'Applied AI engineer with professional experience since 2018, working across computer vision, generative AI, multimodal RAG, product engineering, and cloud deployment.',
   detail:
     'Current responsibilities combine technical investigation, project leadership, hands-on implementation, and delivery of usable AI systems under practical hardware, data, licensing, and timeline constraints.',
+  patentHighlight: {
+    lead: 'Contributor to',
+    emphasis: 'three patent applications',
+    detail: 'with lead contributions to two.',
+  },
 } as const;
 
 export const navigation = [
@@ -243,14 +248,18 @@ export const publications = [
 
 export const contributionCards = [
   {
-    title: 'University AI mentoring',
+    title: 'University AI teaching & mentoring',
     summary:
-      'Lecturer-equivalent contribution to university AI programs through material preparation, lecture delivery, technical guidance, and project mentoring.',
+      'Delivered university-level AI lectures and mentored students through NIPPON AI Dojo at BRAC University.',
     points: [
       "Prepared approximately one-third of the first program's lecture material.",
       'Delivered lecture sessions shared with BRAC University and North South University students.',
       "Supported a mentored group that won the program's final prize.",
     ],
+    link: {
+      label: 'About NIPPON AI Dojo at BRAC University',
+      href: 'https://www.bracu.ac.bd/news/brac-university-collaborates-japan-ai-training-program',
+    },
   },
   {
     title: 'Team and external contribution',
@@ -261,6 +270,7 @@ export const contributionCards = [
       'Mentoring for engineers moving into unfamiliar AI work.',
       'Technical and project presentations for varied audiences.',
     ],
+    link: null,
   },
 ] as const;
 
