@@ -533,9 +533,9 @@ h1 {
 .project-link {
   width: fit-content;
   margin-top: 12px;
-  color: var(--accent);
-  font-size: 0.68rem;
-  font-weight: 700;
+  color: var(--quiet);
+  font-size: 0.61rem;
+  font-weight: 620;
   text-decoration: none;
 }
 
