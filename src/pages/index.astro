@@ -25,7 +25,11 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
   <SiteHeader />
 
   <main id="top">
-    <section class="intro container" aria-labelledby="intro-title">
+    <section
+      class="intro container"
+      aria-labelledby="intro-title"
+      data-pointer-glow
+    >
       <div class="intro-copy">
         <p class="role-label">{profile.role}</p>
         <h1 id="intro-title">{profile.name}</h1>
@@ -172,6 +176,7 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
       class="section container"
       id="projects"
       aria-labelledby="projects-title"
+      data-pointer-glow
     >
       <SectionHeading
         title="Projects"
@@ -342,4 +347,38 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
       >BSc in EEE, BRAC University · Google Cloud Associate Cloud Engineer</span
     >
   </footer>
+
+  <script>
+    const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    if (finePointer.matches && !reducedMotion.matches) {
+      document
+        .querySelectorAll<HTMLElement>('[data-pointer-glow]')
+        .forEach((section) => {
+          let animationFrame = 0;
+
+          const updateGlowPosition = (event: PointerEvent) => {
+            window.cancelAnimationFrame(animationFrame);
+            animationFrame = window.requestAnimationFrame(() => {
+              const sectionBounds = section.getBoundingClientRect();
+              section.style.setProperty('--pointer-x', `${event.clientX}px`);
+              section.style.setProperty(
+                '--pointer-y',
+                `${event.clientY - sectionBounds.top}px`,
+              );
+            });
+          };
+
+          section.addEventListener('pointerenter', (event) => {
+            section.style.setProperty('--pointer-glow-opacity', '1');
+            updateGlowPosition(event);
+          });
+          section.addEventListener('pointermove', updateGlowPosition);
+          section.addEventListener('pointerleave', () => {
+            section.style.setProperty('--pointer-glow-opacity', '0');
+          });
+        });
+    }
+  </script>
 </BaseLayout>
