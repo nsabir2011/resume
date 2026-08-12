@@ -1,0 +1,16 @@
+---
+import { navigation, profile } from '../data/portfolio';
+---
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary navigation">
+    <a class="brand" href="#top" aria-label={`${profile.name}, back to top`}>
+      <span class="brand-mark" aria-hidden="true">SA</span>
+      <span>{profile.name}</span>
+    </a>
+    <div class="nav-links">
+      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a class="contact-link" href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
