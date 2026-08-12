@@ -470,24 +470,24 @@ h1 {
   content: '';
   position: absolute;
   z-index: 0;
-  left: 4px;
+  left: 5px;
   top: 12px;
   bottom: 12px;
-  width: 3px;
+  width: 1px;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(121, 169, 255, 0.2) 22%,
-    var(--accent-2) 48%,
-    var(--accent) 62%,
+    rgba(121, 169, 255, 0.1) 22%,
+    rgba(121, 169, 255, 0.7) 48%,
+    rgba(98, 199, 189, 0.52) 62%,
     transparent
   );
   background-repeat: no-repeat;
   background-position: 0 120%;
   background-size: 100% 112px;
-  filter: drop-shadow(0 0 5px rgba(121, 169, 255, 0.45));
-  animation: timeline-signal 5.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 2px rgba(121, 169, 255, 0.22));
+  animation: timeline-signal 8s ease-in-out infinite;
 }
 
 @keyframes timeline-signal {
@@ -498,11 +498,11 @@ h1 {
   }
 
   23% {
-    opacity: 0.82;
+    opacity: 0.5;
   }
 
   86% {
-    opacity: 0.82;
+    opacity: 0.5;
   }
 
   100% {
