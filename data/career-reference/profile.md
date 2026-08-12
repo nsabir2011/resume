@@ -7,6 +7,9 @@
 - **Name:** Nazmus Sakib Abir
 - **Current employer:** Chowa Giken Corporation (`chowagiken.co.jp`)
 - **Employment period:** October 2022 - Present
+- **Previous employer:** MononAI Limited
+- **Previous employment period:** June 2018 - 2022; exact end month needs confirmation
+- **Previous role:** Full Stack Developer and Deep Learning Engineer
 - **Organization shown in annual presentations:** R&D Offshore AI Development Team (ASJ)
 - **Grade progression shown in presentations:** Grade III-2 in 2023, Grade III-4 in 2024, and Grade III-5 in 2025
 - **Formal current job title:** Needs confirmation before it is used on the portfolio
@@ -22,6 +25,7 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 ### AI and machine learning
 
 - Computer vision, anomaly detection, object detection, segmentation, image enhancement, image generation, inpainting, and texture-aware generation
+- Real-time face detection and recognition, multi-camera video monitoring, identity matching, and video analytics
 - Generative AI systems using Stable Diffusion 1.5, SDXL, LoRA, GDINO, SAM, FLUX.2 Klein 4B, and language models
 - Forecast explainability, document-image-enhanced RAG/MRAG, OCR-based document understanding, and multi-document retrieval
 - Topic/subtopic-based evidence organization across multi-page document corpora
@@ -31,6 +35,7 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 ### Product and software engineering
 
 - Backend and REST API design and implementation
+- Real-time backend systems using databases, Redis caching, and WebSocket interactions
 - React frontend development and UI/UX performance improvement
 - Kivy desktop GUI development and Gradio demo interfaces
 - End-to-end workflows for data upload, model training, inference, and result delivery
@@ -46,6 +51,7 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 
 ### Leadership and communication
 
+- Took a face-recognition product from a self-built prototype to a production system, owned its backend, and later maintained and extended it as the sole remaining product engineer
 - Proposed and led multiple technical projects and research initiatives
 - Served as Development Lead while also contributing hands-on engineering and research
 - Largest self-estimated individual contributor (`>75%`) on two patent applications
@@ -70,6 +76,8 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 | Limited client dataset | 150 samples initially, later increased to 580 | EII FloorPlan Generation; reference publication used 50,000 |
 | Teaching material | One-third of lecture materials plus lecture delivery | Dhaka AI Dojo / Global South Subsidy, 2025 |
 | Coordinated generation | Four seamless house exterior sides | KMEW House Image Generation, 2025 |
+| Real-time multi-camera capacity | 14 live camera feeds on one six-core CPU and an RTX GPU | FaceLens; database, backend API, and frontend also ran on the same computer; first-hand account, exact hardware and test conditions not yet recorded |
+| Product ownership | Prototype creator and complete production-backend owner | FaceLens; later sole maintaining engineer and full-stack contributor, while another engineer had created the baseline frontend |
 
 ## 2026 highlights to date
 
@@ -87,6 +95,8 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 
 ## Evidence-backed positioning themes
 
+- Prototype-to-production builder who owned the AI, APIs, data layer, caching, and real-time interactions of a multi-camera computer-vision product
+- Systems-focused optimizer who increased multi-camera capacity and lowered end-to-end latency under single-machine CPU/GPU constraints
 - AI engineer who moves from research and proposal through implementation, demo, deployment, and maintenance
 - End-to-end builder across AI/ML, backend, frontend, UI/UX, infrastructure, and cloud operations
 - Performance-focused problem solver who delivers under GPU, data, licensing, and time constraints

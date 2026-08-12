@@ -2,6 +2,30 @@
 
 > Internal source of truth for project purpose, constraints, ownership, technologies, and outcomes. Do not copy client or internal project names directly into a public portfolio without checking `sources-and-publication.md`.
 
+## FaceLens
+
+**Period:** Prototype began August 2018; continued through Nazmus's MononAI employment in 2022; exact end month needs confirmation
+
+**Role:** Prototype creator; AI and backend system owner; later primary product engineer and full-stack contributor
+
+**Public label suggestion:** Real-Time Multi-Camera Face Intelligence Platform
+
+**Portfolio treatment:** Strong earlier-career case study; the product and features are publicly demonstrated, but approve staffing history, architecture details, and the exact throughput claim before publication
+
+- **Purpose:** A face-recognition and video-surveillance product that continuously monitored CCTV feeds, logged detected faces, matched or categorized identities, and generated operational analytics such as attendance, unknown-person clustering, activity summaries, alerts, and time spent within an area.
+- **Origin:** Built the initial prototype using face detection, face recognition, and OpenCV. The prototype became the basis for development of the production product.
+- **Backend ownership:** Built the production backend across the AI pipeline, REST APIs, database design and queries, Redis caching, and WebSocket-based real-time interactions.
+- **Performance challenge:** Continuous CCTV monitoring had to remain accurate and responsive while processing as many live camera streams as possible on one machine that also hosted the database, backend API, and frontend.
+- **Optimization work:** Improved database queries, added Redis caching, reduced latency across the application, and optimized the continuous-monitoring pipeline for efficient use of available CPU and GPU resources.
+- **Accuracy work:** Continued improving recognition accuracy while increasing camera capacity and reducing latency; no accuracy metric is currently recorded.
+- **Measured capacity:** First-hand account reports real-time processing of 14 cameras on one computer with a six-core processor and an RTX GPU while the database, backend API, and frontend ran on the same system. The exact hardware configuration and test conditions are not yet recorded.
+- **Product continuity:** After COVID-era layoffs removed the other engineers associated with the product, became the sole engineer maintaining and extending FaceLens.
+- **Full-stack expansion:** Learned the existing frontend and subsequently delivered UI responsiveness improvements, workflow refinements, and new user-facing features, including analytics for how long a person remained within an area.
+- **Registration overhaul:** Substantially redesigned the slow registration system and its UI, removing a bottleneck that had limited integration of additional product features.
+- **Ownership boundary:** Another engineer developed the baseline frontend. A second engineer participated briefly during roughly the first year and guided what the product needed, but did not write the backend implementation. Nazmus built most of the eventual product, but not the entire system single-handedly.
+- **Engineering context:** This work was implemented and optimized before AI coding assistants were available, using conventional hands-on development, profiling, debugging, and systems engineering.
+- **Public evidence:** The public [FaceLens Version 1.0 walkthrough](https://www.youtube.com/watch?v=htZk24_gaVs), published on 2020-01-28, demonstrates live monitoring, identity matching, alerts and status categories, face search, people registration and management, attendance/activity analytics, and person- and device-level video summaries. The video supports the visible product capabilities, while the contribution and ownership details above are first-hand.
+
 ## Anomaly Detection Platform
 
 **Period:** 2023-2024  

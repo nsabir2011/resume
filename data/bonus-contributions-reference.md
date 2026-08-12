@@ -7,8 +7,8 @@
 - **Name:** Nazmus Sakib Abir
 - **Employer:** Chowa Giken Corporation
 - **Employment period:** October 2022 - Present; the start month is confirmed by a published Chowa Giken author biography
-- **Primary work:** AI/ML engineering, technical and development leadership, full-stack delivery, infrastructure, research, mentoring, and client-facing technical communication
-- **Latest coverage:** 2026-08-11
+- **Primary work:** AI/ML engineering, real-time computer-vision systems, technical and development leadership, full-stack delivery, infrastructure, research, mentoring, and client-facing technical communication
+- **Latest coverage:** 2026-08-12
 
 ## Reference map
 
@@ -16,7 +16,7 @@
 | --- | --- | --- |
 | Professional summary, capabilities, and metrics | [career-reference/profile.md](career-reference/profile.md) | Employment facts, positioning, skills, quantified evidence, and 2026 highlights |
 | Understand a project or write a case study | [career-reference/projects.md](career-reference/projects.md) | Canonical purpose, constraints, role, implementation, outcomes, technology, and public-label suggestions |
-| Answer when something happened | [career-reference/timeline.md](career-reference/timeline.md) | Dated 2023-2026 contribution record, grade progression, external work, operations, and mentoring |
+| Answer when something happened | [career-reference/timeline.md](career-reference/timeline.md) | Dated 2018-2026 contribution record, grade progression, external work, operations, and mentoring |
 | Decide what is safe to publish | [career-reference/sources-and-publication.md](career-reference/sources-and-publication.md) | Source provenance, confidentiality rules, confirmation gaps, and portfolio publication workflow |
 | Review earlier career and education information | [DL-CV-5th-reference.md](DL-CV-5th-reference.md) | Structured transcription of the older image-based resume |
 
@@ -40,6 +40,7 @@
 
 ## Current flagship portfolio themes
 
+- Prototype-to-production ownership of a real-time, multi-camera face-intelligence platform
 - OCR-driven multi-document RAG with topic/subtopic evidence retrieval
 - Image-aware RAG with clean multimodal streaming from PDFs
 - High-resolution vision inference optimized from approximately 42 seconds to 12-13 seconds

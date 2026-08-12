@@ -2,6 +2,28 @@
 
 > Dated evidence organized by annual presentation. Use [projects.md](projects.md) for canonical project explanations and [sources-and-publication.md](sources-and-publication.md) for provenance and publication restrictions.
 
+## MononAI Limited: 2018-2022
+
+**Employment start:** June 2018
+
+**Employment end:** 2022; exact month needs confirmation
+
+**Role:** Full Stack Developer and Deep Learning Engineer
+
+### FaceLens development
+
+- Began the [FaceLens](projects.md#facelens) prototype in August 2018 using face detection, face recognition, and OpenCV.
+- Turned the prototype into a production face-intelligence and CCTV-monitoring product.
+- Built the complete production backend, including the AI pipeline, REST APIs, database layer and queries, Redis caching, and WebSocket interactions.
+- Improved query performance, introduced caching, and reduced latency throughout the product.
+- Continued improving face-recognition accuracy while increasing multi-camera throughput; no accuracy metric is currently recorded.
+- Optimized continuous live-camera processing to run 14 cameras in real time on one six-core CPU and an RTX GPU while the database, backend API, and frontend ran on the same computer. This is a first-hand claim; exact hardware and test conditions are not yet recorded.
+- Expanded into frontend work, delivering responsive UI improvements, workflow refinements, and new features such as tracking how long a person remained in an area.
+- Substantially redesigned the registration system and its UI after the earlier implementation became a performance and feature-development bottleneck.
+- After COVID-era layoffs removed the other product engineers, continued as the sole engineer maintaining and extending FaceLens.
+- Another engineer had developed the baseline frontend, and a second engineer provided product guidance for roughly the first year without writing the backend implementation. Nazmus therefore built most, but not all, of the final system.
+- A public [FaceLens Version 1.0 walkthrough](https://www.youtube.com/watch?v=htZk24_gaVs) was published on 2020-01-28 and demonstrates the product's monitoring, search, registration, alerting, analytics, and video-summary workflows.
+
 ## Employment baseline
 
 - **Employer:** Chowa Giken Corporation

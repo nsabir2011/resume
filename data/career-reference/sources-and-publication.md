@@ -9,15 +9,17 @@ The career reference combines confidential company presentations, an older image
 | Coverage | Prepared | Source | Notes |
 | --- | --- | --- | --- |
 | Resume history | Source resume predates Chowa Giken work | `../DL-CV-5th-reference.md` | Structured transcription of image-based `DL-CV-5th.pdf` |
+| FaceLens ownership, architecture, performance, and team context | 2026-08-12 conversation | First-hand clarifications from Nazmus Sakib Abir | Adds prototype origin, backend ownership, Redis/WebSocket/database work, throughput, full-stack expansion, registration overhaul, and contribution boundaries |
 | Contributions through 2023 | 2023-11-20 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus - Nazmus Sakib Abir.pptx` | Confidential; Grade III-2 |
 | Contributions through 2024 | 2024-11-21 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus 2024 - Nazmus Sakib Abir.pptx` | Confidential; Grade III-4 |
 | Contributions through 2025 | 2025-12-07 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus 2025 - Nazmus Sakib Abir.pptx` | Confidential; Grade III-5 |
 | Additional technical context and 2026 work | 2026-08-11 conversation | First-hand clarifications from Nazmus Sakib Abir | Adds project purpose, constraints, implementation detail, ownership, timelines, estimates, and 2026 contributions not present in the reviewed decks |
 
-## Official public pages
+## Public material
 
 | Published | Page | Public attribution | How to use it |
 | --- | --- | --- | --- |
+| 2020-01-28 | [FaceLens Version 1.0](https://www.youtube.com/watch?v=htZk24_gaVs) | B M Abir; MononAI-branded product walkthrough | Public evidence for visible FaceLens features and workflows; it does not establish Nazmus's contribution ownership or independently validate the performance and robustness claims in the video description |
 | 2024-06-07 | [Combating the Malicious Use of AI-Powered Image Editing: A Deep Technical Dive](https://www.chowagiken.co.jp/future-studio/combating_malicious_use/) | Nazmus Sakib Abir | Authored technical article; its author biography confirms joining Chowa Giken in October 2022 |
 | 2026-03-13 | [Prototype No.2 Visual Response RAG](https://www.chowagiken.co.jp/future-studio/visual-response-rag/) | Chowa Giken Editorial Department | Official public overview of the MRAG concept and its user-facing capabilities |
 | 2026-03-13 | [Demo Video No.2 Visual Response RAG](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) | Chowa Giken Editorial Department | Official public demo; intentionally high-level and does not disclose internal techniques |
@@ -28,7 +30,7 @@ The career reference combines confidential company presentations, an older image
 Use these labels internally when deciding how strongly to phrase a claim:
 
 - **Deck-backed:** Explicitly stated in an annual presentation.
-- **Public-source-backed:** Explicitly supported by an official Chowa Giken public page.
+- **Public-source-backed:** Explicitly supported by public material listed in this ledger.
 - **First-hand:** Supplied directly by Nazmus but not necessarily present in a deck.
 - **Derived:** A cautious synthesis of multiple facts, such as a capability or positioning theme.
 - **Needs confirmation:** Approximate, ambiguous, current-state-sensitive, or unsuitable for formal publication without checking.
@@ -37,6 +39,7 @@ Use these labels internally when deciding how strongly to phrase a claim:
 
 - All three annual contribution presentations are labeled **CONFIDENTIAL**.
 - Treat project names, client names, infrastructure design, patent details, internal personnel names, unpublished research, and company-specific metrics as non-public by default.
+- Treat the FaceLens staffing history, exact deployment topology, 14-camera capacity, hardware configuration, and non-visible implementation details as non-public until Nazmus explicitly approves the final wording. The public video makes the shown product name and workflows public, but not every internal engineering detail.
 - Do not publish information merely because it appears in `projects.md`; that file is an internal source of truth.
 - Chowa Giken may be named as the employer, but public descriptions of its work should still be reviewed for contractual, patent, client, and confidentiality constraints.
 - Never publish contact information or references from the old resume without explicit approval.
@@ -79,6 +82,7 @@ Use this structure for each portfolio project:
 | Strong | Anomaly Detection Platform | Self-Service Product Anomaly Detection | Full workflow, lead role, React UI, backend/frontend performance |
 | Strong | Prediction + GPT | Explainable AI for Forecast Predictions | Trust-centered product concept, Tech Lead role, patent application |
 | Strong | FLUX.2 Klein 4B Floorplan Feasibility Study | Evaluating a New Model for Single-Stage Floorplan Generation | Proposed and led successful technical evaluation that could simplify a two-stage pipeline |
+| Strong | FaceLens | Real-Time Multi-Camera Face Intelligence Platform | Self-built prototype, complete backend ownership, single-machine optimization, later sole product maintenance, and full-stack feature delivery |
 | Supporting | Ukiyolator-v2 | Component-Aware Multi-Style Image Transformation | LoRA, Kivy, multi-model GPU integration |
 | Supporting | Sapporo Subsidy Demo Portal | Secure Delivery Platform for AI Demos | Azure isolation, Nginx proxy, portal, deployments |
 | Supporting | Commercial-Friendly OD Benchmark | Model Selection Under Licensing Constraints | Practical research with reusable team value and mentoring |
@@ -87,6 +91,11 @@ Use this structure for each portfolio project:
 ## Claims that need confirmation before formal use
 
 - Formal current job title.
+- Exact MononAI employment end month.
+- Whether MononAI and FaceLens should be named directly in the portfolio rather than presented under the suggested public label.
+- Whether the COVID-era staffing history should be published.
+- Whether the 14-camera, six-core CPU, RTX GPU, and single-machine full-stack configuration may be stated publicly, and the exact hardware and test conditions supporting it.
+- How much technical detail about the FaceLens database, Redis caching, WebSockets, monitoring architecture, and registration redesign may be disclosed.
 - Exact number of Sapporo demos; current recollection is approximately four.
 - Current legal/status details of all patent applications.
 - Whether the `>75%`, `>75%`, and `20-30%` patent contribution estimates may be stated publicly.
@@ -100,6 +109,8 @@ Use this structure for each portfolio project:
 
 ## First-hand estimates and qualifications
 
+- FaceLens: Nazmus built the initial prototype and the complete production backend, then became the sole maintaining engineer and expanded into frontend work. Another engineer developed the baseline frontend, and an early engineer guided product requirements without implementing the backend.
+- FaceLens capacity: 14 live cameras processed in real time on one six-core CPU and an RTX GPU while the database, backend API, and frontend ran on the same computer. Exact hardware and reproducible test conditions are not yet recorded.
 - Prediction + GPT patent contribution: largest individual contributor, estimated at more than 75%.
 - MRAG patent contribution: largest individual contributor, estimated at more than 75%.
 - EII FloorPlan Generation patent contribution: estimated at 20-30%.
