@@ -84,7 +84,7 @@ export const projects = [
     title: 'Vision Inference Optimization',
     period: '2023',
     summary:
-      'Optimized a 360-degree image-processing pipeline to run more than 3× faster without retraining or changing its outputs.',
+      'Optimized a 360-degree image-processing pipeline in about one week, making it more than 3× faster without retraining or changing its outputs.',
     tags: ['Computer vision', 'PyTorch', 'Performance'],
   },
   {
