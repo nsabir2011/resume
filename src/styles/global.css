@@ -79,16 +79,16 @@ svg {
 }
 
 .brand-mark {
-  width: 32px;
+  width: 38px;
   height: 32px;
   display: grid;
   place-items: center;
   color: var(--bg);
   background: var(--accent);
   border-radius: 8px;
-  font-size: 0.7rem;
+  font-size: 0.64rem;
   font-weight: 850;
-  letter-spacing: -0.05em;
+  letter-spacing: -0.035em;
 }
 
 .nav-links {

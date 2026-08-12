@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import socialPreview from '../assets/ai-workstation-illustration.png';
 
 interface Props {
   title: string;
@@ -11,6 +12,12 @@ const canonicalUrl = Astro.site
   ? new URL(Astro.url.pathname, Astro.site)
   : Astro.url;
 const faviconUrl = `${import.meta.env.BASE_URL}favicon.svg`;
+const socialImageUrl = new URL(
+  socialPreview.src,
+  Astro.site ?? Astro.url.origin,
+);
+const socialImageAlt =
+  'Illustration of an AI engineering workstation viewed from behind a seated engineer';
 ---
 
 <!doctype html>
@@ -24,7 +31,16 @@ const faviconUrl = `${import.meta.env.BASE_URL}favicon.svg`;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="Nazmus Sakib Abir" />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta property="og:image:width" content="1076" />
+    <meta property="og:image:height" content="1462" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href={faviconUrl} />
     <title>{title}</title>
