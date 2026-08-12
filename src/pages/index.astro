@@ -186,6 +186,11 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
                 <time>{project.period}</time>
               </div>
               <p>{project.summary}</p>
+              {'link' in project && project.link && (
+                <a class="project-link" href={project.link.href}>
+                  {project.link.label} <span aria-hidden="true">↗</span>
+                </a>
+              )}
               <ul class="tag-list" aria-label={`${project.title} technologies`}>
                 {project.tags.map((tag) => (
                   <li>{tag}</li>

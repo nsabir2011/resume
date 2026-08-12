@@ -78,7 +78,7 @@ export const projects = [
     period: '2024–2026',
     summary:
       'Proposed and led two generations of document-chat systems that combine written answers with relevant source visuals; contributed directly to engineering, demos, and team guidance.',
-    tags: ['RAG', 'OCR', 'LLMs', 'Development lead'],
+    tags: ['RAG', 'OCR', 'LLMs', 'Tech lead'],
   },
   {
     title: 'Vision Inference Optimization',
@@ -121,6 +121,10 @@ export const projects = [
     summary:
       'Created the original prototype and built the production AI and backend system for real-time CCTV face monitoring, then expanded into performance optimization and full-stack product improvements.',
     tags: ['Face recognition', 'Real-time systems', 'Backend ownership'],
+    link: {
+      label: 'Watch product walkthrough',
+      href: 'https://www.youtube.com/watch?v=htZk24_gaVs',
+    },
   },
   {
     title: 'Vehicle & Number-Plate Intelligence',
@@ -134,7 +138,7 @@ export const projects = [
     period: '2023–2024',
     summary:
       'Worked across model training, backend development, web UI development, and deployment for a component-aware artistic image-transformation system.',
-    tags: ['Image generation', 'Web UI', 'Segmentation', 'Deployment'],
+    tags: ['Image generation', 'Segmentation', 'Deployment'],
   },
   {
     title: 'AI Demo Delivery Platform',
@@ -147,8 +151,8 @@ export const projects = [
     title: 'Commercial-Friendly Model Research',
     period: '2023–2024',
     summary:
-      'Proposed and conducted model-comparison studies for segmentation and object detection, producing reusable internal references for future project selection.',
-    tags: ['Model evaluation', 'Computer vision', 'Research'],
+      'Proposed and led model-comparison research with a junior engineer across segmentation and object detection, producing reusable internal references for future project selection.',
+    tags: ['Model evaluation', 'Computer vision', 'Research lead'],
   },
   {
     title: 'Applied AI Demonstrations',
@@ -188,6 +192,8 @@ export const skillGroups = [
       'PEFT',
       'TensorRT',
       'vLLM',
+      'LangChain',
+      'LangGraph',
       'Language Models',
       'Image Generation Models',
     ],
@@ -227,17 +233,6 @@ export const skillGroups = [
 ] as const;
 
 export const publications = [
-  {
-    type: 'Product walkthrough',
-    title: 'Multi-Camera Face Intelligence Platform',
-    year: '2020',
-    links: [
-      {
-        label: 'Watch',
-        href: 'https://www.youtube.com/watch?v=htZk24_gaVs',
-      },
-    ],
-  },
   {
     type: 'Authored article',
     title: 'Combating the Malicious Use of AI-Powered Image Editing',

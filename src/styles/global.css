@@ -196,7 +196,7 @@ h1 {
 
 .portrait {
   position: relative;
-  aspect-ratio: 4 / 4.55;
+  aspect-ratio: 1;
   overflow: hidden;
   background: var(--surface);
   border: 1px solid #344154;
@@ -528,6 +528,20 @@ h1 {
 .project-card > p {
   margin: 15px 0 0;
   line-height: 1.65;
+}
+
+.project-link {
+  width: fit-content;
+  margin-top: 12px;
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus-visible {
+  color: var(--text);
 }
 
 .tag-list,
