@@ -3,6 +3,7 @@ tmp/
 
 # Production site dependencies and build output
 node_modules/
+.pnpm-store/
 dist/
 .astro/
 
