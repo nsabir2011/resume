@@ -1,5 +1,7 @@
 ---
 import { navigation, profile } from '../data/portfolio';
+
+const cvUrl = `${import.meta.env.BASE_URL}cv/Nazmus-Sakib-Abir-CV.pdf`;
 ---
 
 <header class="site-header">
@@ -10,6 +12,25 @@ import { navigation, profile } from '../data/portfolio';
     </a>
     <div class="nav-links">
       {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a
+        class="resume-link"
+        href={cvUrl}
+        download="Nazmus-Sakib-Abir-CV.pdf"
+        aria-label="Download Nazmus Sakib Abir's CV as a PDF"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M12 3v11"></path>
+          <path d="m7.5 10 4.5 4.5 4.5-4.5"></path>
+          <path d="M5 20h14"></path>
+        </svg>
+        <span class="resume-link-full" aria-hidden="true">Download CV</span>
+        <span class="resume-link-short" aria-hidden="true">CV</span>
+      </a>
       <a class="contact-link" href="#contact">Contact</a>
       <button
         class="theme-toggle"

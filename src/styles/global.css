@@ -201,6 +201,40 @@ svg {
   border-radius: 8px;
 }
 
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 11px;
+  color: var(--brand-ink) !important;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  white-space: nowrap;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.resume-link:hover,
+.resume-link:focus-visible {
+  color: var(--brand-ink) !important;
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.resume-link svg {
+  width: 14px;
+  height: 14px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.resume-link-short {
+  display: none;
+}
+
 .theme-toggle {
   width: 35px;
   height: 35px;
@@ -1110,7 +1144,15 @@ h1 {
 }
 
 @media (max-width: 760px) {
-  .nav-links a:not(.contact-link) {
+  .nav {
+    gap: 14px;
+  }
+
+  .nav-links {
+    gap: 9px;
+  }
+
+  .nav-links a:not(.contact-link):not(.resume-link) {
     display: none;
   }
 
@@ -1181,6 +1223,23 @@ h1 {
 
   .brand > span:last-child {
     display: none;
+  }
+
+  .resume-link {
+    gap: 5px;
+    padding-inline: 9px;
+  }
+
+  .resume-link-full {
+    display: none;
+  }
+
+  .resume-link-short {
+    display: inline;
+  }
+
+  .contact-link {
+    padding-inline: 10px;
   }
 
   .intro {
