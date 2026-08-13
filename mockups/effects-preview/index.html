@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Effects Preview</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0b1018;
+        --surface: #111925;
+        --surface-2: #162131;
+        --text: #edf4ff;
+        --muted: #a8bad0;
+        --line: #2a394b;
+        --accent: #61d5c8;
+        --blue: #70a5ff;
+        --spot: rgba(97, 213, 200, 0.09);
+      }
+
+      [data-theme="light"] {
+        color-scheme: light;
+        --bg: #f5f8fb;
+        --surface: #ffffff;
+        --surface-2: #edf4f8;
+        --text: #132133;
+        --muted: #52657a;
+        --line: #cedae5;
+        --accent: #087f78;
+        --blue: #316fcb;
+        --spot: rgba(24, 140, 132, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background:
+          linear-gradient(rgba(115, 155, 185, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(115, 155, 185, 0.025) 1px, transparent 1px),
+          var(--bg);
+        background-size: 48px 48px;
+        color: var(--text);
+        font: 15px/1.7 Inter, ui-sans-serif, system-ui, sans-serif;
+        transition: background-color 450ms ease, color 300ms ease;
+      }
+
+      .progress {
+        position: fixed; inset: 0 auto auto 0; z-index: 20;
+        width: var(--progress, 0%); height: 2px;
+        background: linear-gradient(90deg, var(--accent), var(--blue));
+        box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 50%, transparent);
+      }
+
+      header {
+        position: sticky; top: 0; z-index: 10;
+        border-bottom: 1px solid color-mix(in srgb, var(--line) 75%, transparent);
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(16px);
+      }
+      nav { max-width: 1120px; height: 64px; margin: auto; padding: 0 24px; display: flex; align-items: center; gap: 28px; }
+      .brand { margin-right: auto; color: var(--accent); font: 700 20px ui-monospace, monospace; }
+      nav a { position: relative; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 650; }
+      nav a.active { color: var(--text); }
+      nav a::after { content: ""; position: absolute; left: 50%; bottom: -9px; width: 0; height: 2px; background: var(--accent); transition: 240ms ease; }
+      nav a.active::after { left: 0; width: 100%; }
+      button { border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; background: var(--surface); color: var(--text); cursor: pointer; }
+
+      main { max-width: 1120px; margin: auto; padding: 0 24px 100px; }
+      section { scroll-margin-top: 80px; padding: 104px 0; border-bottom: 1px solid var(--line); }
+      .hero { min-height: calc(100vh - 64px); display: grid; grid-template-columns: 1.35fr .65fr; align-items: center; gap: 72px; }
+      .eyebrow { color: var(--accent); letter-spacing: .13em; font-size: 12px; font-weight: 800; }
+      h1 { margin: 14px 0 20px; font-size: clamp(48px, 7vw, 78px); line-height: 1; letter-spacing: -.05em; }
+      h2 { margin: 0 0 12px; font-size: 28px; letter-spacing: -.025em; }
+      h3 { margin: 0; font-size: 18px; }
+      .lead { max-width: 680px; color: var(--muted); font-size: 18px; }
+      .portrait { position: relative; overflow: hidden; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
+      .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 700ms ease, transform 220ms ease-out; }
+      .portrait .light { opacity: 0; }
+      [data-theme="light"] .portrait .dark { opacity: 0; }
+      [data-theme="light"] .portrait .light { opacity: 1; }
+
+      .section-head { display: grid; grid-template-columns: 190px 1fr; gap: 24px; margin-bottom: 42px; }
+      .section-head p { max-width: 650px; margin: 0; color: var(--muted); }
+      .grid { margin-left: 214px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .card {
+        --x: 50%; --y: 50%;
+        position: relative; overflow: hidden; min-height: 220px; padding: 25px;
+        border: 1px solid var(--line); border-radius: 15px; background: var(--surface);
+        transition: border-color 220ms ease, transform 220ms ease;
+      }
+      .card::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; background: radial-gradient(330px circle at var(--x) var(--y), var(--spot), transparent 68%); transition: opacity 220ms ease; }
+      .card:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+      .card:hover::before { opacity: 1; }
+      .card-top { display: flex; align-items: center; gap: 13px; }
+      .icon { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 10px; color: var(--muted); transition: color 220ms ease, border-color 220ms ease, transform 220ms ease; }
+      .card:hover .icon { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); transform: translateY(-1px); }
+      .card p { color: var(--muted); }
+      .tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 28px; }
+      .tags span { border: 1px solid var(--line); border-radius: 6px; padding: 3px 8px; color: var(--muted); font-size: 11px; }
+
+      .timeline { position: relative; margin-left: 214px; padding-left: 30px; }
+      .timeline::before { content: ""; position: absolute; left: 4px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+      .job { position: relative; margin-bottom: 16px; padding: 28px; border: 1px solid var(--line); border-radius: 15px; background: var(--surface); transition: border-color 220ms ease; }
+      .job::before { content: ""; position: absolute; left: -32px; top: 36px; width: 10px; height: 10px; border: 2px solid var(--blue); border-radius: 50%; background: var(--bg); transition: 220ms ease; }
+      .job:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+      .job:hover::before { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 16px color-mix(in srgb, var(--accent) 55%, transparent); }
+      .date { float: right; color: var(--muted); font-size: 12px; }
+
+      .reveal { opacity: 0; transform: translateY(12px); transition: opacity 620ms ease, transform 620ms cubic-bezier(.22,.7,.2,1); transition-delay: var(--delay, 0ms); }
+      .reveal.visible { opacity: 1; transform: none; }
+      .hint { position: fixed; right: 18px; bottom: 18px; z-index: 8; max-width: 270px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 9px; background: color-mix(in srgb, var(--surface) 94%, transparent); color: var(--muted); font-size: 12px; backdrop-filter: blur(12px); }
+
+      @media (max-width: 760px) {
+        nav a { display: none; }
+        .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 64px; }
+        .portrait { max-width: 380px; }
+        .section-head { grid-template-columns: 1fr; }
+        .grid, .timeline { margin-left: 0; }
+        .grid { grid-template-columns: 1fr; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+        .reveal { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="progress"></div>
+    <header>
+      <nav>
+        <a class="brand" href="#top">&gt;_</a>
+        <a href="#top" data-nav>Profile</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#experience" data-nav>Experience</a>
+        <button id="theme" aria-label="Toggle theme">☼ / ◐</button>
+      </nav>
+    </header>
+    <main id="top">
+      <section class="hero" data-section>
+        <div class="reveal visible">
+          <div class="eyebrow">AI/ML ENGINEER · TECHNICAL LEAD</div>
+          <h1>Nazmus Sakib Abir</h1>
+          <p class="lead">Applied AI engineer working across computer vision, generative AI, multimodal RAG, product engineering, and cloud deployment.</p>
+        </div>
+        <div class="portrait reveal visible" id="portrait" style="--delay: 100ms">
+          <img class="dark" src="../../src/assets/ai-workstation-illustration.png" alt="Dark AI engineering workstation illustration" />
+          <img class="light" src="../../src/assets/ai-workstation-illustration-light.png" alt="Daylight AI engineering workstation illustration" />
+        </div>
+      </section>
+
+      <section id="projects" data-section>
+        <div class="section-head reveal"><h2>Projects</h2><p>Move across the cards to see the local spotlight and icon response. The cards enter with a short, restrained stagger.</p></div>
+        <div class="grid">
+          <article class="card reveal" style="--delay: 60ms"><div class="card-top"><div class="icon">▤</div><h3>Visual Response RAG</h3></div><p>Proposed and led two generations of document-chat systems combining written answers with relevant source visuals.</p><div class="tags"><span>RAG</span><span>OCR</span><span>Tech lead</span></div></article>
+          <article class="card reveal" style="--delay: 120ms"><div class="card-top"><div class="icon">↯</div><h3>Vision Inference Optimization</h3></div><p>Optimized a 360-degree image-processing pipeline in about one week, making it run more than three times faster.</p><div class="tags"><span>Computer vision</span><span>Performance</span></div></article>
+          <article class="card reveal" style="--delay: 180ms"><div class="card-top"><div class="icon">⌂</div><h3>Generative Floorplans</h3></div><p>Focused on model development and evaluation for constrained floorplan generation and deployment.</p><div class="tags"><span>Generative AI</span><span>FastAPI</span></div></article>
+          <article class="card reveal" style="--delay: 240ms"><div class="card-top"><div class="icon">◎</div><h3>Product Anomaly Detection</h3></div><p>Led the Bangladesh engineering team across backend and React interface development for the full model workflow.</p><div class="tags"><span>Anomaly detection</span><span>React</span></div></article>
+        </div>
+      </section>
+
+      <section id="experience" data-section>
+        <div class="section-head reveal"><h2>Experience</h2><p>Hover an experience card to connect it visually with its timeline node.</p></div>
+        <div class="timeline">
+          <article class="job reveal"><span class="date">2022 — Present</span><div class="eyebrow">CURRENT</div><h3>Chowa Giken Corporation | Japan</h3><p class="lead">Applied research, product engineering, infrastructure, and technical-development leadership.</p></article>
+          <article class="job reveal" style="--delay: 100ms"><span class="date">2018 — 2022</span><div class="eyebrow">PREVIOUS</div><h3>MononAI Limited</h3><p class="lead">Computer-vision products for live video monitoring and full-stack product delivery.</p></article>
+        </div>
+      </section>
+    </main>
+    <div class="hint">Demo: scroll, hover the project and experience cards, and switch themes.</div>
+    <script>
+      const root = document.documentElement;
+      document.querySelector('#theme').addEventListener('click', () => {
+        root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      });
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+      }, { threshold: .12 });
+      document.querySelectorAll('.reveal:not(.visible)').forEach((el) => revealObserver.observe(el));
+
+      const sections = [...document.querySelectorAll('[data-section]')];
+      const links = [...document.querySelectorAll('[data-nav]')];
+      const update = () => {
+        const max = document.documentElement.scrollHeight - innerHeight;
+        document.documentElement.style.setProperty('--progress', `${max ? scrollY / max * 100 : 0}%`);
+        let current = sections[0];
+        sections.forEach((section) => { if (section.getBoundingClientRect().top < innerHeight * .42) current = section; });
+        links.forEach((link) => link.classList.toggle('active', link.hash === `#${current.id || 'top'}`));
+      };
+      addEventListener('scroll', update, { passive: true }); update();
+
+      document.querySelectorAll('.card').forEach((card) => {
+        card.addEventListener('pointermove', (event) => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty('--x', `${event.clientX - rect.left}px`);
+          card.style.setProperty('--y', `${event.clientY - rect.top}px`);
+        });
+      });
+
+      const portrait = document.querySelector('#portrait');
+      portrait.addEventListener('pointermove', (event) => {
+        if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        const rect = portrait.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - .5;
+        const y = (event.clientY - rect.top) / rect.height - .5;
+        portrait.querySelectorAll('img').forEach((img) => img.style.transform = `translate(${x * 4}px, ${y * 4}px) scale(1.015)`);
+      });
+      portrait.addEventListener('pointerleave', () => portrait.querySelectorAll('img').forEach((img) => img.style.transform = ''));
+    </script>
+  </body>
+</html>

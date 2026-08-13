@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NSA Brand Mark Options</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #0e1117;
+        --surface: #151b25;
+        --surface-soft: #10151d;
+        --border: #2a3443;
+        --text: #f1f5f9;
+        --muted: #94a3b8;
+        --accent: #64d5ca;
+        --accent-strong: #4ec7bd;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          radial-gradient(circle at 80% 0%, rgba(100, 213, 202, 0.08), transparent 28rem),
+          var(--bg);
+        color: var(--text);
+      }
+
+      main {
+        width: min(1120px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 64px 0 80px;
+      }
+
+      h1 { margin: 0 0 10px; font-size: clamp(28px, 4vw, 42px); }
+      .intro { margin: 0 0 42px; color: var(--muted); line-height: 1.7; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      .option {
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: rgba(21, 27, 37, 0.82);
+      }
+
+      .option-copy { padding: 22px 24px 18px; }
+      .option-number { color: var(--accent); font: 700 12px/1 ui-monospace, monospace; letter-spacing: 0.1em; }
+      h2 { margin: 9px 0 7px; font-size: 19px; }
+      .option-copy p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+
+      .preview {
+        min-height: 135px;
+        padding: 34px 28px;
+        border-top: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+      }
+
+      .preview.light {
+        --surface: #ffffff;
+        --surface-soft: #f4f7fb;
+        --border: #cbd5e1;
+        --text: #16202e;
+        --muted: #64748b;
+        background: #f4f7fb;
+      }
+
+      .preview.dark { background: #0b0f15; }
+
+      .nav-sample {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--text);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .mark {
+        position: relative;
+        width: 36px;
+        height: 36px;
+        display: inline-grid;
+        place-items: center;
+        flex: 0 0 auto;
+        color: var(--accent);
+        font: 800 10px/1 ui-monospace, SFMono-Regular, Consolas, monospace;
+        letter-spacing: -0.04em;
+      }
+
+      .download {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        padding: 10px 13px;
+        border-radius: 9px;
+        background: var(--accent-strong);
+        color: #071513;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .download svg { width: 14px; height: 14px; stroke-width: 2; }
+
+      .outline .mark {
+        border: 1px solid color-mix(in srgb, var(--accent) 72%, var(--border));
+        border-radius: 9px;
+        background: color-mix(in srgb, var(--surface) 88%, transparent);
+        box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 7%, transparent);
+      }
+
+      .split .mark {
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        background: var(--surface);
+      }
+
+      .split .mark::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 4px;
+        background: var(--accent);
+      }
+
+      .neutral .mark {
+        border: 1px solid var(--border);
+        border-radius: 9px;
+        background: color-mix(in srgb, var(--surface) 78%, var(--muted));
+        color: var(--text);
+      }
+
+      .hex .mark::before {
+        content: "";
+        position: absolute;
+        inset: 2px;
+        border: 1px solid var(--accent);
+        background: color-mix(in srgb, var(--accent) 6%, transparent);
+        clip-path: polygon(25% 5%, 75% 5%, 98% 50%, 75% 95%, 25% 95%, 2% 50%);
+      }
+
+      .hex .mark span { position: relative; z-index: 1; }
+
+      .theme-label {
+        display: block;
+        margin-left: auto;
+        margin-right: 12px;
+        color: var(--muted);
+        font: 600 9px/1 ui-monospace, monospace;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 760px) {
+        main { width: min(100% - 24px, 560px); padding-top: 34px; }
+        .grid { grid-template-columns: 1fr; }
+        .preview { padding: 28px 18px; }
+        .brand { gap: 9px; font-size: 12px; }
+        .download { padding: 9px 10px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>NSA brand-mark options</h1>
+      <p class="intro">Four restrained alternatives shown beside the filled Download CV action, in both site themes.</p>
+
+      <section class="grid" aria-label="Brand mark comparisons">
+        <article class="option outline">
+          <div class="option-copy"><span class="option-number">OPTION 01</span><h2>Outline monogram</h2><p>The cleanest separation between identity and action.</p></div>
+          <div class="preview dark"><div class="nav-sample"><div class="brand"><span class="mark">NSA</span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Dark</span><span class="download">Download CV</span></div></div>
+          <div class="preview light"><div class="nav-sample"><div class="brand"><span class="mark">NSA</span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Light</span><span class="download">Download CV</span></div></div>
+        </article>
+
+        <article class="option split">
+          <div class="option-copy"><span class="option-number">OPTION 03</span><h2>Split-tone block</h2><p>A neutral tile with a small teal signature edge.</p></div>
+          <div class="preview dark"><div class="nav-sample"><div class="brand"><span class="mark">NSA</span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Dark</span><span class="download">Download CV</span></div></div>
+          <div class="preview light"><div class="nav-sample"><div class="brand"><span class="mark">NSA</span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Light</span><span class="download">Download CV</span></div></div>
+        </article>
+
+        <article class="option neutral">
+          <div class="option-copy"><span class="option-number">OPTION 04</span><h2>Inverted neutral block</h2><p>The quietest choice, leaving teal entirely to the action.</p></div>
+          <div class="preview dark"><div class="nav-sample"><div class="brand"><span class="mark">NSA</span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Dark</span><span class="download">Download CV</span></div></div>
+          <div class="preview light"><div class="nav-sample"><div class="brand"><span class="mark">NSA</span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Light</span><span class="download">Download CV</span></div></div>
+        </article>
+
+        <article class="option hex">
+          <div class="option-copy"><span class="option-number">OPTION 05</span><h2>Outlined hexagon</h2><p>A slightly more distinctive, technical-looking signature.</p></div>
+          <div class="preview dark"><div class="nav-sample"><div class="brand"><span class="mark"><span>NSA</span></span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Dark</span><span class="download">Download CV</span></div></div>
+          <div class="preview light"><div class="nav-sample"><div class="brand"><span class="mark"><span>NSA</span></span><span>Nazmus Sakib Abir</span></div><span class="theme-label">Light</span><span class="download">Download CV</span></div></div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
