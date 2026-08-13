@@ -34,6 +34,7 @@
   --grid-line: rgba(121, 169, 255, 0.026);
   --pointer-glow: rgba(98, 199, 189, 0.035);
   --pointer-grid: rgba(121, 169, 255, 0.085);
+  --card-pointer-glow: rgba(98, 199, 189, 0.026);
   --projects-glow: rgba(121, 169, 255, 0.055);
   --timeline-signal-soft: rgba(121, 169, 255, 0.12);
   --timeline-signal-blue: rgba(121, 169, 255, 0.82);
@@ -89,6 +90,7 @@
   --grid-line: rgba(37, 99, 235, 0.04);
   --pointer-glow: rgba(15, 118, 110, 0.045);
   --pointer-grid: rgba(37, 99, 235, 0.085);
+  --card-pointer-glow: rgba(15, 118, 110, 0.024);
   --projects-glow: rgba(37, 99, 235, 0.055);
   --timeline-signal-soft: rgba(37, 99, 235, 0.08);
   --timeline-signal-blue: rgba(37, 99, 235, 0.62);
@@ -221,8 +223,17 @@ svg {
 }
 
 .nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:focus-visible,
+.nav-links a.is-active {
   color: var(--ink);
+}
+
+.nav-links a.is-active:not(.contact-link) {
+  text-shadow: 0 0 16px color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
+.contact-link.is-active {
+  border-color: color-mix(in srgb, var(--accent) 38%, var(--line));
 }
 
 .contact-link {
@@ -479,7 +490,7 @@ h1 {
   display: block;
   object-fit: cover;
   object-position: center;
-  transition: opacity 220ms ease;
+  transition: opacity 620ms ease;
 }
 
 .portrait-image-light {
@@ -569,6 +580,19 @@ h1 {
   padding: 78px 0;
   border-top: 1px solid var(--line);
   scroll-margin-top: 64px;
+}
+
+.reveal-item {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 620ms ease var(--reveal-delay, 0ms),
+    transform 620ms cubic-bezier(0.22, 0.7, 0.2, 1) var(--reveal-delay, 0ms);
+}
+
+.reveal-item.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 #projects {
@@ -726,12 +750,14 @@ h1 {
 }
 
 .experience-card {
+  --experience-node-color: var(--accent);
   position: relative;
   z-index: 1;
   padding: 27px 29px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
+  transition: border-color 180ms ease;
 }
 
 .experience-card::before {
@@ -742,12 +768,33 @@ h1 {
   width: 9px;
   height: 9px;
   background: var(--bg);
-  border: 3px solid var(--accent);
+  border: 3px solid var(--experience-node-color);
   border-radius: 50%;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
 }
 
-.experience-card.previous::before {
-  border-color: var(--accent-2);
+.experience-card.previous {
+  --experience-node-color: var(--accent-2);
+}
+
+.experience-card:hover,
+.experience-card:focus-within {
+  border-color: color-mix(
+    in srgb,
+    var(--experience-node-color) 42%,
+    var(--line)
+  );
+}
+
+.experience-card:hover::before,
+.experience-card:focus-within::before {
+  background: var(--experience-node-color);
+  box-shadow: 0 0 13px
+    color-mix(in srgb, var(--experience-node-color) 48%, transparent);
+  transform: scale(1.06);
 }
 
 .experience-top {
@@ -851,8 +898,8 @@ h1 {
   border-radius: var(--radius);
   box-shadow: var(--card-shadow);
   transition:
-    border-color 160ms ease,
-    transform 160ms ease;
+    border-color 220ms ease,
+    transform 240ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card:hover,
@@ -867,11 +914,35 @@ h1 {
   transform: translateY(-1px);
 }
 
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-0.5px);
+}
+
 .project-card {
+  --card-glow-opacity: 0;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   min-height: 215px;
   display: flex;
   flex-direction: column;
   padding: 23px;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    circle 190px at var(--card-pointer-x, 50%) var(--card-pointer-y, 50%),
+    var(--card-pointer-glow),
+    transparent 80%
+  );
+  opacity: var(--card-glow-opacity);
+  transition: opacity 165ms ease-out;
 }
 
 .project-top {
@@ -1342,7 +1413,16 @@ h1 {
   }
 
   .brand-mark,
-  .brand-name {
+  .brand-name,
+  .portrait-image,
+  .experience-card,
+  .experience-card::before {
+    transition: none;
+  }
+
+  .reveal-item {
+    opacity: 1;
+    transform: none;
     transition: none;
   }
 

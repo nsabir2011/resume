@@ -11,7 +11,13 @@ const cvUrl = `${import.meta.env.BASE_URL}cv/Nazmus-Sakib-Abir-CV.pdf`;
       <span class="brand-name">{profile.name}</span>
     </a>
     <div class="nav-links">
-      {navigation.map((item) => <a href={item.href}>{item.label}</a>)}
+      {
+        navigation.map((item) => (
+          <a href={item.href} data-section-link>
+            {item.label}
+          </a>
+        ))
+      }
       <a
         class="resume-link"
         href={cvUrl}
@@ -31,7 +37,7 @@ const cvUrl = `${import.meta.env.BASE_URL}cv/Nazmus-Sakib-Abir-CV.pdf`;
         <span class="resume-link-full" aria-hidden="true">Download CV</span>
         <span class="resume-link-short" aria-hidden="true">CV</span>
       </a>
-      <a class="contact-link" href="#contact">Contact</a>
+      <a class="contact-link" href="#contact" data-section-link>Contact</a>
       <button
         class="theme-toggle"
         type="button"
@@ -124,5 +130,52 @@ const cvUrl = `${import.meta.env.BASE_URL}cv/Nazmus-Sakib-Abir-CV.pdf`;
     );
 
     introTitleObserver.observe(introTitle);
+  }
+
+  const sectionLinks = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>('[data-section-link]'),
+  );
+  const linkedSections = sectionLinks
+    .map((link) => {
+      const id = link.hash.slice(1);
+      const section = id ? document.getElementById(id) : null;
+      return section ? { link, section } : null;
+    })
+    .filter(
+      (entry): entry is { link: HTMLAnchorElement; section: HTMLElement } =>
+        entry !== null,
+    );
+
+  if (linkedSections.length) {
+    const updateActiveLink = () => {
+      const activationLine = window.innerHeight * 0.36;
+      let activeEntry: (typeof linkedSections)[number] | null = null;
+
+      linkedSections.forEach((entry) => {
+        if (entry.section.getBoundingClientRect().top <= activationLine) {
+          activeEntry = entry;
+        }
+      });
+
+      linkedSections.forEach(({ link }) => {
+        const isActive = link === activeEntry?.link;
+        link.classList.toggle('is-active', isActive);
+        if (isActive) {
+          link.setAttribute('aria-current', 'location');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    let navigationFrame = 0;
+    const queueActiveLinkUpdate = () => {
+      window.cancelAnimationFrame(navigationFrame);
+      navigationFrame = window.requestAnimationFrame(updateActiveLink);
+    };
+
+    window.addEventListener('scroll', queueActiveLinkUpdate, { passive: true });
+    window.addEventListener('resize', queueActiveLinkUpdate);
+    updateActiveLink();
   }
 </script>

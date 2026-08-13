@@ -367,6 +367,44 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+    if (!reducedMotion.matches) {
+      const revealItems = Array.from(
+        document.querySelectorAll<HTMLElement>(
+          '.section-heading, .offset-content > *, .contact-section > *, .site-footer > *',
+        ),
+      );
+
+      revealItems.forEach((item) => {
+        const siblings = item.parentElement
+          ? Array.from(item.parentElement.children).filter((child) =>
+              child.matches(
+                '.section-heading, .offset-content > *, .contact-section > *, .site-footer > *',
+              ),
+            )
+          : [];
+        const itemIndex = siblings.indexOf(item);
+        item.classList.add('reveal-item');
+        item.style.setProperty(
+          '--reveal-delay',
+          `${Math.min(Math.max(itemIndex, 0), 4) * 60}ms`,
+        );
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-revealed');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -5% 0px' },
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    }
+
     if (finePointer.matches && !reducedMotion.matches) {
       document
         .querySelectorAll<HTMLElement>('[data-pointer-glow]')
@@ -392,6 +430,49 @@ const pageTitle = `${profile.name} — AI/ML Engineer`;
           section.addEventListener('pointermove', updateGlowPosition);
           section.addEventListener('pointerleave', () => {
             section.style.setProperty('--pointer-glow-opacity', '0');
+          });
+        });
+
+      const projectsSection = document.querySelector<HTMLElement>('#projects');
+
+      projectsSection
+        ?.querySelectorAll<HTMLElement>('.project-card')
+        .forEach((card) => {
+          let cardAnimationFrame = 0;
+
+          const updateCardGlow = (event: PointerEvent) => {
+            window.cancelAnimationFrame(cardAnimationFrame);
+            cardAnimationFrame = window.requestAnimationFrame(() => {
+              const cardBounds = card.getBoundingClientRect();
+              card.style.setProperty(
+                '--card-pointer-x',
+                `${event.clientX - cardBounds.left}px`,
+              );
+              card.style.setProperty(
+                '--card-pointer-y',
+                `${event.clientY - cardBounds.top}px`,
+              );
+            });
+          };
+
+          card.addEventListener('pointerenter', (event) => {
+            const cardBounds = card.getBoundingClientRect();
+            card.style.setProperty('--card-glow-opacity', '1');
+            card.style.setProperty(
+              '--card-pointer-x',
+              `${cardBounds.width / 2}px`,
+            );
+            card.style.setProperty(
+              '--card-pointer-y',
+              `${cardBounds.height / 2}px`,
+            );
+            updateCardGlow(event);
+          });
+
+          card.addEventListener('pointermove', updateCardGlow);
+
+          card.addEventListener('pointerleave', () => {
+            card.style.setProperty('--card-glow-opacity', '0');
           });
         });
     }
