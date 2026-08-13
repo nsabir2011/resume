@@ -916,7 +916,7 @@ h1 {
 
 .project-card:hover,
 .project-card:focus-within {
-  transform: translateY(-0.5px);
+  transform: scale(1.007);
 }
 
 .project-card {
