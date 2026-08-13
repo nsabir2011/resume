@@ -78,8 +78,8 @@ export const projects = [
     icon: 'document-visuals',
     period: '2024–2026',
     summary:
-      'Proposed and led two generations of document-chat systems that combine written answers with relevant source visuals; contributed directly to engineering, demos, and team guidance.',
-    tags: ['RAG', 'OCR', 'LLMs', 'Tech lead'],
+      'Proposed and led two generations of document-chat systems that combine written answers with relevant source visuals; contributed to a related patent application alongside hands-on engineering, demos, and team guidance.',
+    tags: ['RAG', 'OCR', 'LLMs', 'Tech lead', 'Patent application'],
   },
   {
     title: 'Vision Inference Optimization',
@@ -94,8 +94,8 @@ export const projects = [
     icon: 'floorplan',
     period: '2025–2026',
     summary:
-      'Focused primarily on model development and evaluation for constrained floorplan generation, alongside dataset annotation; also delivered the REST API and deployment, then later proposed and led research that enabled a simpler generation workflow.',
-    tags: ['Generative AI', 'Image generation', 'FastAPI'],
+      'Led first-stage base-floorplan preparation for constrained floorplan generation, then drove model development and evaluation, REST API delivery, deployment, and a related patent application.',
+    tags: ['Generative AI', 'Image generation', 'FastAPI', 'Patent application'],
   },
   {
     title: 'Product Anomaly Detection',
@@ -126,7 +126,7 @@ export const projects = [
     icon: 'face-camera',
     period: '2018–2022',
     summary:
-      'Created the original prototype and built the production AI and backend system for real-time CCTV face monitoring, then expanded into performance optimization and full-stack product improvements.',
+      'Built the entire production AI and backend system for real-time CCTV face monitoring, then expanded into performance optimization and full-stack product improvements.',
     tags: ['Face recognition', 'Real-time systems', 'Backend ownership'],
     link: {
       label: 'Watch product walkthrough',
