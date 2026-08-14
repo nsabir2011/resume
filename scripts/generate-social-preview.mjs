@@ -50,12 +50,11 @@ const svg = `
 
   <g clip-path="url(#photoClip)">
     <image href="data:image/png;base64,${heroBase64}" x="674" y="52" width="464" height="526" preserveAspectRatio="xMidYMid slice"/>
-    <rect x="674" y="52" width="464" height="526" fill="#050a11" opacity="0.07"/>
   </g>
   <rect x="674" y="52" width="464" height="526" rx="18" fill="none" stroke="#344154" stroke-width="2"/>
 
   <text x="76" y="250" fill="#f1f4f8" font-family="Segoe UI, Arial, sans-serif" font-size="57" font-weight="700">Nazmus Sakib Abir</text>
-  <text x="79" y="301" fill="#c1c9d4" font-family="Segoe UI, Arial, sans-serif" font-size="27">AI/ML Engineer · Technical Lead</text>
+  <text x="79" y="303" fill="#d2d8e1" font-family="Segoe UI, Arial, sans-serif" font-size="29">AI/ML Engineer · Technical Lead</text>
 
   <!-- Unified icon strip: data · layered ML network · terminal · technical leadership. -->
   <g fill="none" stroke="#aebdca" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round">

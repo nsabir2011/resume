@@ -19,10 +19,12 @@ import {
 } from '../data/portfolio';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = `${profile.name} — AI/ML Engineer`;
+const pageTitle = `${profile.name} | AI/ML Engineer & Technical Lead`;
+const pageDescription =
+  'Portfolio of Nazmus Sakib Abir, an AI/ML engineer and technical lead working across computer vision, generative AI, multimodal RAG, and AI product delivery.';
 ---
 
-<BaseLayout title={pageTitle} description={profile.summary}>
+<BaseLayout title={pageTitle} description={pageDescription}>
   <SiteHeader />
 
   <main id="top">
