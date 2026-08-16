@@ -4,7 +4,7 @@
 
 ## FaceLens
 
-**Period:** Prototype began August 2018; continued through Nazmus's MononAI employment in 2022; exact end month needs confirmation
+**Period:** Prototype began August 2018; continued through Nazmus's MononAI employment ending September 2022
 
 **Role:** Prototype creator; AI and backend system owner; later primary product engineer and full-stack contributor
 
@@ -50,7 +50,7 @@
 
 ## Anomaly Detection Platform
 
-**Period:** 2023-2024  
+**Period:** October 2022-February 2024  
 **Role:** Lead Engineer on the ASJ side; backend and React frontend contributor  
 **Public label suggestion:** Self-Service Product Anomaly Detection Platform  
 **Portfolio treatment:** Anonymize unless Chowa Giken approves public attribution
@@ -63,7 +63,7 @@
 
 ## IFL 360 Image Enhancement
 
-**Period:** 2023  
+**Period:** March-April 2023  
 **Role:** Inference and pipeline optimization engineer  
 **Public label suggestion:** High-Resolution 360-Degree Image Enhancement Optimization  
 **Portfolio treatment:** Strong anonymized performance case study
@@ -163,7 +163,7 @@
 
 ## Prediction + GPT / ForecastSense
 
-**Period:** Development in 2024; blog activity recorded in 2025  
+**Period:** September-December 2024; blog activity recorded in 2025  
 **Role:** Tech Lead and primary individual contributor  
 **Public label suggestion:** Explainable AI for Forecast Predictions  
 **Portfolio treatment:** Patent-sensitive; publish only approved high-level information
@@ -192,7 +192,7 @@
 
 ## MRAG v2 / OCR-Based Multi-Document RAG
 
-**Period:** Started after May 2026 and completed by August 2026; exact dates need confirmation  
+**Period:** April-July 2026  
 **Role:** Idea originator, Development Lead, project lead, and hands-on engineer  
 **Public label suggestion:** OCR-Driven Multi-Document RAG for Complex Technical Content  
 **Portfolio treatment:** Strong flagship case study; anonymize internal details and verify publication permission
@@ -227,7 +227,7 @@
 
 ## EII FloorPlan Generation
 
-**Period:** 2025  
+**Period:** February-December 2025  
 **Role:** Color-segment generation owner, backend REST API engineer, and deployment/operations contributor  
 **Public label suggestion:** Constraint-Aware Generative Floorplan Pipeline  
 **Portfolio treatment:** Patent- and client-sensitive; anonymize before publication
@@ -259,7 +259,7 @@
 
 ## KMEW House Image Generation
 
-**Period:** 2025 - May 2026  
+**Period:** Direct house-exterior development from February 2025-February 2026; the broader related KMEW phase continued through May 2026  
 **Role:** House-side generation and design-rule implementation engineer  
 **Public label suggestion:** Elevation-Constrained House Exterior Generation  
 **Portfolio treatment:** Client-sensitive; anonymize names, textures, and proprietary design rules
@@ -271,17 +271,17 @@
 - **Model:** Used SDXL under the same commercial-friendly licensing and non-Chinese-model constraints as the floorplan project.
 - **Outcome:** Developed a novel technique that made the proof of concept successful.
 - **Other engineering:** Contributed API specification, implementation, and deployment; suggested an approach to complete texture search accurately within the available time.
-- **Phase status:** This KMEW project phase ended in May 2026.
+- **Phase status:** The public LinkedIn project range for Nazmus's direct house-exterior development is February 2025-February 2026. Related work in the broader KMEW phase continued through May 2026.
 
 ## Global South Subsidy / Dhaka AI Dojo
 
-**Period:** 2025  
+**Period:** September-December 2025 for Nazmus's completed first-cohort LinkedIn entry; the official program ran from September 2025-January 2026  
 **Role:** Lecturer-equivalent educator and mentor  
 **Public label suggestion:** University AI Education and Mentoring Program  
 **Portfolio treatment:** Potentially public with institutional approval and without private student information
 
 - Prepared one-third of the lecture materials and delivered some of the lectures.
-- Lectures were broadcast to North South University, extending the program beyond BRAC University.
+- The 2025 cohort involved BRAC University and North South University. Lectures were shared between the participating campuses: sessions delivered for BRAC students were broadcast to NSU, and BRAC students could join sessions delivered through NSU.
 - Reduced the time Takehiko-san needed to spend on the prepared materials.
 - Mentored BRAC University students. Among the participating BRACU and NSU teams, one mentored group won the final prize; the presentation credits the students for most of the outcome.
 - Prepared all material for an ICT Ministry seminar.
@@ -289,7 +289,7 @@
 
 ## Nippon AI Dojo - Phase 2
 
-**Period:** 2026 - Ongoing as of August 2026  
+**Period:** 2026 - ongoing as of August 2026; the public UAP program notice gives June-September 2026 for that institution's participation  
 **Role:** Lecturer-equivalent mentor  
 **Public label suggestion:** University AI Mentoring Program - Second Cohort  
 **Portfolio treatment:** Potentially public with institutional approval and without private student information
@@ -298,6 +298,8 @@
 - Reused the established lecture materials from the earlier phase.
 - Made minor updates to previous lecture slides when needed.
 - Continued the same lecturer-equivalent mentoring and student-guidance responsibilities as the first phase.
+- The 2026 cohort also involves the University of Asia Pacific. Lectures are shared across participating campuses, including broadcasts to and from the BRAC University group.
+- Do not add a completed 2026 LinkedIn timeline or claim final outcomes until the cohort actually finishes.
 
 ## Morita Foil Stamping Anomaly Detection
 

@@ -8,11 +8,11 @@
 - **Current employer:** Chowa Giken Corporation (`chowagiken.co.jp`)
 - **Employment period:** October 2022 - Present
 - **Previous employer:** MononAI Limited
-- **Previous employment period:** June 2018 - 2022; exact end month needs confirmation
+- **Previous employment period:** August 2018 - September 2022
 - **Previous role:** Full Stack Developer and Deep Learning Engineer
 - **Organization shown in annual presentations:** R&D Offshore AI Development Team (ASJ)
 - **Grade progression shown in presentations:** Grade III-2 in 2023, Grade III-4 in 2024, and Grade III-5 in 2025
-- **Formal current job title:** Needs confirmation before it is used on the portfolio
+- **Formal current job title:** Machine Learning Engineer
 
 The October 2022 start date is confirmed by the author biography on Nazmus's published Chowa Giken article dated 2024-06-07.
 
@@ -81,10 +81,10 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 
 ## 2026 highlights to date
 
-- Continued the KMEW House Image Generation phase until it ended in May 2026.
+- Direct house-exterior development is represented publicly as February 2025-February 2026. Related KMEW-phase work continued until May 2026.
 - Proposed and led a successful feasibility study of FLUX.2 Klein 4B for floorplan generation, establishing that it could directly generate the final output and potentially replace a two-stage SD 1.5 workflow.
-- Proposed, led, and engineered MRAG v2, adding OCR-based extraction, multi-document support, topic/subtopic organization, evidence-oriented multi-step retrieval, and faster response generation than V1.
-- Began mentoring BRAC University students again for Nippon AI Dojo Phase 2, reusing and lightly updating previous lecture materials.
+- Proposed, led, and engineered MRAG v2 from April-July 2026, adding OCR-based extraction, multi-document support, topic/subtopic organization, evidence-oriented multi-step retrieval, and faster response generation than V1.
+- Began mentoring BRAC University students again for Nippon AI Dojo Phase 2, reusing and lightly updating previous lecture materials. The 2026 cohort remains ongoing as of August 2026 and should be added to LinkedIn only after it finishes.
 
 ## Verified public work
 
@@ -92,6 +92,9 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 - **MRAG public overview:** [Prototype No.2 Visual Response RAG](https://www.chowagiken.co.jp/future-studio/visual-response-rag/) - published by the Chowa Giken Editorial Department on 2026-03-13
 - **MRAG video demonstration:** [Demo Video No.2 Visual Response RAG](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) - published by the Chowa Giken Editorial Department on 2026-03-13; high-level and does not disclose internal techniques
 - **Prediction + GPT public overview:** [Prototype No.4 需要予測の見える化技術](https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/) - published by the Chowa Giken Editorial Department on 2026-05-19; high-level and does not disclose internal techniques
+- **NIPPON AI Dojo at BRAC University:** [BRAC University collaborates with Japan on AI training program](https://www.bracu.ac.bd/news/brac-university-collaborates-japan-ai-training-program) - official institutional coverage of the 2025 cohort
+- **NIPPON AI Dojo at North South University:** [Inaugural ceremony of NIPPON AI dojo held at NSU](https://www.newagebd.net/post/country/276892/inaugural-ceremony-of-nippon-ai-dojo-held-at-nsu) - public reporting that identifies BRAC University and NSU as the participating institutions in the 2025 cohort
+- **NIPPON AI Dojo at University of Asia Pacific:** [Prestigious Nippon AI Dojo Program](https://cse.uap-bd.edu/office/newsletters/view/2/) - official UAP CSE coverage of the 2026 cohort
 
 ## Evidence-backed positioning themes
 

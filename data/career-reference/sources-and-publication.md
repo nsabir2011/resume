@@ -16,6 +16,7 @@ The career reference combines confidential company presentations, an older image
 | Contributions through 2024 | 2024-11-21 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus 2024 - Nazmus Sakib Abir.pptx` | Confidential; Grade III-4 |
 | Contributions through 2025 | 2025-12-07 | `../discretional-bonus-docs/ASJ Yearly Discretional Bonus 2025 - Nazmus Sakib Abir.pptx` | Confidential; Grade III-5 |
 | Additional technical context and 2026 work | 2026-08-11 conversation | First-hand clarifications from Nazmus Sakib Abir | Adds project purpose, constraints, implementation detail, ownership, timelines, estimates, and 2026 contributions not present in the reviewed decks |
+| LinkedIn publication choices and confirmed public-entry dates | 2026-08-16 conversation and signed-in profile review | First-hand clarifications from Nazmus Sakib Abir | Confirms the dates deliberately entered on LinkedIn, accepted contact and Open to Work choices, and the decision to add the ongoing 2026 Dojo timeline only after completion |
 
 ## Public material
 
@@ -26,6 +27,9 @@ The career reference combines confidential company presentations, an older image
 | 2026-03-13 | [Prototype No.2 Visual Response RAG](https://www.chowagiken.co.jp/future-studio/visual-response-rag/) | Chowa Giken Editorial Department | Official public overview of the MRAG concept and its user-facing capabilities |
 | 2026-03-13 | [Demo Video No.2 Visual Response RAG](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) | Chowa Giken Editorial Department | Official public demo; intentionally high-level and does not disclose internal techniques |
 | 2026-05-19 | [Prototype No.4 需要予測の見える化技術](https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/) | Chowa Giken Editorial Department | Official public overview of Prediction + GPT; intentionally high-level and does not disclose internal techniques |
+| 2025-09-23 | [Inaugural ceremony of NIPPON AI dojo held at NSU](https://www.newagebd.net/post/country/276892/inaugural-ceremony-of-nippon-ai-dojo-held-at-nsu) | New Age, reporting a press release about the NSU event | Public evidence that the 2025 cohort involved North South University and BRAC University; not evidence of Nazmus's individual role |
+| 2025-09-25 | [BRAC University collaborates with Japan on AI training program](https://www.bracu.ac.bd/news/brac-university-collaborates-japan-ai-training-program) | BRAC University | Official institutional evidence for BRAC University's involvement in the 2025 NIPPON AI Dojo program; not evidence of Nazmus's individual role |
+| 2026-05-21 | [Prestigious Nippon AI Dojo Program](https://cse.uap-bd.edu/office/newsletters/view/2/) | University of Asia Pacific, Department of CSE | Official institutional evidence for UAP participation in the June-September 2026 cohort; not evidence of Nazmus's individual role |
 
 ## Confidence labels
 
@@ -94,8 +98,6 @@ Use this structure for each portfolio project:
 
 ## Claims that need confirmation before formal use
 
-- Formal current job title.
-- Exact MononAI employment end month.
 - Whether MononAI and FaceLens should be named directly in the portfolio rather than presented under the suggested public label.
 - Whether the COVID-era staffing history should be published.
 - Whether the 14-camera, six-core CPU, RTX GPU, and single-machine full-stack configuration may be stated publicly, and the exact hardware and test conditions supporting it.
@@ -111,9 +113,8 @@ Use this structure for each portfolio project:
 - Whether exact infrastructure details and performance figures are approved for publication.
 - Exact start and completion dates for the FLUX.2 floorplan feasibility study.
 - Official spelling/version of the model currently recorded as `FLUX.2 Klein 4B`.
-- Exact start and completion dates for MRAG v2; it is currently recorded as starting after May and completing by August 2026.
 - Quantitative comparison supporting the statement that MRAG v2 generated responses faster and performed better than V1.
-- Publication status and institutional naming permission for Nippon AI Dojo Phase 2.
+- Final completion date and outcomes for Nippon AI Dojo Phase 2. Institutional participation is public, but Nazmus's individual role and cross-campus lecture-sharing description remain first-hand.
 
 ## First-hand estimates and qualifications
 

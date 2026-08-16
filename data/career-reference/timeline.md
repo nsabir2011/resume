@@ -4,9 +4,9 @@
 
 ## MononAI Limited: 2018-2022
 
-**Employment start:** June 2018
+**Employment start:** August 2018
 
-**Employment end:** 2022; exact month needs confirmation
+**Employment end:** September 2022
 
 **Role:** Full Stack Developer and Deep Learning Engineer
 
@@ -49,8 +49,8 @@
 
 ### Product and project delivery
 
-- Led ASJ-side work on the [Anomaly Detection Platform](projects.md#anomaly-detection-platform), contributing backend and React frontend development, UI performance/usability ideas, implementation, and `17 + 8` merged pull requests.
-- Optimized [IFL 360](projects.md#ifl-360-image-enhancement) from approximately 42 seconds to 12-13 seconds per sample without retraining or output changes; the deck reports 3.2x speed-up against a 2x target.
+- From October 2022-February 2024, led ASJ-side work on the [Anomaly Detection Platform](projects.md#anomaly-detection-platform), contributing backend and React frontend development, UI performance/usability ideas, implementation, and `17 + 8` merged pull requests.
+- From March-April 2023, optimized [IFL 360](projects.md#ifl-360-image-enhancement) from approximately 42 seconds to 12-13 seconds per sample without retraining or output changes; the deck reports 3.2x speed-up against a 2x target.
 - Trained artist-specific LoRA models and delivered Kivy GUI, backend, and deployment work for [Ukiyolator-v2](projects.md#ukiyolator-v2).
 - Prepared approximately four research/project demos and built the portal, Azure VM infrastructure, Nginx proxy, SSL, deployment, and maintenance for the [Sapporo Subsidy Demo Portal](projects.md#sapporo-subsidy-demo-portal).
 
@@ -93,7 +93,7 @@
 
 ### Technical-development leadership
 
-- Served as Tech Lead and primary contributor for [Prediction + GPT / ForecastSense](projects.md#prediction--gpt--forecastsense), completing development early and contributing more than 75% by first-hand estimate to the related patent application.
+- From September-December 2024, served as Tech Lead and primary contributor for [Prediction + GPT / ForecastSense](projects.md#prediction--gpt--forecastsense), completing development early and contributing more than 75% by first-hand estimate to the related patent application.
 - Originated and began leading the [MRAG Multimodal Document Chatbot](projects.md#mrag-multimodal-document-chatbot) near the end of 2024. It was marked in progress in the 2024 deck and completed in February 2025.
 - Developed only the Gradio UI for the [2D Image to 3D Demo](projects.md#2d-image-to-3d-demo-ui).
 
@@ -128,7 +128,7 @@
 
 ### Education and mentoring
 
-- Performed lecturer-equivalent work for [Global South Subsidy / Dhaka AI Dojo](projects.md#global-south-subsidy--dhaka-ai-dojo).
+- From September-December 2025, performed lecturer-equivalent work for the completed first-cohort LinkedIn entry for [Global South Subsidy / Dhaka AI Dojo](projects.md#global-south-subsidy--dhaka-ai-dojo). The official program itself ran through January 2026.
 - Prepared one-third of the lecture materials and delivered some lectures.
 - Lectures were broadcast to North South University.
 - Mentored BRAC University students; one mentored group won the final prize across participating BRACU and NSU teams.
@@ -152,7 +152,7 @@
 
 ### Project progression
 
-- Continued [KMEW House Image Generation](projects.md#kmew-house-image-generation) until that project phase ended in May 2026.
+- Direct house-exterior development for [KMEW House Image Generation](projects.md#kmew-house-image-generation) is confirmed as February 2025-February 2026. Related work in the broader KMEW phase continued until May 2026.
 - During the final KMEW phase, proposed and led the [FLUX.2 Klein 4B Floorplan Feasibility Study](projects.md#flux2-klein-4b-floorplan-feasibility-study).
 - Served primarily as Development Lead while contributing a smaller amount of research and coding.
 - Completed the feasibility project successfully and established that the candidate model could directly generate final floorplans, potentially replacing the older two-stage Stable Diffusion 1.5 workflow.
@@ -160,7 +160,7 @@
 ### MRAG v2 technical development
 
 - Prepared an additional MRAG V1 demo published by Chowa Giken as ["Demo Video No.2 Visual Response RAG"](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) on 2026-03-13; the public page is intentionally high-level and does not disclose internal techniques.
-- After the KMEW phase ended, proposed the [MRAG v2 / OCR-Based Multi-Document RAG](projects.md#mrag-v2--ocr-based-multi-document-rag) technical-development project.
+- From April-July 2026, proposed and completed the [MRAG v2 / OCR-Based Multi-Document RAG](projects.md#mrag-v2--ocr-based-multi-document-rag) technical-development project.
 - Led the complete project and also contributed as a hands-on engineer.
 - Replaced V1's single-document limitation with a robust multi-document corpus workflow.
 - Used OCR-extracted text and page images to improve text, image, table, and formula extraction; organize topics/subtopics across pages; and generate image descriptions for RAG input.
@@ -172,3 +172,5 @@
 - Began a second phase of [Nippon AI Dojo](projects.md#nippon-ai-dojo---phase-2) mentoring with BRAC University students.
 - Reused earlier lectures and made minor updates to previous slides when necessary.
 - Continued lecturer-equivalent mentoring and student guidance.
+- The University of Asia Pacific publicly records its 2026 participation as June-September 2026. Lectures are shared across participating campuses, including broadcasts to and from the BRAC University group.
+- This cohort remains ongoing as of August 2026. Add its final LinkedIn timeline only after it finishes.
