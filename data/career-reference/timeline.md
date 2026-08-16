@@ -152,24 +152,38 @@
 
 ### Project progression
 
-- Direct house-exterior development for [KMEW House Image Generation](projects.md#kmew-house-image-generation) is confirmed as February 2025-February 2026. Related work in the broader KMEW phase continued until May 2026.
-- During the final KMEW phase, proposed and led the [FLUX.2 Klein 4B Floorplan Feasibility Study](projects.md#flux2-klein-4b-floorplan-feasibility-study).
-- Served primarily as Development Lead while contributing a smaller amount of research and coding.
-- Completed the feasibility project successfully and established that the candidate model could directly generate final floorplans, potentially replacing the older two-stage Stable Diffusion 1.5 workflow.
+- Direct house-exterior development for [KMEW House Image Generation](projects.md#kmew-house-image-generation) continued through March 2026. Responded to sudden client questions and requests as needed through June 2026 after planned development ended.
+- From February-April 2026, proposed and led the [FLUX.2 Klein 4B Floorplan Feasibility Study](projects.md#flux2-klein-4b-floorplan-feasibility-study), internally titled "Prompt-conditioned floorplan generation with FLUX.2 Klein 4B (LoRA) - direct CAD first, fallback to color-coded."
+- Led BM Abir while serving primarily as Development Lead and contributing a smaller amount of research and coding.
+- Completed the feasibility project successfully and confirmed that the newer model was more capable and a potential solution that could support a future floorplan client phase or related negotiations.
+- Served as a technical advisor when [IFL 360](projects.md#ifl-360-image-enhancement) became active again, primarily advising on and approving task outlines and technical ideas.
+- Continued managing a portion of the company's GCP and Azure services and internal company servers, supporting infrastructure needs across teams and projects.
 
 ### MRAG v2 technical development
 
 - Prepared an additional MRAG V1 demo published by Chowa Giken as ["Demo Video No.2 Visual Response RAG"](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) on 2026-03-13; the public page is intentionally high-level and does not disclose internal techniques.
 - From April-July 2026, proposed and completed the [MRAG v2 / OCR-Based Multi-Document RAG](projects.md#mrag-v2--ocr-based-multi-document-rag) technical-development project.
-- Led the complete project and also contributed as a hands-on engineer.
+- Led BM Abir and Mursalin Islam, defined the architecture and task plan, assigned work, documented baseline approaches, and planned an initial combined allocation of approximately 1.5 person-months.
+- Mursalin was later redirected to client work and BM's public-repository optimization path did not yield a sufficiently effective solution. Nazmus adapted and completed an estimated 90% of the final work himself.
+- Continued the project despite being unavailable for approximately one working month for Hajj.
 - Replaced V1's single-document limitation with a robust multi-document corpus workflow.
 - Used OCR-extracted text and page images to improve text, image, table, and formula extraction; organize topics/subtopics across pages; and generate image descriptions for RAG input.
+- Introduced a novel topic/subtopic-based context-engineering technique that kept image descriptions inline at their semantic positions and passed all relevant inline image descriptions with a selected subtopic to the LLM. This provided the local context required for correct image integration and reduced missed integrations.
 - Implemented multi-step retrieval of appropriate subtopics or complete topics as evidence for answer generation.
 - Completed the project successfully. V2 was more capable, performed better, and generated responses faster than V1; exact metrics are not yet recorded.
+- V2 also retained and integrated substantially more useful document images than V1.
+- The company considered the context-engineering technique novel and decided to pursue a patent for MRAG v2; filing and legal status still need confirmation.
+
+### Public technical communication
+
+- Personally prepared the Visual Response RAG V1 demonstration used in Chowa Giken's public demo released on 2026-03-13.
+- The internal technical blog written about Prediction + GPT became the basis for Chowa Giken's public forecast-explainability article released on 2026-05-19.
 
 ### Education and mentoring
 
-- Began a second phase of [Nippon AI Dojo](projects.md#nippon-ai-dojo---phase-2) mentoring with BRAC University students.
+- Began a second phase of [Nippon AI Dojo](projects.md#nippon-ai-dojo---phase-2) mentoring with BRAC University students in June 2026.
+- At the same time, began managing two company interns from the previous Nippon AI Dojo cohort, adding direct internal people-management responsibility alongside the university mentoring work.
+- Had previously recommended approximately four to five strong participants from the first Nippon AI Dojo cohort. Four recommended candidates were ultimately hired as interns and were contributing across company projects as of August 2026.
 - Reused earlier lectures and made minor updates to previous slides when necessary.
 - Continued lecturer-equivalent mentoring and student guidance.
 - The University of Asia Pacific publicly records its 2026 participation as June-September 2026. Lectures are shared across participating campuses, including broadcasts to and from the BRAC University group.

@@ -63,8 +63,8 @@
 
 ## IFL 360 Image Enhancement
 
-**Period:** March-April 2023  
-**Role:** Inference and pipeline optimization engineer  
+**Period:** March-April 2023; advisory involvement during the first half of 2026  
+**Role:** Inference and pipeline optimization engineer; later technical advisor  
 **Public label suggestion:** High-Resolution 360-Degree Image Enhancement Optimization  
 **Portfolio treatment:** Strong anonymized performance case study
 
@@ -75,6 +75,7 @@
 - **Contributions:** Optimized inference and reduced data-transfer overhead between processing stages.
 - **Outcome:** Reduced runtime to approximately 12-13 seconds per sample with unchanged outputs. The 2023 deck reports an approximately 3.2x speed-up against a 2x target, achieved in a short time.
 - **Business contribution:** Suggested an alternative server configuration intended to increase revenue.
+- **2026 advisory work:** Served as an advisor when the project became active again, primarily reviewing, advising on, and approving proposed task outlines and technical ideas rather than owning implementation.
 
 ## Ukiyolator-v2
 
@@ -171,7 +172,7 @@
 - **Purpose:** Explain possible causes behind a forecast model's prediction to increase user and client trust in AI-generated forecasts.
 - **Contributions:** Led the project, completed development well before the deadline, and created a sales demo with strong UI/UX and a scalable solution.
 - **Patent:** Application filed. First-hand estimate identifies Nazmus as the largest individual contributor, responsible for more than 75% of the work represented in the application.
-- **Writing:** Wrote a technical blog about the project. Publication was complicated by an inability to use the name "ForecastSense" and limited time caused by high engagement on other projects.
+- **Writing:** Wrote an internal technical blog about the project. It became the basis for the public editorial article released in May 2026 after earlier publication difficulties involving the name "ForecastSense" and competing project commitments.
 - **Public overview:** Chowa Giken published ["Prototype No.4 需要予測の見える化技術"](https://www.chowagiken.co.jp/future-studio/forecast-visualization-ai/) on 2026-05-19. The page is credited to the Chowa Giken Editorial Department and presents the product idea at a high level without disclosing the internal techniques.
 
 ## MRAG Multimodal Document Chatbot
@@ -186,23 +187,28 @@
 - **Ownership:** Proposed the idea, obtained company acceptance, led the project, and contributed directly to implementation.
 - **Commercialization:** Created a sales demo.
 - **Public overview:** Chowa Giken published ["Prototype No.2 Visual Response RAG"](https://www.chowagiken.co.jp/future-studio/visual-response-rag/) on 2026-03-13. The page is credited to the Chowa Giken Editorial Department.
-- **Public demo:** Prepared an additional V1 demo published as ["Demo Video No.2 Visual Response RAG"](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/) on 2026-03-13. The page is a high-level demonstration and does not disclose the internal techniques.
+- **Public demo:** Personally prepared the additional V1 demonstration used for ["Demo Video No.2 Visual Response RAG"](https://www.chowagiken.co.jp/future-studio/demo-visual-response-rag/), published on 2026-03-13. The page is a high-level demonstration and does not disclose the internal techniques.
 - **Patent:** Application filed. First-hand estimate identifies Nazmus as the largest individual contributor, responsible for more than 75% of the work represented in the application.
 - **Mentoring:** Guided Mursalin-san on his first language project and improved his RAG understanding.
 
 ## MRAG v2 / OCR-Based Multi-Document RAG
 
 **Period:** April-July 2026  
-**Role:** Idea originator, Development Lead, project lead, and hands-on engineer  
+**Role:** Idea originator, Development Lead, project lead, system architect, and primary hands-on engineer  
 **Public label suggestion:** OCR-Driven Multi-Document RAG for Complex Technical Content  
 **Portfolio treatment:** Strong flagship case study; anonymize internal details and verify publication permission
 
 - **Motivation:** Improve the first MRAG system, which supported only one document and could not reliably extract images from some digital PDFs, much less scanned documents.
 - **Proposal:** Use OCR-based document-content extraction to improve extraction of images, tables, formulas, and text, then build a robust RAG method for a multi-document corpus.
 - **Ingestion architecture:** Combined OCR-extracted text with page images to identify topics and subtopics spanning multiple PDF pages and to generate image descriptions. These outputs became structured text inputs for RAG.
+- **Novel context engineering:** Introduced a topic/subtopic-based context-construction technique that preserved each image description inline at the image's actual semantic position. When a subtopic was selected, the LLM received the relevant subtopic content together with all inline image descriptions belonging to it. This supplied the complete local context needed to integrate relevant images correctly and reduced missed image integrations.
 - **Query architecture:** Implemented a robust multi-step retrieval pipeline that selected the relevant subtopics - or complete topics when appropriate - as evidence for final-answer generation.
-- **Ownership:** Proposed the technical-development project, led it from start to finish, and contributed hands-on engineering work.
-- **Outcome:** Completed successfully. V2 was more capable, performed better, and generated responses faster than V1. Exact comparative metrics are not yet recorded.
+- **Team leadership:** Led BM Abir and Mursalin Islam. Defined the end-to-end architecture, broke it into documented tasks, assigned work, supplied baseline approaches and examples, estimated resource allocation, and encouraged cross-task understanding and collaboration.
+- **Allocation change:** Mursalin was later reassigned to client work, while BM's investigation into adapting and optimizing a public repository did not produce a sufficiently effective solution. Nazmus adapted the plan and completed an estimated 90% of the final project work himself.
+- **Availability constraint:** The project continued across a period when Nazmus was unavailable for approximately one working month for Hajj.
+- **Ownership:** Proposed the technical-development project, led it from start to finish, and became its primary hands-on engineer when the planned team allocation changed.
+- **Outcome:** Completed successfully in July 2026. V2 addressed major V1 shortcomings, retained and integrated substantially more useful document images, was more capable, performed better, and generated responses faster. Exact comparative metrics are not yet recorded.
+- **Patent direction:** Because the company considered the context-engineering technique novel, it decided to pursue patent protection for MRAG v2. The filing and legal status still need confirmation.
 
 ## 2D Image to 3D Demo UI
 
@@ -246,20 +252,22 @@
 
 ## FLUX.2 Klein 4B Floorplan Feasibility Study
 
-**Period:** Early 2026 during the final KMEW phase; exact dates need confirmation  
-**Role:** Idea originator and Development Lead, with limited hands-on coding and research  
+**Internal title:** Prompt-conditioned floorplan generation with FLUX.2 Klein 4B (LoRA) - direct CAD first, fallback to color-coded
+
+**Period:** February-April 2026  
+**Role:** Idea originator and Development Lead; led one engineer while contributing limited hands-on coding and research  
 **Public label suggestion:** Evaluating a New Generative Model for Single-Stage Floorplan Generation  
 **Portfolio treatment:** Anonymize the related internal project and verify the model name/version before publication
 
 - **Motivation:** The existing floorplan pipeline used the relatively old Stable Diffusion 1.5 model and required two-stage generation.
 - **Opportunity:** A newly viable model identified as `FLUX.2 Klein 4B` became available during the first part of 2026.
-- **Proposal:** Run a focused technical-development project to determine whether the model was suitable for the floorplan use case and should replace or augment the existing approach.
-- **Ownership:** Proposed and led the project as Development Lead while contributing a smaller amount of coding and research work.
-- **Outcome:** Completed successfully. The team determined that the model was viable for the use case and could directly generate the final floorplan, potentially replacing the prior two-stage generation process.
+- **Proposal:** Run a focused technical-development project using prompt conditioning and LoRA to test direct CAD-style generation first, with color-coded generation as a fallback.
+- **Team leadership:** Led BM Abir, setting the technical direction and guiding the feasibility work while contributing a smaller amount of coding and research.
+- **Outcome:** Completed successfully in April 2026. The team confirmed that the newer model was more capable and a potential solution for the floorplan use case. The result may materially support a future client phase or strengthen the technical basis for negotiating and securing that work.
 
 ## KMEW House Image Generation
 
-**Period:** Direct house-exterior development from February 2025-February 2026; the broader related KMEW phase continued through May 2026  
+**Period:** Direct house-exterior development from February 2025-March 2026; responsive client support continued through June 2026  
 **Role:** House-side generation and design-rule implementation engineer  
 **Public label suggestion:** Elevation-Constrained House Exterior Generation  
 **Portfolio treatment:** Client-sensitive; anonymize names, textures, and proprietary design rules
@@ -271,7 +279,7 @@
 - **Model:** Used SDXL under the same commercial-friendly licensing and non-Chinese-model constraints as the floorplan project.
 - **Outcome:** Developed a novel technique that made the proof of concept successful.
 - **Other engineering:** Contributed API specification, implementation, and deployment; suggested an approach to complete texture search accurately within the available time.
-- **Phase status:** The public LinkedIn project range for Nazmus's direct house-exterior development is February 2025-February 2026. Related work in the broader KMEW phase continued through May 2026.
+- **Phase status:** Continued direct house-exterior work through March 2026. After planned development ended, responded to sudden client questions and requests as needed through June 2026.
 
 ## Global South Subsidy / Dhaka AI Dojo
 
@@ -286,15 +294,18 @@
 - Mentored BRAC University students. Among the participating BRACU and NSU teams, one mentored group won the final prize; the presentation credits the students for most of the outcome.
 - Prepared all material for an ICT Ministry seminar.
 - Helped resolve practical issues such as Colab Pro access for students.
+- After the program, recommended approximately four to five strong participants as potential company candidates. Four recommended candidates were subsequently hired as interns and, as of August 2026, were contributing to company projects. Treat candidate identities and employment details as private.
 
 ## Nippon AI Dojo - Phase 2
 
-**Period:** 2026 - ongoing as of August 2026; the public UAP program notice gives June-September 2026 for that institution's participation  
-**Role:** Lecturer-equivalent mentor  
+**Period:** Began June 2026; ongoing as of August 2026; the public UAP program notice gives June-September 2026 for that institution's participation  
+**Role:** Lecturer-equivalent mentor and manager of two interns from the previous cohort  
 **Public label suggestion:** University AI Mentoring Program - Second Cohort  
 **Portfolio treatment:** Potentially public with institutional approval and without private student information
 
 - Began mentoring students at BRAC University again during the program's second phase.
+- Alongside the second phase, began managing two company interns selected from the previous Nippon AI Dojo cohort. This is distinct from student mentoring and provides direct internal people-management experience.
+- The two managed interns are part of a group of four previous-cohort participants hired after Nazmus recommended approximately four to five strong candidates. The other interns are contributing to other company projects.
 - Reused the established lecture materials from the earlier phase.
 - Made minor updates to previous lecture slides when needed.
 - Continued the same lecturer-equivalent mentoring and student-guidance responsibilities as the first phase.

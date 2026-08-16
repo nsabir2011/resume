@@ -45,6 +45,10 @@ Use these labels internally when deciding how strongly to phrase a claim:
 
 - All three annual contribution presentations are labeled **CONFIDENTIAL**.
 - Treat project names, client names, infrastructure design, patent details, internal personnel names, unpublished research, and company-specific metrics as non-public by default.
+- Treat MRAG v2 staffing, person-month estimates, task assignments, individual allocation changes, the 90% contribution estimate, and Hajj-related availability as internal evaluation context rather than public portfolio material unless explicit approval is given.
+- Treat the identities, performance, assignments, and employment details of the two interns managed from June 2026 as private personnel information. The general fact of managing two interns may be used internally; external use requires publication approval.
+- Treat the identities, selection details, recommendations, employment status, and project assignments of all candidates/interns from the previous Nippon AI Dojo cohort as private personnel information. The approximate recommendation count and four hires are first-hand internal evaluation facts, not public claims.
+- Treat the MRAG v2 topic/subtopic context-engineering method, inline image-description handling, image-integration mechanism, and patent decision as patent-sensitive and non-public unless explicitly cleared. Do not describe a patent as filed or pending until its legal status is confirmed.
 - Treat the FaceLens staffing history, exact deployment topology, 14-camera capacity, hardware configuration, and non-visible implementation details as non-public until Nazmus explicitly approves the final wording. The public video makes the shown product name and workflows public, but not every internal engineering detail.
 - Treat the StreetLens recording, prospective Bangladesh government customer, customer-acquisition context, and non-public implementation details as confidential. Do not publish the local video or identify the prospective organization without explicit approval.
 - Do not publish information merely because it appears in `projects.md`; that file is an internal source of truth.
@@ -108,10 +112,10 @@ Use this structure for each portfolio project:
 - StreetLens backend architecture, AI/ANPR implementation, performance, accuracy, and scale details.
 - Exact number of Sapporo demos; current recollection is approximately four.
 - Current legal/status details of all patent applications.
+- Filing and legal status of the planned MRAG v2 patent, and what level of the novel context-engineering method may be disclosed.
 - Whether the `>75%`, `>75%`, and `20-30%` patent contribution estimates may be stated publicly.
 - Whether client/internal names such as EII, KMEW, Morita, Sapporo, FanMagic, ForecastSense, and Ukiyolator may appear publicly.
 - Whether exact infrastructure details and performance figures are approved for publication.
-- Exact start and completion dates for the FLUX.2 floorplan feasibility study.
 - Official spelling/version of the model currently recorded as `FLUX.2 Klein 4B`.
 - Quantitative comparison supporting the statement that MRAG v2 generated responses faster and performed better than V1.
 - Final completion date and outcomes for Nippon AI Dojo Phase 2. Institutional participation is public, but Nazmus's individual role and cross-campus lecture-sharing description remain first-hand.
@@ -124,6 +128,7 @@ Use this structure for each portfolio project:
 - Prediction + GPT patent contribution: largest individual contributor, estimated at more than 75%.
 - MRAG patent contribution: largest individual contributor, estimated at more than 75%.
 - EII FloorPlan Generation patent contribution: estimated at 20-30%.
+- MRAG v2: the company decided to pursue patent protection based on the perceived novelty of the context-engineering technique; filing status and any individual contribution estimate are not yet confirmed.
 - Sapporo demo count: approximately four.
 
 These are useful internal facts, but they should be presented as estimates or confirmed before formal publication.

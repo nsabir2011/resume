@@ -81,10 +81,15 @@ AI/ML engineer and technical lead with end-to-end experience turning research id
 
 ## 2026 highlights to date
 
-- Direct house-exterior development is represented publicly as February 2025-February 2026. Related KMEW-phase work continued until May 2026.
-- Proposed and led a successful feasibility study of FLUX.2 Klein 4B for floorplan generation, establishing that it could directly generate the final output and potentially replace a two-stage SD 1.5 workflow.
-- Proposed, led, and engineered MRAG v2 from April-July 2026, adding OCR-based extraction, multi-document support, topic/subtopic organization, evidence-oriented multi-step retrieval, and faster response generation than V1.
+- Continued direct house-exterior development through March 2026 and handled sudden client questions and requests through June 2026.
+- Proposed and led a February-April 2026 feasibility study of FLUX.2 Klein 4B for floorplan generation, leading one engineer and confirming the newer model as a more capable potential solution for a future client phase.
+- Proposed and led MRAG v2 from April-July 2026. Planned and assigned work across two engineers, then adapted when allocations changed and completed an estimated 90% of the final solution himself. The result added OCR-based extraction, multi-document support, evidence-oriented multi-step retrieval, and a novel topic/subtopic context-engineering technique that supplied inline image descriptions with their complete local context, substantially improving useful-image integration over V1. The company decided to pursue a patent for the technique; filing status needs confirmation.
+- Served as an advisor for renewed IFL 360 work, reviewing and approving task outlines and technical ideas.
+- Prepared the public Visual Response RAG demonstration and authored the internal forecast-explainability blog that became the basis for the public editorial article.
 - Began mentoring BRAC University students again for Nippon AI Dojo Phase 2, reusing and lightly updating previous lecture materials. The 2026 cohort remains ongoing as of August 2026 and should be added to LinkedIn only after it finishes.
+- Began directly managing two company interns from the previous Nippon AI Dojo cohort alongside the second-phase mentoring work in June 2026.
+- Recommended approximately four to five strong candidates from the previous Nippon AI Dojo cohort; four were subsequently hired as interns and were contributing across company projects as of August 2026.
+- Continued managing portions of GCP and Azure and the company's internal servers, providing shared infrastructure support across teams.
 
 ## Verified public work
 
