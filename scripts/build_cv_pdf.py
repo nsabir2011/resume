@@ -250,7 +250,9 @@ def build():
         Paragraph("Nazmus Sakib Abir", styles["name"]),
         Paragraph("AI/ML Engineer | Technical Lead", styles["role"]),
         Paragraph(
-            "Dhaka, Bangladesh  |  nsabir2011@gmail.com  |  linkedin.com/in/nsabir2011  |  github.com/nsabir2011",
+            "Dhaka, Bangladesh  |  nsabir2011@gmail.com  |  "
+            "<link href='https://www.linkedin.com/in/nsabir2011/'>linkedin.com/in/nsabir2011</link>  |  "
+            "<link href='https://github.com/nsabir2011'>github.com/nsabir2011</link>",
             styles["contact"],
         ),
         HRFlowable(
