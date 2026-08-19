@@ -122,7 +122,13 @@ const pageDescription =
         <div class="social-row" aria-label="Professional profiles">
           {
             socialLinks.map((social) => (
-              <a class="social-card" href={social.href}>
+              <a
+                class="social-card"
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${social.label} profile (opens in a new tab)`}
+              >
                 <span class="social-icon" aria-hidden="true">
                   {social.label === 'LinkedIn' ? (
                     'in'
@@ -213,7 +219,13 @@ const pageDescription =
               </div>
               <p>{project.summary}</p>
               {'link' in project && project.link && (
-                <a class="project-link" href={project.link.href}>
+                <a
+                  class="project-link"
+                  href={project.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${project.link.label} (opens in a new tab)`}
+                >
                   {project.link.label} <span aria-hidden="true">↗</span>
                 </a>
               )}
@@ -272,7 +284,14 @@ const pageDescription =
                 <span>{publication.year}</span>
                 <div class="article-links">
                   {publication.links.map((link) => (
-                    <a href={link.href}>{link.label} ↗</a>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${link.label} ${publication.title} (opens in a new tab)`}
+                    >
+                      {link.label} ↗
+                    </a>
                   ))}
                 </div>
               </div>
@@ -299,7 +318,13 @@ const pageDescription =
                 ))}
               </ul>
               {card.link && (
-                <a class="support-link" href={card.link.href}>
+                <a
+                  class="support-link"
+                  href={card.link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`${card.link.label} (opens in a new tab)`}
+                >
                   {card.link.label} <span aria-hidden="true">↗</span>
                 </a>
               )}
@@ -347,7 +372,12 @@ const pageDescription =
           </a>
           {
             socialLinks.map((social) => (
-              <a href={social.href}>
+              <a
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`${social.label} profile (opens in a new tab)`}
+              >
                 <strong>{social.label}</strong>
                 <span>{social.handle} ↗</span>
               </a>
