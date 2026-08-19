@@ -1292,7 +1292,7 @@ h1 {
 
   .profile-column {
     max-width: 390px;
-    justify-self: start;
+    justify-self: center;
   }
 
   .section-heading,
@@ -1321,14 +1321,6 @@ h1 {
 @media (max-width: 520px) {
   .container {
     width: min(calc(100% - 24px), var(--max));
-  }
-
-  .brand {
-    width: auto;
-  }
-
-  .brand-name {
-    display: none;
   }
 
   .resume-link {
@@ -1396,6 +1388,16 @@ h1 {
   .site-footer span {
     display: block;
     margin-top: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .brand {
+    width: auto;
+  }
+
+  .brand-name {
+    display: none;
   }
 }
 
